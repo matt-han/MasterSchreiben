@@ -1,0 +1,132 @@
+%%
+%% Beuth Hochschule für Technik -- Masterarbeit
+%%
+%% Hauptdokument
+%%
+%--------------------------------------------------------------%
+
+%\documentclass[11pt, a4paper,parskip=half]{report}
+\documentclass[11pt, a4paper,twoside]{report}
+\usepackage[abgabe]{bhtThesis}
+\typeout{Masterarbeit}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage{blindtext}
+\usepackage{listings}
+\usepackage{color}
+
+\lstset{
+	literate =	{ö}{{\"o}}1
+				{ä}{{\"a}}1
+				{ü}{{\"u}}1
+				{Ö}{{\"O}}1
+				{Ä}{{\"A}}1
+				{Ü}{{\"U}}1
+				{ß}{{\ss}}1
+}
+\usepackage{trsym}
+\usepackage{bytefield}
+\usepackage{longtable}
+\definecolor{light-gray}{gray}{0.90} %Code Hintergundfarbe
+\definecolor{darkBHT}{rgb}{0,0.5882,0.5529}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65,0.12,0.82}
+
+
+%##################################################################
+%Pfad zu den Bildern
+%##################################################################
+\graphicspath{
+	{pictures/}%,
+%	{einleitung/pictures/},
+%	{5_Systementwurf/pictures/}
+}
+
+
+
+%format for program code
+\lstset{language=Java,
+				backgroundcolor=\color{white},
+				%frame=single,
+				tabsize=2,
+				numbers=left,
+				numbersep=0pt,
+				basicstyle=\ttfamily\color{black}\small,
+				keywordstyle=\color{HKS51}\bfseries,
+				commentstyle=\color{HKS13}\slshape,,
+				identifierstyle=\color{black}
+		}
+
+
+		
+\begin{document}
+%##################################################################
+% Titelpage
+%##################################################################
+\pagestyle{fancy}
+\input{titlepage.tex}
+
+%##################################################################
+% Inhaltsverzeichnis
+%##################################################################
+\pagenumbering{Roman}
+\tableofcontents
+%one empty two sided page after table of contents
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+%##################################################################
+% Die Kapitel
+%##################################################################
+
+\pagenumbering{arabic}
+
+\input{1_Einleitung/einleitung.tex}
+\input{2_Aufgabenstellung/aufgabenstellung.tex}
+\input{3_Fachlichesumfeld/fachlichesumfeld.tex}
+\input{4_Loesungsansaetze/loesungsansaetze.tex}
+\input{5_Systementwurf/systementwurf.tex}
+\input{6_Testbeschreibung/testbeschreibung.tex}
+\input{7_Something/something.tex}
+\input{8_Zusammenfassung_und_Ausblick/zusammenfassung_u_ausblick.tex}
+
+%##################################################################
+% Abbildungsverzeichnis
+%##################################################################
+\listoffigures 
+
+%##################################################################
+% Listingsverzeichnis
+%##################################################################
+\lstlistoflistings
+
+
+%##################################################################
+% Anhang
+%##################################################################
+
+\begin{appendix}
+	\input{anhang.tex}
+\end{appendix}
+
+
+%##################################################################
+% Literaturverzeichnis
+%##################################################################
+
+\nocite{*}
+\clearpage\newpage
+\addcontentsline{toc}{chapter}{Literatur- und Quellenverzeichnis}
+\bibliographystyle{alpha}
+\bibliography{bhtThesis}
+
+\end{document}  
