@@ -5,7 +5,6 @@
 %%
 %--------------------------------------------------------------%
 
-%\documentclass[11pt, a4paper,parskip=half]{report}
 \documentclass[11pt, a4paper,twoside]{report}
 \usepackage[abgabe]{bhtThesis}
 \typeout{Masterarbeit}
@@ -69,7 +68,16 @@
 % Titelpage
 %##################################################################
 \pagestyle{fancy}
+%\fancyfoot[C]{\thepage}
 \input{titlepage.tex}
+
+%one empty two sided page before table of contents
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\thispagestyle{empty}
+\mbox{}
 
 %##################################################################
 % Inhaltsverzeichnis
