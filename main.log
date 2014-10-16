@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  14 OCT 2014 18:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  16 OCT 2014 16:48
 entering extended mode
 **main.tex
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.tex
@@ -991,31 +991,31 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
 
-<pictures/BHT-Logo-Basis.pdf, id=103, 303.39667pt x 99.95987pt>
+<pictures/BHT-Logo-Basis.pdf, id=107, 303.39667pt x 99.95987pt>
 File: pictures/BHT-Logo-Basis.pdf Graphic file (type pdf)
 
 <use pictures/BHT-Logo-Basis.pdf>
 Package pdftex.def Info: pictures/BHT-Logo-Basis.pdf used on input line 18.
-(pdftex.def)             Requested size: 256.0748pt x 84.37447pt.
+(pdftex.def)             Requested size: 199.16928pt x 65.61984pt.
 
-<pictures/BernerMattner_Logo.pdf, id=104, 485.815pt x 245.91875pt>
+<pictures/BernerMattner_Logo.pdf, id=108, 485.815pt x 245.91875pt>
 File: pictures/BernerMattner_Logo.pdf Graphic file (type pdf)
 
 <use pictures/BernerMattner_Logo.pdf>
 Package pdftex.def Info: pictures/BernerMattner_Logo.pdf used on input line 28.
 
-(pdftex.def)             Requested size: 194.32256pt x 98.36575pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+(pdftex.def)             Requested size: 145.74562pt x 73.77618pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+trsy on input line 34.
+LaTeX Font Info:    Try loading font information for U+trsy on input line 37.
 
 (C:\Users\hansert\AppData\Roaming\MiKTeX\2.9\tex\latex\trsym\utrsy.fd
 File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
@@ -1024,18 +1024,18 @@ File: utrsy.fd 2000/06/25v1.0transformation symbol font definitions
 {C:/Users/hansert/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/
 hansert/Documents/Masterarbeit/MasterSchreiben/pictures/BHT-Logo-Basis.pdf> <C:
 /Users/hansert/Documents/Masterarbeit/MasterSchreiben/pictures/BernerMattner_Lo
-go.pdf>]) [2] [1]
+go.pdf>]) [1]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 86.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 83.
  (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-)
-\tf@toc=\write6
 
 [2
 
-] [3] [4]
+])
+\tf@toc=\write6
+ [3]
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\1_Einleitung/einleitun
 g.texpdfTeX warning (ext4): destination with the same identifier (name{page.1})
  has been already used, duplicate ignored
@@ -1044,14 +1044,29 @@ g.texpdfTeX warning (ext4): destination with the same identifier (name{page.1})
 l.1 \chapter
             {Einleitung}\label{chp:einleitung} [1]
 Kapitel 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
 )
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\2_Aufgabenstellung/auf
-gabenstellung.texpdfTeX warning (ext4): destination with the same identifier (n
-ame{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2 \chapter
-            {Aufgabenstellung}\label{chp:aufgabenstellung} [2
+gabenstellung.tex [2
 
 ]
 Kapitel 2.
@@ -1062,7 +1077,7 @@ hlichesumfeld.tex [3
 ]
 Kapitel 3.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 13.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
 [4
 
 ])
@@ -1086,7 +1101,7 @@ Ausblick/zusammenfassung_u_ausblick.tex [7
 ]
 Kapitel 6.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 12--109
+Underfull \hbox (badness 10000) in paragraph at lines 12--103
 
  []
 
@@ -1115,32 +1130,40 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 22.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [12]) [13]
-No file main.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.bbl) [14
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
+
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 140.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0B0B8A793B666BCB2FEDA721DE6769EA;1641.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
+(rerunfilecheck)             Checksum: 88366B27081A6B0E7F561F1706CE6CED;1716.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
  ) 
 Here is how much of TeX's memory you used:
- 11120 strings out of 493921
- 156760 string characters out of 3144870
+ 11149 strings out of 493921
+ 157279 string characters out of 3144870
  273403 words of memory out of 3000000
- 14088 multiletter control sequences out of 15000+200000
- 45858 words of font info for 78 fonts, out of 3000000 for 9000
+ 14105 multiletter control sequences out of 15000+200000
+ 48706 words of font info for 80 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,11n,48p,313b,1213s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (19 pages, 294830 bytes).
+ 35i,11n,49p,675b,1213s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{lstnumber.-2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on main.pdf (18 pages, 305159 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 319 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 

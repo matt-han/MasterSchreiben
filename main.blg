@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+The style file: alpha.bst
+Database file #1: bhtThesis.bib
+You're missing a field name---line 3 of file bhtThesis.bib
+ : 
+ : % address={\url{http://msdn.microsoft.com/en-us/library/ff802693.aspx}},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 19 of file bhtThesis.bib
+ : 
+ : %author = {Dirk Louis},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 26 of file bhtThesis.bib
+ : 
+ : %author = {Charles Petzold},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 34 of file bhtThesis.bib
+ : 
+ : %author = {Joe Campbell},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 41 of file bhtThesis.bib
+ : 
+ : %author = {Joe Campbell},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--to sort, need author, organization, or key in SerialCommunications
+Warning--to sort, need author, editor, or key in VisualC++
+Warning--to sort, need author, editor, or key in ProgrammingWindows
+Warning--to sort, need author, editor, or key in CProgrammersGuide
+Warning--to sort, need author, editor, or key in V24/RS232
+Warning--empty author and editor in CProgrammersGuide
+Warning--empty title in CProgrammersGuide
+Warning--empty publisher in CProgrammersGuide
+Warning--empty year in CProgrammersGuide
+Warning--empty author and editor in ProgrammingWindows
+Warning--empty title in ProgrammingWindows
+Warning--empty publisher in ProgrammingWindows
+Warning--empty year in ProgrammingWindows
+Warning--empty title in SerialCommunications
+Warning--empty author and editor in V24/RS232
+Warning--empty title in V24/RS232
+Warning--empty publisher in V24/RS232
+Warning--empty year in V24/RS232
+Warning--empty author and editor in VisualC++
+Warning--empty title in VisualC++
+Warning--empty publisher in VisualC++
+Warning--empty year in VisualC++
+(There were 5 error messages)
