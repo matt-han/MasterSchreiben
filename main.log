@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  16 OCT 2014 16:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  20 OCT 2014 12:50
 entering extended mode
 **main.tex
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.tex
@@ -1070,23 +1070,67 @@ gabenstellung.tex [2
 
 ]
 Kapitel 2.
-)
-(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\3_Fachlichesumfeld/fac
-hlichesumfeld.tex [3
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3
 
 ]
+<pictures/gruenePolygone_DE.png, id=211, 1203.7472pt x 368.1253pt>
+File: pictures/gruenePolygone_DE.png Graphic file (type png)
+
+<use pictures/gruenePolygone_DE.png>
+Package pdftex.def Info: pictures/gruenePolygone_DE.png used on input line 32.
+(pdftex.def)             Requested size: 421.31783pt x 128.84578pt.
+
+<pictures/roterKreis_DE.png, id=213, 1203.7472pt x 491.58656pt>
+File: pictures/roterKreis_DE.png Graphic file (type png)
+
+<use pictures/roterKreis_DE.png>
+Package pdftex.def Info: pictures/roterKreis_DE.png used on input line 41.
+(pdftex.def)             Requested size: 421.31783pt x 172.05786pt.
+)
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\3_Fachlichesumfeld/fac
+hlichesumfeld.tex [4 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/p
+ictures/gruenePolygone_DE.png> <C:/Users/hansert/Documents/Masterarbeit/MasterS
+chreiben/pictures/roterKreis_DE.png>]
 Kapitel 3.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
-[4
+[5
 
 ])
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\4_Loesungsansaetze/loe
-sungsansaetze.tex [5]
+sungsansaetze.tex [6]
 Kapitel 4.
 )
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\5_Systementwurf/system
-entwurf.tex [6
+entwurf.tex [7
 
 ]
 Kapitel 5.
@@ -1096,7 +1140,7 @@ tbeschreibung.tex)
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\7_Something/something.
 tex)
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\8_Zusammenfassung_und_
-Ausblick/zusammenfassung_u_ausblick.tex [7
+Ausblick/zusammenfassung_u_ausblick.tex [8
 
 ]
 Kapitel 6.
@@ -1105,32 +1149,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--103
 
  []
 
-[8
+[9
 
 ] (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.lof)
 \tf@lof=\write7
- [9
+ [10
 
 ]
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.lol)
 \tf@lol=\write8
 
-(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\anhang.tex [10
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\anhang.tex [11
 
 ]
 Anhang A.
 LaTeX Font Info:    Try loading font information for TS1+ptm on input line 14.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [11
+) [12
 
 ]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 22.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [12]) [13]
-(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.bbl) [14
+) [13]) [14]
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.bbl) [15
 
 
 ]
@@ -1141,17 +1185,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 88366B27081A6B0E7F561F1706CE6CED;1716.
+(rerunfilecheck)             Checksum: 2EEBDF62AA8C5654D22EA70CB2DB2BF0;1715.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
  ) 
 Here is how much of TeX's memory you used:
- 11149 strings out of 493921
- 157279 string characters out of 3144870
+ 11166 strings out of 493921
+ 157641 string characters out of 3144870
  273403 words of memory out of 3000000
- 14105 multiletter control sequences out of 15000+200000
+ 14116 multiletter control sequences out of 15000+200000
  48706 words of font info for 80 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,11n,49p,675b,1213s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,11n,49p,1016b,1213s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{lstnumber.-2.2} has been referenced but does not 
 exist, replaced by a fixed one
 
@@ -1161,9 +1205,9 @@ Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x8
 .9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on main.pdf (18 pages, 305159 bytes).
+Output written on main.pdf (19 pages, 433288 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 219 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 335 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
