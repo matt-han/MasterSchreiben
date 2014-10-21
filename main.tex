@@ -68,10 +68,26 @@
 % Titelpage
 %##################################################################
 \pagestyle{fancy}
-%\fancyfoot[C]{\thepage}
 \input{titlepage.tex}
 
-%one empty two sided page before table of contents
+%one empty page before table of contents
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+
+%##################################################################
+% Dankessage
+%##################################################################
+
+\input{dankessage.tex}
+
+
+
+%one empty page before table of contents
 \newpage
 \thispagestyle{empty}
 \mbox{}
@@ -128,7 +144,7 @@
 %\nocite{*}
 \clearpage\newpage
 \addcontentsline{toc}{chapter}{Literatur- und Quellenverzeichnis}
-\bibliographystyle{alpha}
+\bibliographystyle{plain}
 \bibliography{bhtThesis}
 
 \end{document}  

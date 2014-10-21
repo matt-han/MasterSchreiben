@@ -1,22 +1,28 @@
-\begin{thebibliography}{Ber14}
+\begin{thebibliography}{1}
 
-\bibitem[Ber14]{TESTONA}
+\bibitem{TESTONA}
 Berner \& Mattner, http://www.testona.net.
 \newblock {\em TESTONA}, Oktober 2014.
 
-\bibitem[CPr]{CProgrammersGuide}
+\bibitem{ClassificationTrees}
+M.~Grochtmann and K.~Grimm.
+\newblock {\em Classification Trees For Partition testing, Software testing,
+  Verification \& Reliability, Volume 3, Number 2}.
+\newblock Wiley, 1993.
 
+\bibitem{CombinatorialSTesting}
+IEEE Computer Society,
+  https://courses.cs.ut.ee/MTAT.03.159/2013\_spring/uploads/Main/SWT\_comb-paper1.pdf.
+\newblock {\em Combinatorial Software Testing}, 2009.
 
-\bibitem[Pro]{ProgrammingWindows}
+\bibitem{TestCaseDesign}
+Quality Week 1995,
+  http://www.systematic-testing.com/documents/qualityweek1995\_1.pdf.
+\newblock {\em Test Case Design Using Classification Trees and the
+  Classification-Tree Editor CTE}, 1995.
 
-
-\bibitem[Ser]{SerialCommunications}
-
-
-\bibitem[V24]{V24/RS232}
-
-
-\bibitem[Vis]{VisualC++}
-
+\bibitem{KlassifikationsbaumMethode}
+Wikipedia, http://de.wikipedia.org/wiki/Klassifikationsbaum-Methode.
+\newblock {\em Klassifikationsbaum-Methode}, Oktober 2014.
 
 \end{thebibliography}

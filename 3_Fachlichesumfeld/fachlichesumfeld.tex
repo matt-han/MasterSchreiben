@@ -25,23 +25,68 @@ Die Quellen dieses Kapitel sind aus ......
 %#######################################################################################
 \subsection{Klassifikationsbaum-Methode}
 \paragraph{}
+In 1993 entwickelten K. Grimm und M. Grochtmann die Klassifikationsbaum-Methode zur Ermittlung funktionaler Backbox-Tests im Bereich von eingebetteter Software. Die Methode wurde im Forschungslabor von Daimler-Benz in Berlin als Weiterentwicklung der Category-Partition Method (CPM) erforscht. Gegenüber CPM hat die Klassifikationsbaum-Methode eine graphische Baum-Darstellung und hierarchische Verfeinerungen für implizite Abhängigkeiten. Als Werkzeug wurde der "Classification Tree Editor" (CTE) \footnote{Entwickelt von Grochtmann und Wegener\cite{TestCaseDesign}. Bei Berner  \& Mattner aus rechtlichen Gründen zu TESTONA umbenannt} programmiert und unterstützt Partitionierung und Testfallgenerierung. Das Werkzeug von CPM konnte nur Testfälle generieren ohne Bestimmung der Testaspekte\cite{ClassificationTrees}.
+
+ Diese Methode besteht aus zwei wichtige Schritten:
+\begin{itemize}
+\item Bestimmung der Klassifikationen (testrelevante Aspekte) und Klassen (mögliche Ausprägungen).
+\item Erzeugung von Testfällen aus Kombinationen von unterschiedlichen Klassen für alle Klassifikationen
+\end{itemize}
+
+Ansatzpunkt sind die Funktionale Anforderungen (siehe \ref{DOORS}) eines zu testendes Objekt. Um die Testfälle zu definieren und erzeugen, folgt die Methode das Prinzip des kombinatorischen Testentwurfs \cite{KlassifikationsbaumMethode}. Dieses Prinzip hilft bei der Detektierung von Fehler in frühe Schritte des Testvorgangs. Nicht jeder einzelne Parameter steuert ein Fehler bei, eher werden Fehler verursacht durch die Interaktion verschiedene Parameter. Betrachten wir ein einfaches Beispiel, indem ein Programm auf Windows oder Linux laufen soll, unter Verwendung eines AMD oder Intel Prozessors und mit Unterstützung des IPv4 oder IPv6 Protokolls. Das ergibt intuitiv acht verschiedene Testfälle ($2^{3}$ Möglichkeiten). Verwenden wir dafür der kombinatorische Testentwurf "paarweise Kombination", hätten wir nur vier Testfälle (siehe Tabelle \ref{table:4TestCases}). Durch diese Methode werden alle Kombinationspaare der Parameter mindestens durch ein Testfall gedeckt\cite{CombinatorialSTesting}.
+
+
+
+\begin{table}
+\begin{center}
+	\begin{tabular}{|r||c|c|c|}
+	 \hline
+	 No. &OS &CPU &Protokoll\\
+	 \hline
+	 1. &Windows &Intel &IPv4\\
+	 \hline
+	 2. &Windows &AMD &IPv6\\
+	 \hline
+	 3. &Linux &Intel &IPv4\\
+	 \hline
+	 4. &Linux &AMD &IPv6\\
+	 \hline
+	\end{tabular}
+	
+	\caption{Testfälle mittels paarweise Kombinatorik}
+	\label{table:4TestCases}
+\end{center}
+\end{table}
+
+
+Die Effizienz von diesen einfachen kombinatorischen Entwurf ist bei komplexeren System zu sehen. Hat ein System $20$ verschiedene Schalter und jeder Schalter $10$ verschiedene Einstellungen, so gibt es $10^{20}$ verschiedene Kombinationen. Durch Anwendung der paarweise Kombination muss der Tester nur 180 Testfälle betrachten.\\
+
+Ein Experiment hat gezeigt, dass durch die Verwendung von die paarweise Kombinatorik die gleichen oder meistens mehrere Fehler entdeckt wurden, als mit manuelle Testauswahl\footnote{Basierend auf funktionelle und technische Anforderungen, Use-Cases}. Paarweise Kombinatorik ist am meisten verbreitet, aber man kann durchaus auch Drei-Werde-Kombinatorik verwenden. TESTONA implementiert standardmäßig Minimalabdeckung, Paarweise-, Drei-Wege- und N-Kombinatorik (wo N die maximale Anzahl an möglichen Parameter im Klassifikationsbaum ist, auch vollständige Kombinatorik genannt)\cite{CombinatorialSTesting}.\\
+
+
+
 
 %#######################################################################################
 \subsection{Testfälle und Testfallgenerierung}
 \paragraph{}
 
+Unter ein Testfall ist zu verstehen, die Beschreibung eines elementaren Zustands eines Testobjekts. Hierfür werden Eingangsdaten benötigt (Parameterwerte, Vorbedingungen) und ein erwarteter Folgezustand.
 
-
+%#######################################################################################
 %#######################################################################################
 \subsection{Abhängigsleitsregeln}
 \paragraph{}
 
 
 
+
+
 %#######################################################################################
-\subsection{Variantenmanagement und IBM Rational DOORS}
+\section{Variantenmanagement und IBM Rational DOORS}\label{DOORS}
 \paragraph{}
 %kopplung zwischen testona und doors, parameter der anforderungen
+
+
 
 
 
@@ -50,9 +95,13 @@ Die Quellen dieses Kapitel sind aus ......
 \section{Entwicklungsumgebung und Programmiersprache}
 \paragraph{}
 
+
+
 %#######################################################################################
 \subsection{Eclipse}
 \paragraph{}
+
+
 
 
 %#######################################################################################
@@ -60,11 +109,16 @@ Die Quellen dieses Kapitel sind aus ......
 \paragraph{}
 
 
+
+
 %#######################################################################################
 \subsection{Java}
 \paragraph{}
 
 
+
+
 %#######################################################################################
 \subsection{Java SWT}
 \paragraph{}
+
