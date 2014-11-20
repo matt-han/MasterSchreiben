@@ -1,29 +1,20 @@
 \chapter{Fachliches Umfeld}\label{chp:fachlichesumfeld}
-Die Quellen dieses Kapitel sind aus ......
+
+mehr zu testabdeckung?
 
 %#######################################################################################
 %#######################################################################################
 \section{TESTONA}\label{sec:Testona} 
 \paragraph{}
-%was ist testona
-%bäume
-%eclipse basierend
 
-%Basiert auf der bewährten Klassifikationsbaum-Methode
-%Klar definierte, systematische Testspezifikationen
-%Reduzierte Testaufwände durch einheitlichen und domänenunabhängigen
-%Einsatz in allen Testphasen
-%Kostensenkung durch automatisierte Testfallgenerierung
-%Präzise Bestimmung der Testtiefe
-%Messbare Beurteilung der Testabdeckung
-%Einfache Einhaltung von Test- und Qualitätsstandards
-%Anbindung an gängige Werkzeuge im Entwicklungs- und Testprozess
-%Umfassende Unterstützung des Requirements Tracing
-%Einfach erlernbar mit geringem Einarbeitungsaufwand
+Mit TESTONA wird dem Tester ein Tool angeboten, um signifikante Testszenarien und -umfänge strukturiert zu bestimmen. Mit das Programm können komplette Testspezifikationen schnell und einfach generiert werden und überflüssige Testfälle vermeiden werden. Bei Bedarf gibt es die Möglichkeit automatische generierte Testspezifikationen und Testfälle bequem mit Anforderung verlinken (siehe \ref{sec:DOORS}). Durch Add-Ons an Standard-Werkzeuge werden robuste Schnittstellen für ein komfortables Anforderungs- und Testmanagement. Ein sehr wichtiger Aspekt von TESTONA ist, dass es Branchen-unabhängig ist. Dass heisst ein Tester kann TESTONA im jedem Fachgebiet benutzen, nicht nur bei Softwaretests.\\
+
+Mehr zu Testfällen und die Arbeitsweise dieses Programms werden in er nächsten Kapiteln erläutert, wie zum Beispiel die anerkannte Klassifikationsbaum-Methode.
+
 
 
 %#######################################################################################
-\subsection{Klassifikationsbaum-Methode}
+\subsection{Klassifikationsbaum-Methode}\label{ssec:KM}
 \paragraph{}
 In 1993 entwickelten K. Grimm und M. Grochtmann die Klassifikationsbaum-Methode zur Ermittlung funktionaler Backbox-Tests im Bereich von eingebetteter Software. Die Methode wurde im Forschungslabor von Daimler-Benz in Berlin als Weiterentwicklung der Category-Partition Method (CPM) erforscht. Gegenüber CPM hat die Klassifikationsbaum-Methode eine graphische Baum-Darstellung und hierarchische Verfeinerungen für implizite Abhängigkeiten. Als Werkzeug wurde der "Classification Tree Editor" (CTE) \footnote{Entwickelt von Grochtmann und Wegener\cite{TestCaseDesign}. Bei Berner  \& Mattner aus rechtlichen Gründen zu TESTONA umbenannt} programmiert und unterstützt Partitionierung und Testfallgenerierung. Das Werkzeug von CPM konnte nur Testfälle generieren ohne Bestimmung der Testaspekte\cite{ClassificationTrees}.
 
@@ -69,25 +60,83 @@ Ein Experiment hat gezeigt, dass durch die Verwendung von die paarweise Kombinat
 %#######################################################################################
 \subsection{Testfälle und Testfallgenerierung}
 \paragraph{}
+%Reduzierte Testaufwände durch einheitlichen und domänenunabhängigen
 
-Unter ein Testfall ist zu verstehen, die Beschreibung eines elementaren Zustands eines Testobjekts. Hierfür werden Eingangsdaten benötigt (Parameterwerte, Vorbedingungen) und ein erwarteter Folgezustand.
+%Einsatz in allen Testphasen
+%Kostensenkung durch automatisierte Testfallgenerierung
+%Präzise Bestimmung der Testtiefe
+%Messbare Beurteilung der Testabdeckung
+
+
+Unter ein Testfall ist zu verstehen, die Beschreibung eines elementaren Zustands eines Testobjekts. Hierfür werden Eingangsdaten benötigt (Parameterwerte, Vorbedingungen) und ein erwarteter Folgezustand. Mit TESTONA werden Testfälle definiert für eine vereinbarte Testspezifikation. Laut IEEE 829 ist unter Testspezifikation die Durchführung von:
+
+\begin{itemize}
+\item\textbf{ Testentwurfsspezifikation}: verfeinerte Beschreibung der Vorgehensweise für das Testen einer Software
+\item \textbf{Testfallspezifikation}: dokumentiert die zu benutzenden Eingabewerte und erwarteten Ausgabewerte
+\item \textbf{Testablaufspezifikation}: Beschreibung alles Schritte zur Durchführung der spezifizierten Testfälle.
+\end{itemize}
+
+zu verstehen. Da TESTONA in allen Testphasen einsetzbar ist, kann effizient die Arbeitszeit reduziert werden. Dazu hilft auch die automatische Testfallgenerierung und die verschiedene kombinatorische Möglichkeiten (siehe \ref{ssec:KM}) . Somit kann der Tester ein besseren Zeitplan erzeugen und die Arbeitskraft zielbewusst an der Ausführung und Auswertung der Testfälle beschäftigen.\\
+
+Anhand der generierten Testfälle und die Benutzung von  kombinatorische Möglichkeiten kann der Tester einfach eine präzise Testtiefe bestimmen. Somit wird auch eine vereinbarte Testabdeckung erreicht.
 
 %#######################################################################################
 %#######################################################################################
 \subsection{Abhängigskeitsregeln}
 \paragraph{}
 
+Abhängigkeitsregeln werden vereinbart um überflüssige Testfälle zu vermeiden, bzw. um Vorbedingungen für bestimmte Testszenarien festzulegen. Abhängigkeitsregeln werden Mithilfe von boolische Algebra definiert wie folgende Abbildung %\ref{}%
+zeigt: \\
+\\
+screenshot testona AR manager\\
+screenshot testona AR manager\\
+\\
+Boolesche Operatoren:\\
+
+\begin{tabular}{ll}
+AND &: Konjunktion\\
+NAND &: negierte Konjunktion\\
+OR &: Disjunktion\\
+NOR &: negierte Disjunktion\\
+XOR &: ausschließende Disjunktion\\
+\% &: "'don't care"` Operator\\
+=> &: vom A folgt B\\
+<=> &: A ist gleichwertig wie B\\
+NOT &: Negation\\
+\end{tabular}
+
+Durch die Verwendung diese Operatoren werden wie folgt Abhängigkeitsregeln definiert:\\
+
+\begin{center}
+beispiel von regeln aus testona, aus kapitel 1 oder 2\\
+A AND B 
+\end{center}
 
 
 
 
 %#######################################################################################
-\section{Variantenmanagement und IBM Rational DOORS}\label{DOORS}
+%#######################################################################################
+\section{IBM Rational DOORS}\label{sec:DOORS}
 \paragraph{}
 %kopplung zwischen testona und doors, parameter der anforderungen
 
+%Anbindung an gängige Werkzeuge im Entwicklungs- und Testprozess
+%Umfassende Unterstützung des Requirements Tracing
 
+Quality Systems \& Software (QSS) hat am Anfang der 90er Jahre DOORS (Dynamic Object Oriented Requirements System) entwickelt. Die Firma Telelogic kaufte im Jahr 2000 QSS, die wiederum 2008 von IBM übernommen wurde. DOORS ist eine Anforderungsmanagement Software und ermöglicht die Verwaltung und strukturierte Aufzeichnung von Anforderungen (als Objekte). Durch eine tabellarische Ansicht der Anforderungen können geordnet die Anforderungen und die zugehörige Eingenschaften abgelesen werden. Als Eingenschaften sind eine eindeutige Identifikationsnummer, sowie vom Benutzer ausgewählte Attribute.\\
 
+Bild von Doors Tabelle
+\\
+
+Um Anforderungen im Laufe des Projektes zu verfolgen (Tracing), können Anforderungen miteinander verlinkt werden. DOORS basiert sich auf eine Client - Server Anwendung mit einer proprietären Datenbank. \\
+\\
+Es werden auch Schnittstellen für den Datenaustausch zur Verfügung gestellt (Testmanagement-, Modellierungs- und Changemanagementwerkzeugen) dank der Unterstützung von RIF (Requirements Interchange Format). Durch diese Schnittstelle erhält TESTONA zugriff auf die gespeicherten Anforderungen in DOORS. \cite{Doors} \cite{Anforderungsmanagement}\\
+
+%#######################################################################################
+%#######################################################################################
+\section{Variantenmanagement}\label{sec:VarManag}
+\paragraph{}
 
 
 %#######################################################################################
@@ -95,30 +144,77 @@ Unter ein Testfall ist zu verstehen, die Beschreibung eines elementaren Zustands
 \section{Entwicklungsumgebung und Programmiersprache}
 \paragraph{}
 
+nachfragen!\\
+zuerst in welche programmiersprache?\\
+danach weiter entwickelt in...?\\
+import zu java und eclipse, warum eclipse?\\
 
+TESTONA wurde ursprünglich in der Programmiersprache ...... entwickelt. Mit der Weiterentwicklung wurde das Programm an ...... poritert. Durch den Kauf von Berner \& Mattner in 2008 wurde TESTONA bis zum jetzigen Zeitpunkt auf Java übersetzt und wird weiter mit der Entwicklungsumgebung Eclipse entwickelt.
 
 %#######################################################################################
 \subsection{Eclipse}
 \paragraph{}
+Eclipse ist der Nachfolger von "'IMB Visual Age for Java"` und ist ein quelloffenes Programmierwerkzeug zur Entwicklung verschiedener Art. Ursprünglich war Eclipse als integrierte Entwicklungsumgebung für Java benutzt, aber dank seiner Bedienbarkeit und Erweiterung ist mittlerweile für die Entwicklung in verschiedener Programmiersprachen bekannt (C/C++ und PHP, unter anderen). Die am 25 Juni 2014 veröffentliche Version "'Luna"` (Eclipse 4.4) ist die aktuellste Stand der Software. \\
 
+Mit Eclipse 3.0 hat sich die Grundarchitektur von Eclipse geändert. Seit diesem Zeitpunkt ist Eclipse nur ein Kern, der einzelne Plug-Ins lädt. Jedes Plug-In stellt eine oder verschiedene Funktionalitäten zur Verfügung. Darauf aufbauend existiert die "'Rich Client Platform"`(RCP). Diese ermöglicht Entwicklern Anwendungen zu programmieren, die auf das Eclipse Framework aufbauen, aber unabhängig von der Eclipse IDE ist.\cite{EclipseRCP} \cite{Eclipse}\\
 
 
 
 %#######################################################################################
 \subsection{Plugins}
 \paragraph{}
+Ein Plug-In ist die kleinste ausführbare Softwarekomponente für Eclipse. Um eine Anwedung mit Eclipse RCP zu schreiben, werden mindestens diese drei Plug-Ins benötigt:
+\begin{itemize}
+\item Eclipse Core Plattform: steuert den Lebenszyklus der Eclipse Anwendung
+\item Stardard Widget Toolkit: Programmierbibliothek zur Erstellung grafischen Oberflächen
+\item JFace: User Interface Toolkit für komplexeren Widgets
+\end{itemize}
 
-
-
-
-%#######################################################################################
-\subsection{Java}
-\paragraph{}
-
-
-
+Weitere Plug-Ins, von der Eclipse Foundation implementiert, stehen den Programmierern zur Verfügung und unter \textit{"'marketplace.eclipse.org"} können auch von Privatentwickler programmierte Plug-Ins heruntergeladen werden. \cite{Eclipse}
 
 %#######################################################################################
-\subsection{Java SWT}
+\subsection{Standard Widget Toolkit (SWT)}
 \paragraph{}
+SWT ist eine seit 2001 von IBM Programmierbibliothek für die Programmierung grafischen Oberflächen unter Java. Die Bibliothek benutzt, im Gegensatz zu Swing\footnote{Programmierschnittstelle und Grafikbibliothek für Java zum programmieren von grafischen Benutzeroberflächen.}, die nativen grafischen Elemente des jeweiligen Betriebssystems und ermöglicht die Erstellung von Anwendungen, die optisch ähnlich wie die nativen Anwendung des Betriebssystems. Durch die Verwendung der nativen grafischen Elemente, kann das Toolkit sofort Änderungen in das "'look and feel"` des Betriebssystems in der Anwendung aktualisieren und behaltet ein konstantes Programmiermodel in alle Plattformen.
+\cite{EclipseSWT}\\
 
+SWT beinhaltet sehr viele komplexe Eigenschaften, aber um eine robuste und benutzbare Anwendung zur Programmieren sind nur die Grundkenntnissen nötig. Eine typische SWT Anwendung hat folgende Stuktur:
+
+\begin{itemize}
+\item Ein \textit{Display} deklarieren, dieser Repräsentiert die SWT Modus
+\item Erstellen eines \textit{Shell}, welche als Hauptfenster dient
+\item Erzeugung eines Widgets
+\item Initialisierung der Widgetparameter
+\item Öffnen des Fensters
+\item Starten der Event-Schleife bis eine Abbruchbedingung erfüllt wird (Schließen des Fenster vom Benutzer)
+\item Entsorgen des Displays
+\end{itemize}
+
+\begin{lstlisting}[caption={Beispiel einer SWT Anwendung}, captionpos=b]
+   public static void main (String [] args) {
+      Display display = new Display ();
+      Shell shell = new Shell (display);
+      Label label = new Label (shell, SWT.CENTER);
+      label.setText ("Hello_world");
+      label.setBounds (shell.getClientArea ());
+      shell.open ();
+      while (!shell.isDisposed ()) {
+         if (!display.readAndDispatch ()) display.sleep ();
+      }
+      display.dispose ();
+   }
+\end{lstlisting}
+
+%#######################################################################################
+\subsection{JFace}
+\paragraph{}
+JFace ist eine User Interface Toolkit und setzt auf die von SWT gelieferten Basiskomponenten und stellt die Abstraktionsschicht für den Zugriff auf die Komponenten bereit. Es beinhaltet Klassen zur Handhabung gemeinsame Programmieraufgaben, wie zum Beispiel:
+\begin{itemize}
+\item Viewers: Verbindung von GUI-Elementen zum Datenmodell
+\item Actions: definiert Benutzeraktionen und spezifiziert wo diese zur Verfügung stehen
+\item Bilder und Fonts: gemeinsame Muster für den Umgang mit Bilder und Fonts
+\item Dialoge und Wizards: Framework für komplexere Interaktionen mit dem Benutzer
+\item Feldassistent: Klassen die Hilfe an den Benutzer anbieten für richtige Inhaltsauswahl bei Dialoge oder Formulare
+\end{itemize}
+
+SWT ist komplett unabhängig von JFace (und Plattform Code), aber JFace wurde konzipiert um SWT zu unterstützen bei allgemeine Benutzerinteraktionen. Eclipse ist wohl das bekannteste Programm das JFace benutzt.\cite{EclipseHelp}

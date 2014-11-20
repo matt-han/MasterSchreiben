@@ -1,14 +1,35 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{TESTONA}
 Berner \& Mattner, http://www.testona.net.
 \newblock {\em TESTONA}, Oktober 2014.
+
+\bibitem{Eclipse}
+Eclipse Foundation, http://eclipse.org.
+\newblock {\em Eclipse}, Oktober 2014.
+
+\bibitem{EclipseHelp}
+Eclipse Foundation, http://help.eclipse.org.
+\newblock {\em Eclipse Help}, Oktober 2014.
+
+\bibitem{EclipseSWT}
+Eclipse Foundation, http://eclipse.org/swt.
+\newblock {\em Eclipse SWT}, Oktober 2014.
+
+\bibitem{EclipseRCP}
+Eclipse Foundation.
+\newblock {\em Eclipse 4.0 RCP}.
+\newblock Someone, 2014.
 
 \bibitem{ClassificationTrees}
 M.~Grochtmann and K.~Grimm.
 \newblock {\em Classification Trees For Partition testing, Software testing,
   Verification \& Reliability, Volume 3, Number 2}.
 \newblock Wiley, 1993.
+
+\bibitem{Doors}
+IBM, http://www-03.ibm.com/software/products/de/ratidoor.
+\newblock {\em IBM DOORS}, Oktober 2014.
 
 \bibitem{CombinatorialSTesting}
 IEEE Computer Society,
@@ -20,6 +41,12 @@ Quality Week 1995,
   http://www.systematic-testing.com/documents/qualityweek1995\_1.pdf.
 \newblock {\em Test Case Design Using Classification Trees and the
   Classification-Tree Editor CTE}, 1995.
+
+\bibitem{Anforderungsmanagement}
+Gerhard Versteegen.
+\newblock {\em Anforderungsmanagement: Formale Prozesse, Praxiserfahrungen,
+  Einführungsstrategien und Toolauswahl}.
+\newblock Springer, 2004.
 
 \bibitem{KlassifikationsbaumMethode}
 Wikipedia, http://de.wikipedia.org/wiki/Klassifikationsbaum-Methode.
