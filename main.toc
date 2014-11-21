@@ -20,7 +20,7 @@
 \contentsline {paragraph}{}{8}{section*.10}
 \contentsline {subsection}{\numberline {3.4.1}Eclipse}{8}{subsection.3.4.1}
 \contentsline {paragraph}{}{8}{section*.11}
-\contentsline {subsection}{\numberline {3.4.2}Plugins}{9}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Plug-ins}{9}{subsection.3.4.2}
 \contentsline {paragraph}{}{9}{section*.12}
 \contentsline {subsection}{\numberline {3.4.3}Standard Widget Toolkit (SWT)}{9}{subsection.3.4.3}
 \contentsline {paragraph}{}{9}{section*.13}
