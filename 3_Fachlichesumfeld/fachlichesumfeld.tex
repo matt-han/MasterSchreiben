@@ -7,16 +7,16 @@ mehr zu testabdeckung?
 \section{TESTONA}\label{sec:Testona} 
 \paragraph{}
 
-Mit TESTONA wird dem Tester ein Tool angeboten, um signifikante Testszenarien und -umfänge strukturiert zu bestimmen. Mit das Programm können komplette Testspezifikationen schnell und einfach generiert werden und überflüssige Testfälle vermeiden werden. Bei Bedarf gibt es die Möglichkeit automatische generierte Testspezifikationen und Testfälle bequem mit Anforderung verlinken (siehe \ref{sec:DOORS}). Durch Add-Ons an Standard-Werkzeuge werden robuste Schnittstellen für ein komfortables Anforderungs- und Testmanagement. Ein sehr wichtiger Aspekt von TESTONA ist, dass es Branchen-unabhängig ist. Dass heisst ein Tester kann TESTONA im jedem Fachgebiet benutzen, nicht nur bei Softwaretests.\\
+Mit TESTONA wird dem Tester ein Tool angeboten, um signifikante Testszenarien und -umfänge strukturiert zu bestimmen. Mit das Programm können komplette Testspezifikationen schnell und einfach generiert werden und überflüssige Testfälle vermieden werden. Bei Bedarf gibt es die Möglichkeit automatische generierte Testspezifikationen und Testfälle bequem mit Anforderungen durch Add-Ons an Standard-Werkzeugen zu verlinken (siehe \ref{sec:DOORS}). Somit werden robuste Schnittstellen für ein komfortables Anforderungs- und Testmanagement erzeugt. Ein sehr wichtiger Aspekt von TESTONA ist, dass es Branchen-unabhängig ist. Dass heißt ein Tester kann TESTONA im jedem Fachgebiet benutzen, nicht nur bei Software- oder Funktionstests.\\
 
-Mehr zu Testfällen und die Arbeitsweise dieses Programms werden in er nächsten Kapiteln erläutert, wie zum Beispiel die anerkannte Klassifikationsbaum-Methode.
+Mehr zu Testfällen und die Arbeitsweise dieses Programms werden in den nächsten Kapiteln erläutert, wie zum Beispiel die anerkannte Klassifikationsbaum-Methode.
 
 
 
 %#######################################################################################
 \subsection{Klassifikationsbaum-Methode}\label{ssec:KM}
 \paragraph{}
-In 1993 entwickelten K. Grimm und M. Grochtmann die Klassifikationsbaum-Methode zur Ermittlung funktionaler Backbox-Tests im Bereich von eingebetteter Software. Die Methode wurde im Forschungslabor von Daimler-Benz in Berlin als Weiterentwicklung der Category-Partition Method (CPM) erforscht. Gegenüber CPM hat die Klassifikationsbaum-Methode eine graphische Baum-Darstellung und hierarchische Verfeinerungen für implizite Abhängigkeiten. Als Werkzeug wurde der "Classification Tree Editor" (CTE) \footnote{Entwickelt von Grochtmann und Wegener\cite{TestCaseDesign}. Bei Berner  \& Mattner aus rechtlichen Gründen zu TESTONA umbenannt} programmiert und unterstützt Partitionierung und Testfallgenerierung. Das Werkzeug von CPM konnte nur Testfälle generieren ohne Bestimmung der Testaspekte\cite{ClassificationTrees}.
+In 1993 entwickelten K. Grimm und M. Grochtmann die Klassifikationsbaum-Methode zur Ermittlung funktionaler Backbox-Tests im Bereich von eingebetteter Software. Die Methode wurde im Forschungslabor von Daimler-Benz in Berlin als Weiterentwicklung der Category-Partition Method (CPM) erforscht. Gegenüber CPM hat die Klassifikationsbaum-Methode eine graphische Baum-Darstellung und hierarchische Verfeinerungen für implizite Abhängigkeiten. Als Werkzeug wurde der "'Classification Tree Editor"` (CTE) \footnote{Entwickelt von Grochtmann und Wegener\cite{TestCaseDesign}. Bei Berner  \& Mattner aus rechtlichen Gründen zu TESTONA umbenannt} programmiert und unterstützt Partitionierung und Testfallgenerierung. Das Werkzeug von CPM konnte nur Testfälle generieren ohne Bestimmung der Testaspekte\cite{ClassificationTrees}.
 
  Diese Methode besteht aus zwei wichtige Schritten:
 \begin{itemize}
@@ -24,11 +24,11 @@ In 1993 entwickelten K. Grimm und M. Grochtmann die Klassifikationsbaum-Methode 
 \item Erzeugung von Testfällen aus Kombinationen von unterschiedlichen Klassen für alle Klassifikationen
 \end{itemize}
 
-Ansatzpunkt sind die Funktionale Anforderungen (siehe \ref{DOORS}) eines zu testendes Objekt. Um die Testfälle zu definieren und erzeugen, folgt die Methode das Prinzip des kombinatorischen Testentwurfs \cite{KlassifikationsbaumMethode}. Dieses Prinzip hilft bei der Detektierung von Fehler in frühe Schritte des Testvorgangs. Nicht jeder einzelne Parameter steuert ein Fehler bei, eher werden Fehler verursacht durch die Interaktion verschiedene Parameter. Betrachten wir ein einfaches Beispiel, indem ein Programm auf Windows oder Linux laufen soll, unter Verwendung eines AMD oder Intel Prozessors und mit Unterstützung des IPv4 oder IPv6 Protokolls. Das ergibt intuitiv acht verschiedene Testfälle ($2^{3}$ Möglichkeiten). Verwenden wir dafür der kombinatorische Testentwurf "paarweise Kombination", hätten wir nur vier Testfälle (siehe Tabelle \ref{table:4TestCases}). Durch diese Methode werden alle Kombinationspaare der Parameter mindestens durch ein Testfall gedeckt\cite{CombinatorialSTesting}.
+Ansatzpunkt sind die Funktionale Anforderungen (siehe \ref{sec:DOORS}) eines zu testendes Objekt. Um die Testfälle zu definieren und erzeugen, folgt die Methode das Prinzip des kombinatorischen Testentwurfs \cite{KlassifikationsbaumMethode}. Dieses Prinzip hilft bei der Detektierung von Fehler in frühe Schritte des Testvorgangs. Nicht jeder einzelne Parameter steuert ein Fehler bei, eher werden Fehler durch die Interaktion verschiedene Parameter verursacht. Betrachten wir ein einfaches Beispiel, indem ein Programm auf Windows oder Linux laufen soll, unter Verwendung eines AMD oder Intel Prozessors und mit Unterstützung des IPv4 oder IPv6 Protokolls. Das ergibt intuitiv acht verschiedene Testfälle ($2^{3} = 8$ Möglichkeiten). Verwenden wir dafür der kombinatorische Testentwurf "'paarweise Kombination"` , hätten wir nur vier Testfälle (siehe Tabelle \ref{table:4TestCases}). Durch diese Methode werden alle Kombinationspaare der Parameter mindestens durch ein Testfall gedeckt\cite{CombinatorialSTesting}.\\
+
+\begin{table}[h]
 
 
-
-\begin{table}
 \begin{center}
 	\begin{tabular}{|r||c|c|c|}
 	 \hline
@@ -47,12 +47,21 @@ Ansatzpunkt sind die Funktionale Anforderungen (siehe \ref{DOORS}) eines zu test
 	\caption{Testfälle mittels paarweise Kombinatorik}
 	\label{table:4TestCases}
 \end{center}
+
 \end{table}
 
 
+%\begin{figure}[h]
+%  \begin{center}
+%    \includegraphics[scale=0.35]{a.png}
+%  		  \caption{Testfälle aller Möglichkeiten}
+%     \label{ttn.gruen}
+%  \end{center}
+%\end{figure}
+
 Die Effizienz von diesen einfachen kombinatorischen Entwurf ist bei komplexeren System zu sehen. Hat ein System $20$ verschiedene Schalter und jeder Schalter $10$ verschiedene Einstellungen, so gibt es $10^{20}$ verschiedene Kombinationen. Durch Anwendung der paarweise Kombination muss der Tester nur 180 Testfälle betrachten.\\
 
-Ein Experiment hat gezeigt, dass durch die Verwendung von die paarweise Kombinatorik die gleichen oder meistens mehrere Fehler entdeckt wurden, als mit manuelle Testauswahl\footnote{Basierend auf funktionelle und technische Anforderungen, Use-Cases}. Paarweise Kombinatorik ist am meisten verbreitet, aber man kann durchaus auch Drei-Werde-Kombinatorik verwenden. TESTONA implementiert standardmäßig Minimalabdeckung, Paarweise-, Drei-Wege- und N-Kombinatorik (wo N die maximale Anzahl an möglichen Parameter im Klassifikationsbaum ist, auch vollständige Kombinatorik genannt)\cite{CombinatorialSTesting}.\\
+Ein Experiment hat gezeigt, dass durch die Verwendung von die paarweise Kombinatorik die gleichen oder meistens mehrere Fehler entdeckt wurden, als mit manuelle Testauswahl\footnote{Basierend auf funktionelle und technische Anforderungen, Use-Cases}. Paarweise Kombinatorik ist am meisten verbreitet, aber man kann durchaus auch Drei-Wege-Kombinatorik verwenden. TESTONA implementiert standardmäßig Minimalabdeckung, Paarweise-, Drei-Wege- und N-Kombinatorik (wo N die maximale Anzahl an möglichen Parameter im Klassifikationsbaum ist, auch vollständige Kombinatorik genannt)\cite{CombinatorialSTesting}.\\
 
 
 
@@ -76,9 +85,19 @@ Unter ein Testfall ist zu verstehen, die Beschreibung eines elementaren Zustands
 \item \textbf{Testablaufspezifikation}: Beschreibung alles Schritte zur Durchführung der spezifizierten Testfälle.
 \end{itemize}
 
-zu verstehen. Da TESTONA in allen Testphasen einsetzbar ist, kann effizient die Arbeitszeit reduziert werden. Dazu hilft auch die automatische Testfallgenerierung und die verschiedene kombinatorische Möglichkeiten (siehe \ref{ssec:KM}) . Somit kann der Tester ein besseren Zeitplan erzeugen und die Arbeitskraft zielbewusst an der Ausführung und Auswertung der Testfälle beschäftigen.\\
+zu verstehen. Da TESTONA in allen Testphasen einsetzbar ist, kann effizient die Arbeitszeit reduziert werden. Dazu hilft auch die automatische Testfallgenerierung und die verschiedene kombinatorische Möglichkeiten (siehe \ref{ssec:KM}) . Somit kann der Tester ein besseren Zeitplan erzeugen und die Arbeitskräfte zielbewusst an der Ausführung und Auswertung der Testfälle beschäftigen.\\
 
-Anhand der generierten Testfälle und die Benutzung von  kombinatorische Möglichkeiten kann der Tester einfach eine präzise Testtiefe bestimmen. Somit wird auch eine vereinbarte Testabdeckung erreicht.
+Allgemein wird ein Test laut das ISTQB-Glossar\footnote{International Software Testing Qualification Board} folgendermaßen definiert:
+
+\begin{center}
+\textit{
+Der Prozess, der aus allen Aktivitäten des Lebenszyklus besteht (sowohl statisch als auch dynamisch), die sich mit der Planung, Vorbereitung und Bewertung einer Softwareprodukts und dazugehörige Arbeitsergebnisse befassen. Ziel des Prozesses ist sicherzustellen, dass diese allen festgelegten Anforderungen genügen, dass sie ihren Zweck erfüllen und etwaige Fehlerzustände zu finden.}\cite{SoftwareTestEmbSys}\\
+
+\end{center}
+
+Anhand der generierten Testfälle und die Benutzung von  kombinatorische Möglichkeiten kann der Tester einfach eine präzise Testtiefe erreichen. Die Testtiefe wird anhand der Durchführung einer Risikoanalyse vereinbart und die Auswertung des Kritikalitätsstufe (sehr hoch, hoch, mittel und tief) des Systems. Das soll heißen, dass die Testtiefe für ein Flugzeug (Kritikalitätsstufe = sehr hoch\footnote{Das Fehlverhalten kann zu Verlust von Menschenleben führen, die Existen des Unternehmens gefährden}) viel höher und genauer ist, als die Kompatibilität eines Bildschirmes mit ein Graphiktreiber (Kritikalitätsstufe = tief\footnote{Das Fehlverhalten kann zu geringen materiellen oder immateriellen Schäden fuhren}).\\
+
+Anhand der Risikoanalyse und die Kritikalitätsstufe wird auch eine vereinbarte Testabdeckung und Testfallermittlungsverfahren erreicht. Im Fall vom Flugzeug wird eine Kombination von White und Blackbox-Methoden mit sehr hoher Testtiefe ausgeführt. Dagegen im Fall vom Bildschirm wird intuitives Testen mit geringer Testtiefe angewendet.\cite{ApplicationEngineering}
 
 %#######################################################################################
 %#######################################################################################
@@ -131,7 +150,7 @@ Bild von Doors Tabelle
 
 Um Anforderungen im Laufe des Projektes zu verfolgen (Tracing), können Anforderungen miteinander verlinkt werden. DOORS basiert sich auf eine Client - Server Anwendung mit einer proprietären Datenbank. \\
 \\
-Es werden auch Schnittstellen für den Datenaustausch zur Verfügung gestellt (Testmanagement-, Modellierungs- und Changemanagementwerkzeugen) dank der Unterstützung von RIF (Requirements Interchange Format). Durch diese Schnittstelle erhält TESTONA zugriff auf die gespeicherten Anforderungen in DOORS. \cite{Doors} \cite{Anforderungsmanagement}\\
+Es werden auch Schnittstellen für den Datenaustausch zur Verfügung gestellt (Testmanagement-, Modellierungs- und Changemanagementwerkzeugen) dank der Unterstützung von RIF (Requirements Interchange Format). Durch die Skriptsprache "'DXL"` (DOORS eXtention Language) erhält TESTONA zugriff auf die gespeicherten Anforderungen in DOORS (durch die Ausführung von Skripts). \cite{Doors} \cite{Anforderungsmanagement}\\
 
 %#######################################################################################
 %#######################################################################################
@@ -143,12 +162,6 @@ Es werden auch Schnittstellen für den Datenaustausch zur Verfügung gestellt (T
 %#######################################################################################
 \section{Entwicklungsumgebung und Programmiersprache}
 \paragraph{}
-
-nachfragen!\\
-zuerst in welche programmiersprache?\\
-danach weiter entwickelt in...?\\
-import zu java und eclipse, warum eclipse?\\
-
 TESTONA wurde ursprünglich in der Programmiersprache ...... entwickelt. Mit der Weiterentwicklung wurde das Programm an ...... poritert. Durch den Kauf von Berner \& Mattner in 2008 wurde TESTONA bis zum jetzigen Zeitpunkt auf Java übersetzt und wird weiter mit der Entwicklungsumgebung Eclipse entwickelt.
 
 %#######################################################################################
@@ -156,7 +169,7 @@ TESTONA wurde ursprünglich in der Programmiersprache ...... entwickelt. Mit der
 \paragraph{}
 Eclipse ist der Nachfolger von "'IMB Visual Age for Java"` und ist ein quelloffenes Programmierwerkzeug zur Entwicklung verschiedener Art. Ursprünglich war Eclipse als integrierte Entwicklungsumgebung für Java benutzt, aber dank seiner Bedienbarkeit und Erweiterung ist mittlerweile für die Entwicklung in verschiedener Programmiersprachen bekannt (C/C++ und PHP, unter anderen). Die am 25 Juni 2014 veröffentliche Version "'Luna"` (Eclipse 4.4) ist die aktuellste Stand der Software. \\
 
-Mit Eclipse 3.0 hat sich die Grundarchitektur von Eclipse geändert. Seit diesem Zeitpunkt ist Eclipse nur ein Kern, der einzelne Plug-ins lädt. Jedes Plug-in stellt eine oder verschiedene Funktionalitäten zur Verfügung. Darauf aufbauend existiert die "'Rich Client Platform"`(RCP). Diese ermöglicht Entwicklern Anwendungen zu programmieren, die auf das Eclipse Framework aufbauen, aber unabhängig von der Eclipse IDE ist.\cite{EclipseRCP} \cite{Eclipse}\\
+Mit Eclipse 3.0 hat sich die Grundarchitektur von Eclipse geändert. Seit diesem Zeitpunkt ist Eclipse nur ein Kern, der einzelne Plug-ins lädt. Jedes Plug-in stellt eine oder verschiedene Funktionalitäten zur Verfügung. Darauf aufbauend existiert die "'Rich Client Platform"`(RCP). Diese ermöglicht Entwicklern Anwendungen zu programmieren, die auf das Eclipse Framework aufbauen, aber unabhängig von der Eclipse IDE ist\cite{EclipseRCP} \cite{Eclipse}. Dies ist einer der Hauptgründe warum TESTONA zu Java und Eclipse migriert wurde. Durch die RCP können verschiedene Programmversionen (Light, Express, Professional, Enterprise) besser verwaltet werden. Durch die RCP Architektur können auch verschiedene Funktionalitäten voneinander getrennt werden. Das hilft bei der Weiterentwicklung sowie bei der Pflege des Programms, da mehrere Programmieren gleichzeitig an verschiedenen Plug-ins arbeiten können.\\
 
 
 
@@ -170,12 +183,14 @@ Ein Plug-in ist die kleinste ausführbare Softwarekomponente für Eclipse. Um ei
 \item JFace: User Interface Toolkit für komplexeren Widgets
 \end{itemize}
 
-Weitere Plug-Ins, von der Eclipse Foundation implementiert, stehen den Programmierern zur Verfügung und unter \textit{"'marketplace.eclipse.org"} können auch von Privatentwickler programmierte Plug-Ins heruntergeladen werden. \cite{Eclipse}
+Weitere Plug-Ins, von der Eclipse Foundation implementiert, stehen den Programmierern zur Verfügung und unter \textit{"'marketplace.eclipse.org"} können auch von Privatentwickler programmierte Plug-Ins heruntergeladen werden. \cite{Eclipse}\\
+
+Plug-ins beinhalten den Java-Code der, wie gewöhnlich, in verschiedene Pakete und Klassen strukturiert werden kann. Sinnvoll ist, dass jedes Plug-in eine Funktionalität des gesamtes Programms repräsentiert, wie zum Beispiel, Variantenmanagement oder autosave.
 
 %#######################################################################################
 \subsection{Standard Widget Toolkit (SWT)}
 \paragraph{}
-SWT ist eine seit 2001 von IBM Programmierbibliothek für die Programmierung grafischen Oberflächen unter Java. Die Bibliothek benutzt, im Gegensatz zu Swing\footnote{Programmierschnittstelle und Grafikbibliothek für Java zum programmieren von grafischen Benutzeroberflächen.}, die nativen grafischen Elemente des jeweiligen Betriebssystems und ermöglicht die Erstellung von Anwendungen, die optisch ähnlich wie die nativen Anwendung des Betriebssystems. Durch die Verwendung der nativen grafischen Elemente, kann das Toolkit sofort Änderungen in das "'look and feel"` des Betriebssystems in der Anwendung aktualisieren und behaltet ein konstantes Programmiermodel in alle Plattformen.
+SWT ist eine seit 2001 von IBM Programmierbibliothek für die Programmierung grafischen Oberflächen unter Java. Die Bibliothek benutzt, im Gegensatz zu Swing\footnote{Programmierschnittstelle und Grafikbibliothek für Java zum programmieren von grafischen Benutzeroberflächen.}, die nativen grafischen Elemente des jeweiligen Betriebssystems und ermöglicht die Erstellung von Anwendungen, die optisch ähnlich wie die nativen Anwendung des Betriebssystems aussehen. Durch die Verwendung der nativen grafischen Elemente, kann das Toolkit sofort Änderungen in das "'look and feel"` des Betriebssystems in der Anwendung aktualisieren und behaltet ein konstantes Programmiermodel in alle Plattformen.
 \cite{EclipseSWT}\\
 
 SWT beinhaltet sehr viele komplexe Eigenschaften, aber um eine robuste und benutzbare Anwendung zur Programmieren sind nur die Grundkenntnissen nötig. Eine typische SWT Anwendung hat folgende Stuktur:
@@ -191,24 +206,27 @@ SWT beinhaltet sehr viele komplexe Eigenschaften, aber um eine robuste und benut
 \end{itemize}
 
 \begin{lstlisting}[caption={Beispiel einer SWT Anwendung}, captionpos=b]
-   public static void main (String [] args) {
-      Display display = new Display ();
-      Shell shell = new Shell (display);
-      Label label = new Label (shell, SWT.CENTER);
-      label.setText ("Hello_world");
-      label.setBounds (shell.getClientArea ());
-      shell.open ();
-      while (!shell.isDisposed ()) {
-         if (!display.readAndDispatch ()) display.sleep ();
+   public static void main (String[] args) {
+      Display display = new Display();
+      Shell shell = new Shell(display);
+      Label label = new Label(shell, SWT.CENTER);
+      label.setText("Hello_world");
+      label.setBounds(shell.getClientArea());
+      shell.open();
+      while (!shell.isDisposed()) {
+         if (!display.readAndDispatch())
+         		display.sleep();
       }
-      display.dispose ();
+      display.dispose();
    }
 \end{lstlisting}
 
 %#######################################################################################
 \subsection{JFace}
 \paragraph{}
-JFace ist eine User Interface Toolkit und setzt auf die von SWT gelieferten Basiskomponenten und stellt die Abstraktionsschicht für den Zugriff auf die Komponenten bereit. Es beinhaltet Klassen zur Handhabung gemeinsame Programmieraufgaben, wie zum Beispiel:
+JFace ist ein User Interface Toolkit, dass auf die von SWT gelieferten Basiskomponenten setzt und stellt die Abstraktionsschicht für den Zugriff auf die Komponenten bereit. Es beinhaltet Klassen zur Handhabung gemeinsame Programmieraufgaben, wie zum Beispiel:
+
+
 \begin{itemize}
 \item Viewers: Verbindung von GUI-Elementen zum Datenmodell
 \item Actions: definiert Benutzeraktionen und spezifiziert wo diese zur Verfügung stehen
@@ -216,5 +234,6 @@ JFace ist eine User Interface Toolkit und setzt auf die von SWT gelieferten Basi
 \item Dialoge und Wizards: Framework für komplexere Interaktionen mit dem Benutzer
 \item Feldassistent: Klassen die Hilfe an den Benutzer anbieten für richtige Inhaltsauswahl bei Dialoge oder Formulare
 \end{itemize}
+
 
 SWT ist komplett unabhängig von JFace (und Plattform Code), aber JFace wurde konzipiert um SWT zu unterstützen bei allgemeine Benutzerinteraktionen. Eclipse ist wohl das bekannteste Programm das JFace benutzt.\cite{EclipseHelp}

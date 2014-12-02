@@ -21,6 +21,11 @@ Eclipse Foundation.
 \newblock {\em Eclipse 4.0 RCP}.
 \newblock Someone, 2014.
 
+\bibitem{SoftwareTestEmbSys}
+Stephan Grünfelder.
+\newblock {\em Software-Test für Embedded Systems}.
+\newblock dpunkt.verlag, 2013.
+
 \bibitem{ClassificationTrees}
 M.~Grochtmann and K.~Grimm.
 \newblock {\em Classification Trees For Partition testing, Software testing,
@@ -41,6 +46,12 @@ Quality Week 1995,
   http://www.systematic-testing.com/documents/qualityweek1995\_1.pdf.
 \newblock {\em Test Case Design Using Classification Trees and the
   Classification-Tree Editor CTE}, 1995.
+
+\bibitem{ApplicationEngineering}
+H.~Tremp and M.~Ruggiero.
+\newblock {\em Application Engineering: Grundlagen für die objektorientierte
+  Softwareentwicklung mit zahlreichen Beispielen, Aufgaben und Lösungen}.
+\newblock Compendio Bildungsmedien, 2011.
 
 \bibitem{Anforderungsmanagement}
 Gerhard Versteegen.
