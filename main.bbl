@@ -36,7 +36,7 @@ M.~Grochtmann and K.~Grimm.
 IBM, http://www-03.ibm.com/software/products/de/ratidoor.
 \newblock {\em IBM DOORS}, Oktober 2014.
 
-\bibitem{CombinatorialSTesting}
+\bibitem{CombinatorialSoftTesting}
 IEEE Computer Society,
   https://courses.cs.ut.ee/MTAT.03.159/2013\_spring/uploads/Main/SWT\_comb-paper1.pdf.
 \newblock {\em Combinatorial Software Testing}, 2009.
@@ -46,6 +46,18 @@ Quality Week 1995,
   http://www.systematic-testing.com/documents/qualityweek1995\_1.pdf.
 \newblock {\em Test Case Design Using Classification Trees and the
   Classification-Tree Editor CTE}, 1995.
+
+\bibitem{VarMan2}
+Christopher Robinson-Mallet.
+\newblock An approach on integrating models and textual specifications.
+\newblock {\em Model-Driven Requirements Engineering Workshop (MoDRE)}, 2012.
+
+\bibitem{VarMan1}
+Christopher Robinson-Mallet, Matthias Grochtmann, Joachim Wegener, Kens
+  Köhnlein, and Steffen Kühn.
+\newblock Modelling requierements to support testing of product lines.
+\newblock {\em Third International Conference on Software Testing,
+  Verification, and Validation Workshops}, 2010.
 
 \bibitem{ApplicationEngineering}
 H.~Tremp and M.~Ruggiero.

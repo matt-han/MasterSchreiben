@@ -4,6 +4,12 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Richtige Auswahl der Klassen und Klassifikationen f\IeC {\"u}r die Testfallgenerierung}}{4}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ung\IeC {\"u}ltige Auswahl der Klassen (Gr\IeC {\"u}n und Blau) und Klassifikationen (Regularit\IeC {\"a}t und Ecken) f\IeC {\"u}r die Testfallgenerierung}}{4}{figure.2.2}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Baum und Testf\IeC {\"a}lle ohne Kombinatorik}}{6}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln Bearbeitung}}{8}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln \IeC {\"U}bersicht}}{8}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Testf\IeC {\"a}lle mit Anwendung der Abh\IeC {\"a}ngigkeitsregeln aus \ref {ttn.depencyRulesEdit} und \ref {ttn.depencyRules}}}{9}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Beispiel einer Tabelle in DOORS}}{10}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite {VarMan1}}}{11}{figure.3.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

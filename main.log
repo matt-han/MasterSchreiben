@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  2 DEC 2014 16:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  18 DEC 2014 15:58
 entering extended mode
 **main.tex
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.tex
@@ -925,7 +925,14 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 (C:\Users\hansert\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.aux)
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.aux
+
+LaTeX Warning: Label `ttn.depencyRules' multiply defined.
+
+
+LaTeX Warning: Label `doors.bespiel' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
@@ -940,8 +947,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 67.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 67.
@@ -991,14 +997,14 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
 
-<pictures/BHT-Logo-Basis.pdf, id=111, 303.39667pt x 99.95987pt>
+<pictures/BHT-Logo-Basis.pdf, id=107, 303.39667pt x 99.95987pt>
 File: pictures/BHT-Logo-Basis.pdf Graphic file (type pdf)
 
 <use pictures/BHT-Logo-Basis.pdf>
 Package pdftex.def Info: pictures/BHT-Logo-Basis.pdf used on input line 18.
 (pdftex.def)             Requested size: 199.16928pt x 65.61984pt.
 
-<pictures/BernerMattner_Logo.pdf, id=112, 485.815pt x 245.91875pt>
+<pictures/BernerMattner_Logo.pdf, id=108, 485.815pt x 245.91875pt>
 File: pictures/BernerMattner_Logo.pdf Graphic file (type pdf)
 
 <use pictures/BernerMattner_Logo.pdf>
@@ -1111,14 +1117,14 @@ been already used, duplicate ignored
 l.28 
       [3
 
-] <pictures/gruenePolygone_DE.png, id=222, 1203.7472pt x 368.1253pt>
+] <pictures/gruenePolygone_DE.png, id=217, 1203.7472pt x 368.1253pt>
 File: pictures/gruenePolygone_DE.png Graphic file (type png)
 
 <use pictures/gruenePolygone_DE.png>
 Package pdftex.def Info: pictures/gruenePolygone_DE.png used on input line 32.
 (pdftex.def)             Requested size: 421.31783pt x 128.84578pt.
 
-<pictures/roterKreis_DE.png, id=224, 1203.7472pt x 491.58656pt>
+<pictures/roterKreis_DE.png, id=219, 1203.7472pt x 491.58656pt>
 File: pictures/roterKreis_DE.png Graphic file (type png)
 
 <use pictures/roterKreis_DE.png>
@@ -1131,165 +1137,234 @@ ictures/gruenePolygone_DE.png> <C:/Users/hansert/Documents/Masterarbeit/MasterS
 chreiben/pictures/roterKreis_DE.png>]
 Kapitel 3.
 
-Overfull \hbox (3.61624pt too wide) in paragraph at lines 10--11
+Overfull \hbox (3.61624pt too wide) in paragraph at lines 8--9
  [][] \T1/ptm/m/n/10.95 Mit TE-STO-NA wird dem Tes-ter ein Tool an-ge-bo-ten, u
 m si-gni-fi-kan-te Test-sze-na-ri-en und -umfänge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 23.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 21.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [5
+)
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+[5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+<pictures/os_cpu_proto_max_kombinatorik.png, id=244, 807.7678pt x 294.34969pt>
+File: pictures/os_cpu_proto_max_kombinatorik.png Graphic file (type png)
+
+<use pictures/os_cpu_proto_max_kombinatorik.png>
+Package pdftex.def Info: pictures/os_cpu_proto_max_kombinatorik.png used on inp
+ut line 29.
+(pdftex.def)             Requested size: 403.8829pt x 147.17447pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
 
-Overfull \hbox (1.26633pt too wide) in paragraph at lines 64--65
+Overfull \hbox (1.26633pt too wide) in paragraph at lines 73--74
 \T1/ptm/m/n/10.95 ver-wen-den. TE-STO-NA im-ple-men-tiert stan-dard-mä-ÿig Mi-n
 i-ma-lab-de-ckung, Paarweise-, Drei-Wege-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+[6 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/pictures/os_cpu_pro
+to_max_kombinatorik.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--114
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+<pictures/dependency_rules_2.png, id=269, 426.09187pt x 357.58594pt>
+File: pictures/dependency_rules_2.png Graphic file (type png)
+
+<use pictures/dependency_rules_2.png>
+Package pdftex.def Info: pictures/dependency_rules_2.png used on input line 120
+.
+(pdftex.def)             Requested size: 213.04541pt x 178.79253pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+[7] <pictures/dependency_rules.png, id=283, 414.04688pt x 255.95625pt>
+File: pictures/dependency_rules.png Graphic file (type png)
+
+<use pictures/dependency_rules.png>
+Package pdftex.def Info: pictures/dependency_rules.png used on input line 144.
+(pdftex.def)             Requested size: 207.02292pt x 127.9778pt.
+
+<pictures/dependency_rules_noParam.png, id=284, 819.8128pt x 246.1697pt>
+File: pictures/dependency_rules_noParam.png Graphic file (type png)
+
+<use pictures/dependency_rules_noParam.png>
+Package pdftex.def Info: pictures/dependency_rules_noParam.png used on input li
+ne 155.
+(pdftex.def)             Requested size: 409.9054pt x 123.08453pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/pictures/dependency
+_rules_2.png> <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/pictures
+/dependency_rules.png>] [9 <C:/Users/hansert/Documents/Masterarbeit/MasterSchre
+iben/pictures/dependency_rules_noParam.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+<pictures/doorsTable.png, id=301, 664.73344pt x 464.4853pt>
+File: pictures/doorsTable.png Graphic file (type png)
+
+<use pictures/doorsTable.png>
+Package pdftex.def Info: pictures/doorsTable.png used on input line 189.
+(pdftex.def)             Requested size: 199.42157pt x 139.34666pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--114
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--114
+Overfull \hbox (32.01906pt too wide) in paragraph at lines 202--203
+[]\T1/ptm/m/n/10.95 Um die-se Auf-ga-be küm-mert sich der TE-STO-NA Plug-in \T1
+/ptm/m/it/10.95 com.berner_mattner.testona.requirements.doors\T1/ptm/m/n/10.95 
+.
+ []
+
+[10 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/pictures/doorsTabl
+e.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
 
-Underfull \vbox (badness 7203) has occurred while \output is active []
-
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
+
+ []
+
+<pictures/varianten.png, id=317, 475.02469pt x 392.21532pt>
+File: pictures/varianten.png Graphic file (type png)
+
+<use pictures/varianten.png>
+Package pdftex.def Info: pictures/varianten.png used on input line 220.
+(pdftex.def)             Requested size: 285.017pt x 235.331pt.
+ [11 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/pictures/variante
+n.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--154
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--154
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
 
  []
 
-[9]
+[13]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 208.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 208.
+nput line 290.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 290.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\4_Loesungsansaetze/loe
-sungsansaetze.tex [10] [11]
+sungsansaetze.tex [14]
 Kapitel 4.
-)
-(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\5_Systementwurf/system
-entwurf.tex [12
+[15
 
-]
+])
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\5_Systementwurf/system
+entwurf.tex [16]
 Kapitel 5.
-)
+[17
+
+])
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\6_Testbeschreibung/tes
 tbeschreibung.tex)
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\7_Something/something.
 tex)
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\8_Zusammenfassung_und_
-Ausblick/zusammenfassung_u_ausblick.tex [13
-
-]
+Ausblick/zusammenfassung_u_ausblick.tex [18]
 Kapitel 6.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 12--120
 
  []
 
-[14
+[19
 
 ] (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.lof)
 \tf@lof=\write7
 
-[15
+[20
 
 ] (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.lol)
 \tf@lol=\write8
 
-(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\anhang.tex [16
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\anhang.tex [21
 
 ]
 Anhang A.
-[17
+[22
 
-] [18]) [19]
+] [23]) [24]
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.bbl
 Overfull \hbox (48.94844pt too wide) in paragraph at lines 40--43
 []\T1/ptm/m/n/10.95 IEEE Com-pu-ter So-cie-ty, https://courses.cs.ut.ee/MTAT.03
@@ -1297,12 +1372,12 @@ Overfull \hbox (48.94844pt too wide) in paragraph at lines 40--43
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
 []\T1/ptm/m/n/10.95 Wikipedia, http://de.wikipedia.org/wiki/Klassifikationsbaum
 -Methode.
  []
 
-) [20
+) [25
 
 
 ]
@@ -1312,31 +1387,36 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4A3F31980C672CC3AB4DFA37E0E69046;1776.
+(rerunfilecheck)             Checksum: 692B3A6A32FE6ED3576E0CDCB001E7ED;1707.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
  ) 
 Here is how much of TeX's memory you used:
- 11260 strings out of 493921
- 158935 string characters out of 3144870
- 303471 words of memory out of 3000000
- 14162 multiletter control sequences out of 15000+200000
+ 11304 strings out of 493921
+ 160054 string characters out of 3144870
+ 301471 words of memory out of 3000000
+ 14187 multiletter control sequences out of 15000+200000
  61826 words of font info for 99 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,12n,51p,1113b,1198s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,12n,49p,1016b,1198s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{lstnumber.-2.2} has been referenced but does not 
 exist, replaced by a fixed one
 
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
-/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on main.pdf (26 pages, 498627 bytes).
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on main.pdf (31 pages, 850314 bytes).
 PDF statistics:
- 437 PDF objects out of 1000 (max. 8388607)
- 112 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 498 PDF objects out of 1000 (max. 8388607)
+ 125 named destinations out of 1000 (max. 500000)
+ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
 
