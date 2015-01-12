@@ -1,0 +1,68 @@
+TASKS
+=====
+- Playground definieren --> #param[] und DOORS lernen
+- Testona Programmstruktur verstehen (wo wird was gemacht?)
+- Java API für DOORS (Jens R.)
+- DOORS Parameterinfo. local im Rechner speichern. Wie wird das gemacht? (lesen&schreiben)
+
+INFOS
+=====
+* Verbindung zwischen DOORS Variante und Leaf
+	
+	nach Import einer Variante keine auto. Bezeihungen / Verlinkungen?
+	Ja, man exkludiert die nicht gewollte/gebrauchte Elemente
+	Manuelle Verbindungen müssen immer gemacht werden
+	Varianten in DOORS ==> Vorteil vom Import ist: alles ist schon definiert
+	
+* Beziehung von DOORS Anforderung / Parameter zu Leaf ==> Anforderung wird gespeichert, Ziel: Parameter lesen und verknupfen
+
+ABLAUF - WORKFLOW
+=================
+- DOORS Datenbank mit Anforderungen, Parameter und Varianten definieren
+- In TESTONA Baum erstellen
+- TESTONA mit DOORS verbinden und Anforderungen, Varianten werden importiert (Parameter sind in den Anforderungen)
+- Varianten mit Baumelemente einteilen/exkludieren
+- Anforderung mit definierten Parameter mit einer Klasse verbinden Drag&Drop
+- *** #param[] Wert mit Label der Klasse ersetzen/hinzufügen
+- Testfälle werden erzeugt (Abhängigskeitsregeln beachten)
+
+
+ZU PROGRAMMIEREN
+================
+Wie verknüpfe ich ein DOORS Parameter mit eine Klasse in TESTONA?
+- Manuell durch Drag&Drop einer Anforderung. --> Wo ist das Implementiert??
+nach dem D&D muss die Anforderung auf #param[] überprüft werden und falls ja der Parameter laden
+Methode für:
+- Überprüfen von Parameter --> suche nach #param?
+- Laden des Parameter aus DOORS
+- Parameter Local speichern --> XML Datei erweitern? Neuer Eintrag <Tag, type param> Liste der parameter
+								oder in VariantsList in jeder variante die parameter speichern?
+- Parameter Local lesen     --> " " "
+- Wechseln der Variante Parameter neuladen (überarbeiten)
+
+
+- Speichern der Parameter in *.testona Datei nicht am Anfang machen. Java-Object Tag wird serialisiert 
+- Add/RemoveVariantCommand können Ghost Einträge existieren? laut schmitt TODO
+
+JAVA - DOORS
+============
+Aufruf von BM_PARAMETERS_MODULE_NAME über Java ergibt den Pfad zu den Parametertabelle in DOORS.
+So können Parameter aus DOORS geladen werden.
+
+
+XML
+===
+Planung für Parameter
+
+<Tag id="c165" type="VariantsList">
+        <Content key="2" value="Cabrio"/>
+        <Content key="1" value="Kombi"/>
+        <Content key="0" value="Limo"/>
+</Tag>
+
+<Tag id="cXXX" type="ParametersList">
+		<Param id="cDDD" name="EEE" value="ZZZ" key="2"/>
+		<Param id="cXXX" name="YYY" value="AAA" key="2"/>
+		<Param id="cXXX" name="YYY" value="BBB" key="1"/>
+		<Param id="cXXX" name="YYY" value="CCC" key="0"/>		
+<Tag/>
