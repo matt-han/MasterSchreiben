@@ -5,6 +5,7 @@ TASKS
 - Java API für DOORS (Jens R.)
 - DOORS Parameterinfo. local im Rechner speichern. Wie wird das gemacht? (lesen&schreiben)
 
+
 INFOS
 =====
 * Verbindung zwischen DOORS Variante und Leaf

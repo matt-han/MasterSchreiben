@@ -5,6 +5,18 @@ NOTES
 
 - Speichern der Parameter in *.testona Datei nicht am Anfang machen. Java-Object Tag wird serialisiert 
 
+FRAGEN
+======
+- Objektenherarchy
+- Wenn die Variantenansicht geändert wird, was passiert genau? Ablauf?
+- Welches Objekt beinhaltet die Requirements? VariantInportHelper importedRequirements?
+- Genauer zu Tags / GST
+- Filter, was genau wird filtiert, wie funktioniert es?
+- 
+
+
+
+
 
 JAVA - DOORS
 ============
