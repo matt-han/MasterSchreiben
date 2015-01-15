@@ -1,21 +1,27 @@
 NOTES
 =====
-- Listener für Pfeile finden --> Update Parameterwert in Label
-- Drag&Drop Listener from Requirements to Leaf --> Parameterparser
+- Speichern der Parameter in *.testona Datei nicht am Anfang machen. Java-Object Tag wird serialisiert
+- Listener für Pfeile finden --> Update Parameterwert in Label, package com.berner_mattner.testona.variants.handler ShowNextVariantHandler
 
-- Speichern der Parameter in *.testona Datei nicht am Anfang machen. Java-Object Tag wird serialisiert 
 
 FRAGEN
 ======
-- Objektenherarchy
-- Wenn die Variantenansicht geändert wird, was passiert genau? Ablauf?
-- Welches Objekt beinhaltet die Requirements? VariantInportHelper importedRequirements?
+- Welches Objekt beinhaltet die Requirements? VariantImportHelper importedRequirements? wie kann ich es lesen
+- Drag&Drop Listener from Requirements to Leaf --> Parameterparser, 
+
+
+
+FAQ
+===
+- Wenn die Variantenansicht geändert wird, was passiert genau?
+Ein Filter wird neu gesetzt, dann updateTestRee und updateVisualization
+
 - Genauer zu Tags / GST
+ich muss mich um das schreiben und lesen nicht kümmern!
+
 - Filter, was genau wird filtiert, wie funktioniert es?
-- 
-
-
-
+je nach aktivierte Variante und Variantenname werden die Filtergesetzt.
+mit updateTestTree und updateVisualization wird auch der Filter aktiviert
 
 
 JAVA - DOORS
@@ -24,7 +30,7 @@ Aufruf von BM_PARAMETERS_MODULE_NAME über Java ergibt den Pfad zu den Parameter
 So können Parameter aus DOORS geladen werden.
 
 
-XML
+XML --> nicht nötig..... nur als referenz da
 ===
 Planung für Parameter
 

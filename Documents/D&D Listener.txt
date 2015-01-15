@@ -1,0 +1,53 @@
+add
+editor.getEditingDomain().addResourceSetListener(this.resourceSetListener);
+					
+remove
+editor.getEditingDomain().removeResourceSetListener(this.resourceSetListener);
+					
+FÜR BEISPIELE Type Hierarchy von MyResourceSetListerner
+				
+NACH REQ AUFPASSEN
+	for (Notification notification : event.getNotifications())
+	{
+		if (notification.getNotifier() instanceof RequirementsListTag // requirement had been added
+			|| notification.getNotifier() instanceof RequirementsViewsTag // requirements order had been changed
+			|| notification.getNotifier() instanceof StringToStringListMapEntryImpl)
+		{
+			update |= UPDATE_REQUIREMENTS;
+			break;
+		}
+		notification.getNewValue() instanceof RequirementTag // requirement linkage had been added
+		notification.getOldValue() instanceof RequirementTag // requirement linkage  had  been removed
+		notification.getNotifier() instanceof RequirementTag // requirement inkage had been added  or  removed
+		notification.getNotifier() instanceof StringToIndieRequirementMapEntryImpl // requirement value changed
+	}
+	
+	
+private class MyResourceSetListener implements ResourceSetListener
+{
+@Override
+		public void resourceSetChanged(ResourceSetChangeEvent event) {
+			for (Notification notification : event.getNotifications()) {
+				if (notification.getNotifier() instanceof TagManagerTag
+						|| notification.getNewValue() instanceof Icon
+						|| notification.getOldValue() instanceof Icon) {
+					TagManagerDialog.this.updateTagsList();
+					return;
+				}
+			}
+		}
+
+@Override
+		public void resourceSetChanged(ResourceSetChangeEvent event) {
+			for (Notification notification : event.getNotifications()) {
+				if (notification.getNotifier() instanceof RuleViolations) {
+					RuleViolations rv;
+					rv = (RuleViolations) notification.getNotifier();
+					rules = (java.util.List<Object>) rv.getViolatedRules();
+					update();
+					break;
+				}
+			}
+		}
+		
+}

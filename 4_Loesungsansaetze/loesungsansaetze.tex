@@ -1,14 +1,68 @@
 \chapter{Lösungsansätze}\label{chp:loesungsansaetze}
 
+Um besser den Lösungsansatz zu verstehen, wird erstmal der Ablauf von die Erstellung von Anforderung bis zu einem Testfall erläutert. Als erstes wird in DOORS alle schon definierte Anforderungen eingetragen (siehe \ref{sec:DOORS}). In diesen Anforderung können Parameter vorkommen, die für die Testfälle relevant sind. Die Parameter werden als folgendes in einer Anforderung eintragen:\\
 
+\begin{center}
+\#param [\textit{Parametername}]\\
+\#param [maximale\_Geschwindigkeit]
+\end{center}
+
+Die Parameter sind in einer Parameter-Tabelle definiert, wo die jeweilige Parameterwerte eingetragen werden. Der Grund, dass es eine extra Tabelle für Parameter gibt, kommt daher, dass die Parameter in der Regel pro Variante verschiedene Werte annehmen. Zum Beispiel beträgt die maximale Geschwindigkeit bei einem Cabrio 150 km/h  und bei einem Kombi 200 km/h. Dank dieser Tabelle werden die Varianten (Cabrio und Kombi) die richtige Parameterwerte zugewiesen.\\
+
+Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, die Parametern beinhalten, mit der Parameter-Tabelle manuell verlinkt werden. Wenn dieser Vorgang abgeschlossen ist, kann über die TESTONA Oberfläche die Verbindung zu DOORS aufgebaut werden um die nötigen Informationen zu importieren. Es wird davon ausgegangen, dass der Tester bereist ein Klassifikationsbaum passend zu das Produkt und die Anforderungen erstellt hat. Jetzt werden die in DOORS definierte Varianten importiert. Als erstes muss der Tester die Baumelemente der richtigen Variante zuordnen (durch ein Ausschlussverfahren, es wird angenommen, dass alle Baumelemente in alle Varianten gültig sind). 
 
 
 %#######################################################################################
 %#######################################################################################
-\section{Parameterspeicherung und Visualisierung}
+\newpage
+\section{Parameterspeicherung}
 \paragraph{}
-Parameter aus DOORS in TESTONA importieren und speichern\\
-Je nach ausgewählte Variante der richtige Parameterwert anzeigen\\
+
+%1.1 Doors beinhaltet vereinbarte Anforderungen mit definierten Parametern. Diese Parameter repräsentieren Werte, die je nach Variante, unterschiedlich sein können (zum Beispiel: die maximale Geschwindigkeit eines Autos). Diese Menge von Werten muss nach TESTONA importiert und gespeichert werden. Zu beachten ist, dass jeder Wert zu der richtigen Produktvariante zugeordnet wird. Dafür kann ein Enum oder ein Zweidimensionales Array (Variante Tag/ID und Parameterwert) benutzt werden. Diese Information muss lokal auf dem Rechner gespeichert werden (Metadaten ?), da sie zur Verfügung stehen muss, auch wenn keine Verbindung zur Datenbank gibt. Die Aufrufe zur Datenbank werden über eine Java-API erfolgen.
+ 
+Um die Parameter erfolgreich in TESTONA zu speichern, müssen sie aus DOORS importiert werden und aus den Anforderungen gelesen werden. Durch eine gezielte Anfrage an DOORS über eine Java API kann die Parameter-Tabelle in TESTONA geladen werden. Die darin bestimmte Beziehungen (Parameterwert zu Variante) müssen fest in die TESTONA Datei gespeichert werden, damit diese auch ohne eine DOORS Verbindung zur Verfügung stehen. Als erstes werden die Parameterwerte in Objekte gespeichert und einen \textit{Tag} (Kennzeichen) gegeben und nach Programmende in die TESTONA Datei im XML Format gespeichert. Dank des \textit{Tags} kann beim Programmstart wieder der Parameterwert gelesen werden und währen das Programm ausgeführt wird, Änderungen vornehmen.\\
+
+Einer der Besonderheiten von MERAN ist, dass Anforderungen and Baumelemente per Drag\&Drop verknüpft werden können. Mit dieser Funktion muss der Tester die Anforderung mit einem zugehörigen Baumelement verknüpfen (auslösendes Element). An dieser Stelle beginnt die Parameterspeicherung. Nachdem die Verlinkung abgeschlossen ist, muss eine Funktion den Text der verlinkten Anforderung analysieren, um Parameter zu erkennen.\\
+
+Wird ein Parameter erkannt, so muss dieser aus den bereits geladene Parameter-Tabelle zugeordnet werden. Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und ein Baumelement verknüpft werden. Als Ergebnis werden folgenden Beziehungen erwartet:
+
+\begin{center}
+\textbf{Anforderung 1: }Das Auto kann maximal \#param[max\_geschwindigkeit] km/h fahren.
+\end{center}
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{|l||c|c|}
+	 \hline
+	 Variante &Maximale Geschwindigkeit &Anforderung\\
+	 \hline\hline
+	 Cabrio   &150                      & 1\\
+	 \hline
+	 Kombi    &200                      & 1\\
+	 \hline
+	 Limo     &250                      & 1\\
+	 \hline
+	\end{tabular}
+	
+	\caption{Beispiel für Zuordnung zwischen Varianten und Parameterwert aus einer Anforderung}
+	\label{table:4TestCases}
+\end{center}
+\end{table}
+
+
+%#######################################################################################
+%#######################################################################################
+\newpage
+\section{Visualisierung}
+\paragraph{}
+%1.2 Wenn der Tester die Ansicht zwischen Varianten ändert, muss der Wert hinter dem Parameter auf die jeweilige Variante aktualisiert werden (maximale Geschwindigkeit von Cabrio = x, Limo = y, Kombi = z).
+
+% Als Ergebnis soll bei der Änderung der Variantenansicht, auch  geändert werden. Ist die Variante \textit{Cabrio} aktiv, so muss das Baumelement mit die maximalen Türanzahl der Wert zwei anzeigen. Wird die Variantenansicht geändert auf die Variante \textit{Kombi}, so muss das Baumelement der Wert fünf anzeigen.
+
+Wenn die Beziehungen zwischen Varianten, Parameter und Anforderungen erfolgreich entstanden sind, können jetzt die gespeicherte Parameterwerte angezeigt werden. Hier ist gefordert, dass wenn der Benutzer die Variantenansicht ändert (durch Betätigung an der Benutzeroberfläche) die Beschriftung (Label) des Baumelements aktualisiert werden.\\
+
+screen shot ausgewählter variante (pfeile und combo box) und max geschw. in tree \\
+
 %#######################################################################################
 %#######################################################################################
 \newpage
@@ -22,3 +76,16 @@ Innerhalb einer Variante auf Testfallduplikate überprüfen
 \section{Optimierungskriterien}
 \paragraph{}
 Testablauf optimieren in Betrachtung auf die Varianten und mögliche Testduplikate
+
+%#######################################################################################
+%#######################################################################################
+\newpage
+\section{Benutzeroberfläche}
+\paragraph{}
+
+%Um die Handhabung der Varianten bezogen auf die Testfälle und die Testgenerierung benutzerfreundlicher
+%und effizienter zu gestalten, soll die Benutzung des Variantenmanagements durch
+%einen Testingenieur untersucht werden. Resultierend aus den erworbenen Erkenntnissen wird das
+%Lösungsdesign für eine Erweiterung des bestehenden Variantenmanagements in TESTONA konzipiert.
+
+nach besprechen mit kollegen keine änderung nötig erstmal \\
