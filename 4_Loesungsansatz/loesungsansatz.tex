@@ -1,4 +1,4 @@
-\chapter{Lösungsansätze}\label{chp:loesungsansaetze}
+\chapter{Lösungsansatz}\label{chp:loesungsansatz}
 
 Um besser den Lösungsansatz zu verstehen, wird erstmal der Ablauf von die Erstellung von Anforderung bis zu einem Testfall erläutert. Als erstes wird in DOORS alle schon definierte Anforderungen eingetragen (siehe \ref{sec:DOORS}). In diesen Anforderung können Parameter vorkommen, die für die Testfälle relevant sind. Die Parameter werden als folgendes in einer Anforderung eintragen:\\
 
@@ -19,6 +19,9 @@ Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, 
 \paragraph{}
 
 %1.1 Doors beinhaltet vereinbarte Anforderungen mit definierten Parametern. Diese Parameter repräsentieren Werte, die je nach Variante, unterschiedlich sein können (zum Beispiel: die maximale Geschwindigkeit eines Autos). Diese Menge von Werten muss nach TESTONA importiert und gespeichert werden. Zu beachten ist, dass jeder Wert zu der richtigen Produktvariante zugeordnet wird. Dafür kann ein Enum oder ein Zweidimensionales Array (Variante Tag/ID und Parameterwert) benutzt werden. Diese Information muss lokal auf dem Rechner gespeichert werden (Metadaten ?), da sie zur Verfügung stehen muss, auch wenn keine Verbindung zur Datenbank gibt. Die Aufrufe zur Datenbank werden über eine Java-API erfolgen.
+AUSLÖSE ELEMENT LISTENER UND MEHR PROGRAMMIERUNG!\\
+
+ 
  
 Um die Parameter erfolgreich in TESTONA zu speichern, müssen sie aus DOORS importiert werden und aus den Anforderungen gelesen werden. Durch eine gezielte Anfrage an DOORS über eine Java API kann die Parameter-Tabelle in TESTONA geladen werden. Die darin bestimmte Beziehungen (Parameterwert zu Variante) müssen fest in die TESTONA Datei gespeichert werden, damit diese auch ohne eine DOORS Verbindung zur Verfügung stehen. Als erstes werden die Parameterwerte in Objekte gespeichert und einen \textit{Tag} (Kennzeichen) gegeben und nach Programmende in die TESTONA Datei im XML Format gespeichert. Dank des \textit{Tags} kann beim Programmstart wieder der Parameterwert gelesen werden und währen das Programm ausgeführt wird, Änderungen vornehmen.\\
 

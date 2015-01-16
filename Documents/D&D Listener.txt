@@ -1,11 +1,15 @@
-add
-editor.getEditingDomain().addResourceSetListener(this.resourceSetListener);
-					
-remove
-editor.getEditingDomain().removeResourceSetListener(this.resourceSetListener);
-					
+
+
+package com.berner_mattner.testona.requirements.gui.viewparts.req;					
 FÜR BEISPIELE Type Hierarchy von MyResourceSetListerner
-				
+
+
+private final ResourceSetListener resourceSetListener;
+this.resourceSetListener = new MyResourceSetListener();
+add:    editor.getEditingDomain().addResourceSetListener(this.resourceSetListener);
+remove: editor.getEditingDomain().removeResourceSetListener(this.resourceSetListener);
+
+
 NACH REQ AUFPASSEN
 	for (Notification notification : event.getNotifications())
 	{
@@ -49,5 +53,30 @@ private class MyResourceSetListener implements ResourceSetListener
 				}
 			}
 		}
-		
+	
+	@Override
+	public NotificationFilter getFilter() {
+		return null;
+	}
+
+	@Override
+	public boolean isAggregatePrecommitListener() {
+		return false;
+	}
+
+	@Override
+	public boolean isPostcommitOnly() {
+		return false;
+	}
+
+	@Override
+	public boolean isPrecommitOnly() {
+		return false;
+	}
+
+	@Override
+	public Command transactionAboutToCommit(ResourceSetChangeEvent event)
+			throws RollbackException {
+		return null;
+	}
 }

@@ -26,7 +26,7 @@
 \contentsline {paragraph}{}{13}{section*.13}
 \contentsline {subsection}{\numberline {3.4.4}JFace}{14}{subsection.3.4.4}
 \contentsline {paragraph}{}{14}{section*.14}
-\contentsline {chapter}{\numberline {4}L\IeC {\"o}sungsans\IeC {\"a}tze}{15}{chapter.4}
+\contentsline {chapter}{\numberline {4}L\IeC {\"o}sungsansatz}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Parameterspeicherung}{16}{section.4.1}
 \contentsline {paragraph}{}{16}{section*.15}
 \contentsline {section}{\numberline {4.2}Visualisierung}{17}{section.4.2}
