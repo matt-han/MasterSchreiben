@@ -19,18 +19,28 @@ Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, 
 \paragraph{}
 
 %1.1 Doors beinhaltet vereinbarte Anforderungen mit definierten Parametern. Diese Parameter repräsentieren Werte, die je nach Variante, unterschiedlich sein können (zum Beispiel: die maximale Geschwindigkeit eines Autos). Diese Menge von Werten muss nach TESTONA importiert und gespeichert werden. Zu beachten ist, dass jeder Wert zu der richtigen Produktvariante zugeordnet wird. Dafür kann ein Enum oder ein Zweidimensionales Array (Variante Tag/ID und Parameterwert) benutzt werden. Diese Information muss lokal auf dem Rechner gespeichert werden (Metadaten ?), da sie zur Verfügung stehen muss, auch wenn keine Verbindung zur Datenbank gibt. Die Aufrufe zur Datenbank werden über eine Java-API erfolgen.
-AUSLÖSE ELEMENT LISTENER UND MEHR PROGRAMMIERUNG!\\
-
- 
  
 Um die Parameter erfolgreich in TESTONA zu speichern, müssen sie aus DOORS importiert werden und aus den Anforderungen gelesen werden. Durch eine gezielte Anfrage an DOORS über eine Java API kann die Parameter-Tabelle in TESTONA geladen werden. Die darin bestimmte Beziehungen (Parameterwert zu Variante) müssen fest in die TESTONA Datei gespeichert werden, damit diese auch ohne eine DOORS Verbindung zur Verfügung stehen. Als erstes werden die Parameterwerte in Objekte gespeichert und einen \textit{Tag} (Kennzeichen) gegeben und nach Programmende in die TESTONA Datei im XML Format gespeichert. Dank des \textit{Tags} kann beim Programmstart wieder der Parameterwert gelesen werden und währen das Programm ausgeführt wird, Änderungen vornehmen.\\
 
-Einer der Besonderheiten von MERAN ist, dass Anforderungen and Baumelemente per Drag\&Drop verknüpft werden können. Mit dieser Funktion muss der Tester die Anforderung mit einem zugehörigen Baumelement verknüpfen (auslösendes Element). An dieser Stelle beginnt die Parameterspeicherung. Nachdem die Verlinkung abgeschlossen ist, muss eine Funktion den Text der verlinkten Anforderung analysieren, um Parameter zu erkennen.\\
+Einer der Besonderheiten von MERAN in Verbindung mit TESTONA ist, dass Anforderungen and Baumelemente per Drag\&Drop verknüpft werden können. Mit dieser Funktion muss der Tester die Anforderung mit einem zugehörigen Baumelement verknüpfen (auslösendes Element). Damit das Programm die Aktion des Benutzer mitbekommen, wird an dieser Stelle ein \textit{Listener} implementiert. Der \textit{Listener} bekommt verschiedene Nachrichten von Ereignisse die gefiltert werden müssen. Wenn die Nachricht empfangen wird, dass eine Anforderung an ein Baumelement verknüpft wurde, muss eine zu programmierende Methode das Anforderungstext von dieses Baumelement lesen und nach Parameter suchen. Es wird davon ausgegangen, dass ein Baumelement nur eine Anforderung beinhalten kann und eine Anforderung nur ein Parameter beinhaltet. Wird in die gelesene Anforderung ein Parameter gefunden, so müssen die möglichen Werten dieses Parameters aus die DOORS Parameter-Tabelle gelesen und gespeichert werden. An dieser Stelle beginnt die Parameterspeicherung.\\
 
-Wird ein Parameter erkannt, so muss dieser aus den bereits geladene Parameter-Tabelle zugeordnet werden. Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und ein Baumelement verknüpft werden. Als Ergebnis werden folgenden Beziehungen erwartet:
+Für die Parameterspeicherung ergeben sich zwei Lösungswege. Die erste Lösung lautet, die Parameter-Tabelle beim Import der Anforderung gleich in TESTONA zu speichern. Diese Lösung hat den Vorteil, dass eine Verbindung zu DOORS nicht mehr notwendig ist. Somit muss nach eine Verbindung nicht geprüft werden oder die Verbindung muss nicht wieder aufgebaut werden. Das heißt der Benutzer muss sich nur einmal mit DOORS Verbinden und kann in der Zukunft problemlos die Anforderungen an Baumelement verlinken und zugleich werden die Parameter gelesen und gespeichert. Der Nachteil ist, dass möglicherweise unnötige Daten in TESTONA gespeichert werden.\\
+
+Die zweite Lösung ist der Gegensatz zu die erste. Hier werden jeweils nur die Daten gespeichert, die der Benutzer im Moment verbraucht. Wird eine Anforderung an einem Baumelement verlinkt, so muss eine Verbindung zu DOORS aufgebaut werden (wenn sie nicht vorhanden ist) und die Parameter-Tabelle aufrufen und in TESTONA speichern. Der große Nachteil dieser Lösung ist, dass der Benutzer möglicherweise nicht eine Verbindung zu DOORS aufbauen kann (Server nicht Vorhanden, keine Zugriff Möglichkeiten, etc.). Welcher der beiden Lösungen implementiert wird, wird erst genauer analysiert und ist auch abhängig von den Anforderungen verschiedener Kunden und wie diese TESTONA anwenden. Die implementierte Lösung wird in Kapitel \ref{chp:systementwurf} vorgestellt und begründet.\\
+
+
+Sind die Parameterwerte in TESTONA vorhanden, müssen diese an der richtigen Variante noch zugeordnet werden. Dafür ist vorgesehen, dass der Parameterwert als Eigenschaft des Baumelementes gespeichert wird. Die Darstellungsstruktur für die Variantenansicht ist etwa folgendermaßen definiert:\\
+
+Variante hat Baumelemente hat Name,ID, etc in UML diagram
+
+
+
+
+
+Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und ein Baumelement verknüpft werden. Als Ergebnis werden folgenden Beziehungen erwartet:
 
 \begin{center}
-\textbf{Anforderung 1: }Das Auto kann maximal \#param[max\_geschwindigkeit] km/h fahren.
+\textbf{Anforderung 1: }Das Auto hat eine maximal Geschwindigkeit von \#param[max\_geschwindigkeit] km/h.
 \end{center}
 
 \begin{table}[h]
