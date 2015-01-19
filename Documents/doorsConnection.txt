@@ -1,0 +1,46 @@
+DOORS CONNECTION
+================
+datainterface!!!!!!
+get table contents!!!!
+
+
+import com.berner_mattner.testona.requirements.PreferencesManagment;
+import com.berner_mattner.testona.requirements.datamodel.DataInterface;
+import com.berner_mattner.testona.requirements.manager.ConnectionManager;
+import com.berner_mattner.testona.requirements.manager.Connector;
+import com.berner_mattner.testona.requirements.manager.ConnectorManager;
+import com.berner_mattner.testona.requirements.manager.ExtensionException;
+
+IMportWizardDialog nextPressed()
+this.temp = ((ImportVariantsWizard) this.getWizard()).getPreferenceManagement().getValue((String) combo.getItem(combo.getSelectionIndex()));
+			this.dataInterface = ((ImportVariantsWizard) this.getWizard()).getDataInterface();
+			this.dataInterface.addListener(this);
+			this.dataInterface.connectInterface(makeParams(ImportWizardDialog.this.temp));
+					
+========================================================================================					
+com.berner_mattner.testona.variants.gui.pages.imports;
+ImportVariantsWizard extends Wizard implements IImportWizard 
+
+private DataInterface dataInterface;
+private PreferencesManagment management;
+private final VariantsManager manager;
+
+Connector interfaceExtension;
+ConnectionManager conManager = new ConnectionManager();
+try {
+	interfaceExtension = ConnectorManager.getInstance().getConnector(
+			"doors");
+	this.dataInterface = conManager.getNewDataInterface(
+			interfaceExtension, this);
+} catch (ExtensionException e) {
+	e.printStackTrace();
+}
+management = com.berner_mattner.testona.requirements.Activator.getDefault().getPreferencesManagment();
+========================================================================================
+
+//com.berner_mattner.testona.requirements.Activator
+		for (Entry<String, String[]> entry : Activator.getDefault() //prefList ist eine combo box
+				.getPreferencesManagment().getPrefs()) {
+			if (entry.getValue()[0].equals("doors")) {
+				this.prefList.add(entry.getKey());
+			}

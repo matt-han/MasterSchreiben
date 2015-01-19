@@ -1,6 +1,26 @@
+if (notification.getNotifier() instanceof TreeItem){ // something changed in the treeItem
+	if (notification.getNewValue() instanceof RequirementTag){	// requirement linkage had been added
+		string reqText = getRequirementText();
+		if (searchForParameters(reqText) == true)
+			doorsModul.getParametersValue(param);
+	
+	}
+	else if	(notification.getOldValue() instanceof RequirementTag){ // requirement linkage  had  been removed	
+		delete 
+	
+	
+	}
+	
+	
+		
+} else if (notification.getNotifier() instanceof StringToStringListMapEntryImpl){ // requirement value changed 
+	
+}
 
 
-package com.berner_mattner.testona.requirements.gui.viewparts.req;					
+
+
+package com.berner_mattner.testona.requirements.gui.viewparts.req class TestonaGridRequirementsTagModel					
 FÜR BEISPIELE Type Hierarchy von MyResourceSetListerner
 
 
@@ -15,7 +35,7 @@ NACH REQ AUFPASSEN
 	{
 		if (notification.getNotifier() instanceof RequirementsListTag // requirement had been added
 			|| notification.getNotifier() instanceof RequirementsViewsTag // requirements order had been changed
-			|| notification.getNotifier() instanceof StringToStringListMapEntryImpl)
+			|| notification.getNotifier() instanceof StringToStringListMapEntryImpl)// requirement value changed
 		{
 			update |= UPDATE_REQUIREMENTS;
 			break;
