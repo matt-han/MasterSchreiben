@@ -1,15 +1,16 @@
 \chapter{Lösungsansatz}\label{chp:loesungsansatz}
 
-Um besser den Lösungsansatz zu verstehen, wird erstmal der Ablauf von die Erstellung von Anforderung bis zu einem Testfall erläutert. Als erstes wird in DOORS alle schon definierte Anforderungen eingetragen (siehe \ref{sec:DOORS}). In diesen Anforderung können Parameter vorkommen, die für die Testfälle relevant sind. Die Parameter werden als folgendes in einer Anforderung eintragen:\\
+Um besser den Lösungsansatz zu verstehen, wird erstmal der Ablauf von der Erstellung von Anforderung bis zu einem Testfall erläutert. Als erstes wird in DOORS alle schon definierte Anforderungen eingetragen (siehe \ref{sec:DOORS}). In diesen Anforderung können Parameter vorkommen, die für die Testfälle relevant sind. Die Parameter werden als folgendes in einer Anforderung eintragen:\\
 
 \begin{center}
 \#param [\textit{Parametername}]\\
-\#param [maximale\_Geschwindigkeit]
+\#param [maximale\_Geschwindigkeit]\\
+Das Auto hat eine maximal Geschwindigkeit von \#param[max\_geschwindigkeit] km/h
 \end{center}
 
 Die Parameter sind in einer Parameter-Tabelle definiert, wo die jeweilige Parameterwerte eingetragen werden. Der Grund, dass es eine extra Tabelle für Parameter gibt, kommt daher, dass die Parameter in der Regel pro Variante verschiedene Werte annehmen. Zum Beispiel beträgt die maximale Geschwindigkeit bei einem Cabrio 150 km/h  und bei einem Kombi 200 km/h. Dank dieser Tabelle werden die Varianten (Cabrio und Kombi) die richtige Parameterwerte zugewiesen.\\
 
-Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, die Parametern beinhalten, mit der Parameter-Tabelle manuell verlinkt werden. Wenn dieser Vorgang abgeschlossen ist, kann über die TESTONA Oberfläche die Verbindung zu DOORS aufgebaut werden um die nötigen Informationen zu importieren. Es wird davon ausgegangen, dass der Tester bereist ein Klassifikationsbaum passend zu das Produkt und die Anforderungen erstellt hat. Jetzt werden die in DOORS definierte Varianten importiert. Als erstes muss der Tester die Baumelemente der richtigen Variante zuordnen (durch ein Ausschlussverfahren, es wird angenommen, dass alle Baumelemente in alle Varianten gültig sind). 
+Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, die Parametern beinhalten, mit der Parameter-Tabelle manuell verlinkt werden. Wenn dieser Vorgang abgeschlossen ist, kann über die TESTONA Oberfläche die Verbindung zu DOORS aufgebaut werden um die nötigen Informationen zu importieren. Es wird davon ausgegangen, dass der Tester bereits ein Klassifikationsbaum passend zum testendem Produkt und die dazu gehörige Anforderungen erstellt hat. Jetzt werden die in DOORS definierte Varianten importiert. Als erstes muss der Tester die Baumelemente der richtigen Variante zuordnen (durch ein Ausschlussverfahren, es wird angenommen, dass alle Baumelemente in alle Varianten gültig sind). 
 
 
 %#######################################################################################
@@ -17,12 +18,10 @@ Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, 
 \newpage
 \section{Parameterspeicherung}
 \paragraph{}
-
-%1.1 Doors beinhaltet vereinbarte Anforderungen mit definierten Parametern. Diese Parameter repräsentieren Werte, die je nach Variante, unterschiedlich sein können (zum Beispiel: die maximale Geschwindigkeit eines Autos). Diese Menge von Werten muss nach TESTONA importiert und gespeichert werden. Zu beachten ist, dass jeder Wert zu der richtigen Produktvariante zugeordnet wird. Dafür kann ein Enum oder ein Zweidimensionales Array (Variante Tag/ID und Parameterwert) benutzt werden. Diese Information muss lokal auf dem Rechner gespeichert werden (Metadaten ?), da sie zur Verfügung stehen muss, auch wenn keine Verbindung zur Datenbank gibt. Die Aufrufe zur Datenbank werden über eine Java-API erfolgen.
  
-Um die Parameter erfolgreich in TESTONA zu speichern, müssen sie aus DOORS importiert werden und aus den Anforderungen gelesen werden. Durch eine gezielte Anfrage an DOORS über eine Java API kann die Parameter-Tabelle in TESTONA geladen werden. Die darin bestimmte Beziehungen (Parameterwert zu Variante) müssen fest in die TESTONA Datei gespeichert werden, damit diese auch ohne eine DOORS Verbindung zur Verfügung stehen. Als erstes werden die Parameterwerte in Objekte gespeichert und einen \textit{Tag} (Kennzeichen) gegeben und nach Programmende in die TESTONA Datei im XML Format gespeichert. Dank des \textit{Tags} kann beim Programmstart wieder der Parameterwert gelesen werden und währen das Programm ausgeführt wird, Änderungen vornehmen.\\
+Um die Parameter erfolgreich in TESTONA zu speichern, müssen diese aus DOORS importiert werden und aus den Anforderungen gelesen werden. Durch eine gezielte Anfrage an DOORS über eine Java API kann die Parameter-Tabelle in TESTONA geladen werden. Die darin bestimmte Beziehungen (Parameterwert zu Variante) müssen fest in die TESTONA Datei gespeichert werden, damit diese auch ohne eine DOORS Verbindung zur Verfügung stehen. Als erstes werden die Parameterwerte in Objekte gespeichert und einen \textit{Tag} (Kennzeichen) gegeben und nach Programmende in die TESTONA Datei im XML Format gespeichert. Dank des \textit{Tags} kann beim Programmstart wieder der Parameterwert gelesen werden und währen das Programm ausgeführt wird, Änderungen vornehmen.\\
 
-Einer der Besonderheiten von MERAN in Verbindung mit TESTONA ist, dass Anforderungen and Baumelemente per Drag\&Drop verknüpft werden können. Mit dieser Funktion muss der Tester die Anforderung mit einem zugehörigen Baumelement verknüpfen (auslösendes Element). Damit das Programm die Aktion des Benutzer mitbekommen, wird an dieser Stelle ein \textit{Listener} implementiert. Der \textit{Listener} bekommt verschiedene Nachrichten von Ereignisse die gefiltert werden müssen. Wenn die Nachricht empfangen wird, dass eine Anforderung an ein Baumelement verknüpft wurde, muss eine zu programmierende Methode das Anforderungstext von dieses Baumelement lesen und nach Parameter suchen. Es wird davon ausgegangen, dass ein Baumelement nur eine Anforderung beinhalten kann und eine Anforderung nur ein Parameter beinhaltet. Wird in die gelesene Anforderung ein Parameter gefunden, so müssen die möglichen Werten dieses Parameters aus die DOORS Parameter-Tabelle gelesen und gespeichert werden. An dieser Stelle beginnt die Parameterspeicherung.\\
+Einer der Besonderheiten von MERAN in Verbindung mit TESTONA ist, dass Anforderungen and Baumelemente per Drag\&Drop verknüpft werden können. Mit dieser Funktion muss der Tester die Anforderung mit einem zugehörigen Baumelement verknüpfen (auslösendes Element). Damit das Programm die Aktion des Benutzer mitbekommen, wird an dieser Stelle ein \textit{Listener} implementiert. Der \textit{Listener} bekommt verschiedene Nachrichten von Ereignisse die gefiltert werden müssen. Wenn die Nachricht empfangen wird, dass eine Anforderung an ein Baumelement verknüpft wurde, muss eine zu programmierende Methode das Anforderungstext von dieses Baumelement lesen und nach Parameter suchen. Als erstes wird davon ausgegangen, dass ein Baumelement nur eine Anforderung beinhalten kann und eine Anforderung nur ein Parameter beinhaltet. Wird in die gelesene Anforderung ein Parameter gefunden, so müssen die möglichen Werten dieses Parameters aus die DOORS Parameter-Tabelle gelesen und gespeichert werden. An dieser Stelle beginnt die Parameterspeicherung.\\
 
 Für die Parameterspeicherung ergeben sich zwei Lösungswege. Die erste Lösung lautet, die Parameter-Tabelle beim Import der Anforderung gleich in TESTONA zu speichern. Diese Lösung hat den Vorteil, dass eine Verbindung zu DOORS nicht mehr notwendig ist. Somit muss nach eine Verbindung nicht geprüft werden oder die Verbindung muss nicht wieder aufgebaut werden. Das heißt der Benutzer muss sich nur einmal mit DOORS Verbinden und kann in der Zukunft problemlos die Anforderungen an Baumelement verlinken und zugleich werden die Parameter gelesen und gespeichert. Der Nachteil ist, dass möglicherweise unnötige Daten in TESTONA gespeichert werden.\\
 
@@ -31,10 +30,13 @@ Die zweite Lösung ist der Gegensatz zu die erste. Hier werden jeweils nur die D
 
 Sind die Parameterwerte in TESTONA vorhanden, müssen diese an der richtigen Variante noch zugeordnet werden. Dafür ist vorgesehen, dass der Parameterwert als Eigenschaft des Baumelementes gespeichert wird. Die Darstellungsstruktur für die Variantenansicht ist etwa folgendermaßen definiert:\\
 
-Variante hat Baumelemente hat Name,ID, etc in UML diagram
-
-
-
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.5]{4_1_UML_Var_TreeItem_Properties.jpg}
+  		  \caption{Darstellung der TESTONA Objekte}
+     \label{ttn.depencyRulesEdit}
+  \end{center}
+\end{figure}
 
 
 Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und ein Baumelement verknüpft werden. Als Ergebnis werden folgenden Beziehungen erwartet:
@@ -62,6 +64,10 @@ Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und ein Baumele
 \end{center}
 \end{table}
 
+Wenn eine Baumelement verschiedene Anforderungen beinhaltet, mit verschiedene Parameter, wird die aktive Variante entscheiden, welches Parameter ausgewertet wird. Um genauer diesen Fall zu verstehen, sind folgende Bäume, wo ......\\
+
+TODO, Beispiel mit Baumbilder!!!
+
 
 %#######################################################################################
 %#######################################################################################
@@ -74,7 +80,36 @@ Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und ein Baumele
 
 Wenn die Beziehungen zwischen Varianten, Parameter und Anforderungen erfolgreich entstanden sind, können jetzt die gespeicherte Parameterwerte angezeigt werden. Hier ist gefordert, dass wenn der Benutzer die Variantenansicht ändert (durch Betätigung an der Benutzeroberfläche) die Beschriftung (Label) des Baumelements aktualisiert werden.\\
 
-screen shot ausgewählter variante (pfeile und combo box) und max geschw. in tree \\
+
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics{4_2_Change_Var_Generic.png}
+    \includegraphics[scale=0.8]{4_2_Change_Var_Generic_Tree.png}
+  		  \caption{Aktive Variante Generic (default)}
+     \label{ttn.depencyRulesEdit}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics{4_2_Change_Var_Cabrio.png}
+    \includegraphics[scale=0.9]{4_2_Change_Var_Cabrio_Tree.png}
+  		  \caption{Aktive Variante Cabrio}
+     \label{ttn.depencyRulesEdit}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics{4_2_Change_Var_Kombi.png}
+    \includegraphics[scale=0.9]{4_2_Change_Var_Kombi_Tree.png}
+  		  \caption{Aktive Variante Kombi}
+     \label{ttn.depencyRulesEdit}
+  \end{center}
+\end{figure}
+
+Dafür muss ein \textit{Listener} beim Ändern der Ansicht eine Methode aufrufen, die sich um das aktualisieren der Werte und neubezeichung
 
 %#######################################################################################
 %#######################################################################################

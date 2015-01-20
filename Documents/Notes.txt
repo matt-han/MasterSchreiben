@@ -1,14 +1,15 @@
+FRAGEN
+======
+- Welches Tag beinhaltet die Requirements? Wie kann ich es lesen?
+- Erst (ganze) Parameter Tabelle importieren wenn Benutzer Anforderungen mit Parameter an Baumelement verknüpft? JA
+- 1 Baumelement <--> 1 Parameter bedeutet dass auch nur 1 Anforderung <--> Baumelement? => N..M, implementiere erst 1..1
+
 NOTES
 =====
 - Speichern der Parameter in *.testona Datei nicht am Anfang machen. Java-Object Tag wird serialisiert
 - Listener für Pfeile finden --> Update Parameterwert in Label, package com.berner_mattner.testona.variants.handler ShowNextVariantHandler
 
-
-FRAGEN
-======
-- Welches Objekt beinhaltet die Requirements? VariantImportHelper importedRequirements? wie kann ich es lesen
-- Drag&Drop Listener from Requirements to Leaf --> Parameterparser, 
-
+- Bei abfragen von Tags, muss ich immer den TAGTYPE "anhängen" Tag.TAGTYPE
 
 
 FAQ
@@ -27,7 +28,21 @@ mit updateTestTree und updateVisualization wird auch der Filter aktiviert
 JAVA - DOORS
 ============
 Aufruf von BM_PARAMETERS_MODULE_NAME über Java ergibt den Pfad zu den Parametertabelle in DOORS.
-So können Parameter aus DOORS geladen werden.
+So können Parameter aus DOORS geladen werden. --> nicht in TESTONA implementiert....
+
+com.berner_mattner.testona.requirements.datamodel
+Container
+Module
+Requirement
+DataInterface
+
+com.berner_mattner.testona.requirements.gui.viewparts.connector.viewer.grid
+TestonaGridRequirementsModel
+GridViewer
+
+com.berner_mattner.testona.requirements.manager
+ConnectionManager
+ConnectorManager
 
 
 XML --> nicht nötig..... nur als referenz da
