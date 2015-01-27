@@ -16,7 +16,7 @@ Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, 
 %#######################################################################################
 %#######################################################################################
 \newpage
-\section{Parameterspeicherung}
+\section{Parameterspeicherung}\label{sec.parameterspeicherung}
 \paragraph{}
  
 Um die Parameter erfolgreich in TESTONA zu speichern, müssen diese aus DOORS importiert werden und aus den Anforderungen gelesen werden. Durch eine gezielte Anfrage an DOORS, über eine Java API, kann die Parametertabelle in TESTONA geladen werden. Die darin bestimmte Beziehungen (Parameterwert zu Variante) müssen fest in die TESTONA Datei gespeichert werden, damit diese auch ohne eine DOORS Verbindung zur Verfügung steht. Als erstes werden die Parameterwerte in Objekte gespeichert und einen \textit{Tag} (Kennzeichen) gegeben und nach Programmende in die TESTONA Datei im XML Format gespeichert. Dank des \textit{Tags} kann beim Programmstart wieder der Parameterwert gelesen werden und währen das Programm ausgeführt wird, Änderungen vornehmen.\\
@@ -34,7 +34,7 @@ Sind die Parameterwerte in TESTONA vorhanden, müssen diese an der richtigen Var
   \begin{center}
     \includegraphics[scale=0.5]{4_1_UML_Var_TreeItem_Properties.jpg}
   		  \caption{Darstellung der TESTONA Objekte für die Parameterspeicherung}
-     \label{ttn.depencyRulesEdit}
+     \label{ttn.objectGraph}
   \end{center}
 \end{figure}
 
@@ -64,7 +64,7 @@ Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und ein Baumele
 \end{center}
 \end{table}
 
-Wenn ein Baumelement verschiedene Anforderungen beinhaltet, mit verschiedene Parameter, wird die aktive Variante entscheiden, welches Parameter ausgewertet wird. Um genauer diesen Fall zu verstehen, sind folgende Bäume, wo ......\\
+Wenn eine Baumelement mehr als eine Anforderung beinhaltet, mit verschiedene Parametern, wird die aktive Variante entscheiden, welches Parameter ausgewertet wird. Dabei muss beachtet werden, dass vorhandene Parameterwerte und Anforderung nicht gelöscht oder überschrieben werden.\\
 
 TODO, Beispiel mit Baumbilder
 
@@ -72,7 +72,7 @@ TODO, Beispiel mit Baumbilder
 %#######################################################################################
 %#######################################################################################
 \newpage
-\section{Visualisierung}
+\section{Visualisierung}\label{sec.visialisierung}
 \paragraph{}
 %1.2 Wenn der Tester die Ansicht zwischen Varianten ändert, muss der Wert hinter dem Parameter auf die jeweilige Variante aktualisiert werden (maximale Geschwindigkeit von Cabrio = x, Limo = y, Kombi = z).
 
@@ -87,7 +87,7 @@ Wenn die Beziehungen zwischen Varianten, Parameter und Anforderungen erfolgreich
     \includegraphics{4_2_Change_Var_Generic.png}
     \includegraphics[scale=0.8]{4_2_Change_Var_Generic_Tree.png}
   		  \caption{Aktive Variante Generic (default)}
-     \label{ttn.depencyRulesEdit}
+     \label{ttn.generic}
   \end{center}
 \end{figure}
 
@@ -96,7 +96,7 @@ Wenn die Beziehungen zwischen Varianten, Parameter und Anforderungen erfolgreich
     \includegraphics{4_2_Change_Var_Cabrio.png}
     \includegraphics[scale=0.9]{4_2_Change_Var_Cabrio_Tree.png}
   		  \caption{Aktive Variante Cabrio}
-     \label{ttn.depencyRulesEdit}
+     \label{ttn.2}
   \end{center}
 \end{figure}
 
@@ -105,11 +105,12 @@ Wenn die Beziehungen zwischen Varianten, Parameter und Anforderungen erfolgreich
     \includegraphics{4_2_Change_Var_Kombi.png}
     \includegraphics[scale=0.9]{4_2_Change_Var_Kombi_Tree.png}
   		  \caption{Aktive Variante Kombi}
-     \label{ttn.depencyRulesEdit}
+     \label{ttn.3}
   \end{center}
 \end{figure}
 
-Dafür muss ein \textit{Listener} beim Ändern der Ansicht eine Methode aufrufen, die sich um das aktualisieren der Werte und die Darstellung des Baumelements aktualisiert. Die Methode muss die im Baumelement gespeicherte \textit{Parameter-Tags} lesen und die richtig Parameterwerte (abhängig von der aktiven Variante) im das \textit{Label} schreiben.
+Dafür muss ein \textit{Listener} beim Ändern der Ansicht eine Methode aufrufen, die sich um das aktualisieren der Werte und Neuzeichnung. Die Werten werden dynamisch aus den Inhalten der Baumelemente gelesen. Zur Erinnerung die Werte sind als \textit{Tag} im jeden Baumelement gespeichert (siehe \ref{ttn.objectGraph})
+
 
 %#######################################################################################
 %#######################################################################################
