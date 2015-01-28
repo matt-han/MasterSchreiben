@@ -3,6 +3,8 @@ FRAGEN
 - Welches Tag beinhaltet die Requirements? Wie kann ich es lesen?
 - Erst (ganze) Parameter Tabelle importieren wenn Benutzer Anforderungen mit Parameter an Baumelement verknüpft? JA
 - 1 Baumelement <--> 1 Parameter bedeutet dass auch nur 1 Anforderung <--> Baumelement? => N..M, implementiere erst 1..1
+- Davon ausgehen, keine weitere Varianten werden hinzugefügt/gelöscht?
+
 
 NOTES
 =====

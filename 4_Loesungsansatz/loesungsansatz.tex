@@ -117,14 +117,15 @@ Dafür muss ein \textit{Listener} beim Ändern der Ansicht eine Methode aufrufen
 \newpage
 \section{Testgültigkeit}
 \paragraph{}
-%Innerhalb einer Variante auf Testfallduplikate überprüfen
+%Innerhalb einer Variante auf Testfallduplikate überprüfen anhand der Paramerterwerte
+%Testfallabdeckung + Prozessoptmierung
 
 %#######################################################################################
 %#######################################################################################
 \newpage
 \section{Optimierungskriterien}
 \paragraph{}
-%Testablauf optimieren in Betrachtung auf die Varianten und mögliche Testduplikate
+%Testablauf optimieren in Betrachtung auf nur gültige Baumelemente in einer Variante und mögliche Testduplikate,
 
 %#######################################################################################
 %#######################################################################################
@@ -132,9 +133,12 @@ Dafür muss ein \textit{Listener} beim Ändern der Ansicht eine Methode aufrufen
 \section{Benutzeroberfläche}
 \paragraph{}
 
-%Um die Handhabung der Varianten bezogen auf die Testfälle und die Testgenerierung benutzerfreundlicher
-%und effizienter zu gestalten, soll die Benutzung des Variantenmanagements durch
-%einen Testingenieur untersucht werden. Resultierend aus den erworbenen Erkenntnissen wird das
-%Lösungsdesign für eine Erweiterung des bestehenden Variantenmanagements in TESTONA konzipiert.
+%Um die Handhabung der Varianten bezogen auf die Testfälle und die Testgenerierung benutzerfreundlicher und effizienter zu gestalten, soll die Benutzung des Variantenmanagements durch einen Testingenieur untersucht werden. Resultierend aus den erworbenen Erkenntnissen wird das Lösungsdesign für eine Erweiterung des bestehenden Variantenmanagements in TESTONA konzipiert.
 
 %nach besprechen mit kollegen keine änderung nötig erstmal \\
+
+Eine Änderung der Benutzeroberfläche von TESTONA wurde mit Kollegen in der Entwicklung offen diskutiert. Als Ergebnis konnten wir (aus Sicht der Entwickler) feststellen, dass die bisherige Lösung als gut und intuitiv zu Bezeichnen ist.\\
+
+Um weitere Meinungen und Lösungsvorschläge zu sammeln habe ich Testingenieure innerhalb Berner \& Mattner die TESTONA mit Kunden anwenden befragt. Dabei stellte sich heraus, dass die Aktivierung der Variantenansicht als extra Schritt oft als \glqq unnötig\grqq bezeichnet wurde. Es wurde gewünscht, dass die Variantenansicht als Hauptansicht definiert wird. Das es ein Unterschied zwischen beiden Ansichten gibt liegt daran, dass es verschiedene Etappen repräsentieren. Die Hauptansicht bietet verschiedene Features die in der Variantenansicht mit Variantenmanagement Features ergänzt werden. Dabei wird noch begründet, dass die Trennung zur Übersicht sehr viel beitragt.\\
+
+Als Ergebnis wurde festgelegt, dass für in dieser Arbeit gestellte Problemfrage nicht zur Unübersichtlichkeit der Benutzeroberfläche beiträgt. Die Trennung zwischen die Hauptansicht und die Variantenansicht wird behalten sowie die Lösung der Pfeile und Drop-Down Menü (siebe Abbildungen \ref{ttn.generic}, \ref{ttn.2}, \ref{ttn.3}).

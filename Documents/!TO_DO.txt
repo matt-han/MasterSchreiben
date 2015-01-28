@@ -1,10 +1,9 @@
 TASKS
 =====
-- Playground definieren --> #param[] und DOORS lernen
-- Testona Programmstruktur verstehen (wo wird was gemacht?)
-- Java API für DOORS (Jens R.)
 - DOORS Parameterinfo. local im Rechner speichern. Wie wird das gemacht? (lesen&schreiben)
-
+- Anforderung aus TreeItem gelöscht
+- Variante gelöscht--> alle TreeItems durchgehen und eintrag löschen
+- Neue Variante --> alle TreeItems durchgehen und Tag refresh
 
 INFOS
 =====
@@ -26,19 +25,3 @@ ABLAUF - WORKFLOW
 - Anforderung mit definierten Parameter mit einer Klasse verbinden Drag&Drop
 - *** #param[] Wert mit Label der Klasse ersetzen/hinzufügen
 - Testfälle werden erzeugt (Abhängigskeitsregeln beachten)
-
-
-ZU PROGRAMMIEREN
-================
-Wie verknüpfe ich ein DOORS Parameter mit eine Klasse in TESTONA?
-- Manuell durch Drag&Drop einer Anforderung. --> Wo ist das Implementiert??
-nach dem D&D muss die Anforderung auf #param[] überprüft werden und falls ja der Parameter laden
-Methode für:
-- Überprüfen von Parameter --> suche nach #param?
-- Laden des Parameter aus DOORS
-- Parameter Local speichern --> XML Datei erweitern? Neuer Eintrag <Tag, type param> Liste der parameter
-								oder in VariantsList in jeder variante die parameter speichern?
-- Parameter Local lesen     --> " " "
-- Wechseln der Variante Parameter neuladen (überarbeiten)
-
-- Add/RemoveVariantCommand können Ghost Einträge existieren? laut schmitt TODO
