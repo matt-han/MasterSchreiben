@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  28 JAN 2015 18:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  29 JAN 2015 18:51
 entering extended mode
 **main.tex
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.tex
@@ -1372,13 +1372,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
  []
 
 
-<4_Loesungsansatz/4_1_UML_Var_TreeItem_Properties.jpg, id=451, 651.93562pt x 18
-9.70876pt>
-File: 4_Loesungsansatz/4_1_UML_Var_TreeItem_Properties.jpg Graphic file (type j
-pg)
- <use 4_Loesungsansatz/4_1_UML_Var_TreeItem_Properties.jpg>
-Package pdftex.def Info: 4_Loesungsansatz/4_1_UML_Var_TreeItem_Properties.jpg u
-sed on input line 35.
+<4_Loesungsansatz/pictures/4_1_UML_Var_TreeItem_Properties.jpg, id=451, 651.935
+62pt x 189.70876pt>
+File: 4_Loesungsansatz/pictures/4_1_UML_Var_TreeItem_Properties.jpg Graphic fil
+e (type jpg)
+
+<use 4_Loesungsansatz/pictures/4_1_UML_Var_TreeItem_Properties.jpg>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_1_UML_Var_TreeItem_Propert
+ies.jpg used on input line 35.
 (pdftex.def)             Requested size: 325.96701pt x 94.85414pt.
 
 
@@ -1392,79 +1393,142 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-[18 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/4
-_1_UML_Var_TreeItem_Properties.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+<4_Loesungsansatz/pictures/4_1_UML_TreeItem_ParameterTags.jpg, id=457, 477.2831
+3pt x 219.82124pt>
+File: 4_Loesungsansatz/pictures/4_1_UML_TreeItem_ParameterTags.jpg Graphic file
+ (type jpg)
+
+<use 4_Loesungsansatz/pictures/4_1_UML_TreeItem_ParameterTags.jpg>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_1_UML_TreeItem_ParameterTa
+gs.jpg used on input line 71.
+(pdftex.def)             Requested size: 334.0959pt x 153.87381pt.
+ [18 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/
+pictures/4_1_UML_Var_TreeItem_Properties.jpg> <C:/Users/hansert/Documents/Maste
+rarbeit/MasterSchreiben/4_Loesungsansatz/pictures/4_1_UML_TreeItem_ParameterTag
+s.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-<4_Loesungsansatz/4_2_Change_Var_Generic.png, id=462, 96.36pt x 20.32594pt>
-File: 4_Loesungsansatz/4_2_Change_Var_Generic.png Graphic file (type png)
 
-<use 4_Loesungsansatz/4_2_Change_Var_Generic.png>
-Package pdftex.def Info: 4_Loesungsansatz/4_2_Change_Var_Generic.png used on in
-put line 87.
+<4_Loesungsansatz/pictures/4_2_Change_Var_Generic.png, id=464, 96.36pt x 20.325
+94pt>
+File: 4_Loesungsansatz/pictures/4_2_Change_Var_Generic.png Graphic file (type p
+ng)
+ <use 4_Loesungsansatz/pictures/4_2_Change_Var_Generic.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_2_Change_Var_Generic.png u
+sed on input line 92.
 (pdftex.def)             Requested size: 96.35974pt x 20.32588pt.
 
-<4_Loesungsansatz/4_2_Change_Var_Generic_Tree.png, id=463, 143.78719pt x 67.753
-13pt>
-File: 4_Loesungsansatz/4_2_Change_Var_Generic_Tree.png Graphic file (type png)
- <use 4_Loesungsansatz/4_2_Change_Var_Generic_Tree.png>
-Package pdftex.def Info: 4_Loesungsansatz/4_2_Change_Var_Generic_Tree.png used 
-on input line 88.
+<4_Loesungsansatz/pictures/4_2_Change_Var_Generic_Tree.png, id=465, 143.78719pt
+ x 67.75313pt>
+File: 4_Loesungsansatz/pictures/4_2_Change_Var_Generic_Tree.png Graphic file (t
+ype png)
+ <use 4_Loesungsansatz/pictures/4_2_Change_Var_Generic_Tree.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_2_Change_Var_Generic_Tree.
+png used on input line 93.
 (pdftex.def)             Requested size: 115.02989pt x 54.20256pt.
 
-<4_Loesungsansatz/4_2_Change_Var_Cabrio.png, id=464, 94.10156pt x 24.84282pt>
-File: 4_Loesungsansatz/4_2_Change_Var_Cabrio.png Graphic file (type png)
-
-<use 4_Loesungsansatz/4_2_Change_Var_Cabrio.png>
-Package pdftex.def Info: 4_Loesungsansatz/4_2_Change_Var_Cabrio.png used on inp
-ut line 96.
+<4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio.png, id=466, 94.10156pt x 24.8
+4282pt>
+File: 4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio.png Graphic file (type pn
+g)
+ <use 4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio.png us
+ed on input line 101.
 (pdftex.def)             Requested size: 94.10132pt x 24.84274pt.
 
-<4_Loesungsansatz/4_2_Change_Var_Cabrio_Tree.png, id=465, 121.20282pt x 60.225p
-t>
-File: 4_Loesungsansatz/4_2_Change_Var_Cabrio_Tree.png Graphic file (type png)
- <use 4_Loesungsansatz/4_2_Change_Var_Cabrio_Tree.png>
-Package pdftex.def Info: 4_Loesungsansatz/4_2_Change_Var_Cabrio_Tree.png used o
-n input line 97.
+<4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio_Tree.png, id=467, 121.20282pt 
+x 60.225pt>
+File: 4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio_Tree.png Graphic file (ty
+pe png)
+ <use 4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio_Tree.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio_Tree.p
+ng used on input line 102.
 (pdftex.def)             Requested size: 109.08151pt x 54.20198pt.
 
-<4_Loesungsansatz/4_2_Change_Var_Kombi.png, id=466, 93.34875pt x 21.83156pt>
-File: 4_Loesungsansatz/4_2_Change_Var_Kombi.png Graphic file (type png)
-
-<use 4_Loesungsansatz/4_2_Change_Var_Kombi.png>
-Package pdftex.def Info: 4_Loesungsansatz/4_2_Change_Var_Kombi.png used on inpu
-t line 105.
+<4_Loesungsansatz/pictures/4_2_Change_Var_Kombi.png, id=468, 93.34875pt x 21.83
+156pt>
+File: 4_Loesungsansatz/pictures/4_2_Change_Var_Kombi.png Graphic file (type png
+)
+ <use 4_Loesungsansatz/pictures/4_2_Change_Var_Kombi.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_2_Change_Var_Kombi.png use
+d on input line 110.
 (pdftex.def)             Requested size: 93.34851pt x 21.8315pt.
 
-<4_Loesungsansatz/4_2_Change_Var_Kombi_Tree.png, id=467, 120.45pt x 62.48344pt>
-File: 4_Loesungsansatz/4_2_Change_Var_Kombi_Tree.png Graphic file (type png)
-<use 4_Loesungsansatz/4_2_Change_Var_Kombi_Tree.png>
-Package pdftex.def Info: 4_Loesungsansatz/4_2_Change_Var_Kombi_Tree.png used on
- input line 106.
+<4_Loesungsansatz/pictures/4_2_Change_Var_Kombi_Tree.png, id=469, 120.45pt x 62
+.48344pt>
+File: 4_Loesungsansatz/pictures/4_2_Change_Var_Kombi_Tree.png Graphic file (typ
+e png)
+ <use 4_Loesungsansatz/pictures/4_2_Change_Var_Kombi_Tree.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_2_Change_Var_Kombi_Tree.pn
+g used on input line 111.
 (pdftex.def)             Requested size: 108.40398pt x 56.23456pt.
- [19 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/
-4_2_Change_Var_Generic.png> <C:/Users/hansert/Documents/Masterarbeit/MasterSchr
-eiben/4_Loesungsansatz/4_2_Change_Var_Generic_Tree.png> <C:/Users/hansert/Docum
-ents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/4_2_Change_Var_Cabrio.png> <
-C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/4_2_Ch
-ange_Var_Cabrio_Tree.png> <C:/Users/hansert/Documents/Masterarbeit/MasterSchrei
-ben/4_Loesungsansatz/4_2_Change_Var_Kombi.png> <C:/Users/hansert/Documents/Mast
-erarbeit/MasterSchreiben/4_Loesungsansatz/4_2_Change_Var_Kombi_Tree.png>] [20] 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+[19 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/p
+ictures/4_2_Change_Var_Generic.png> <C:/Users/hansert/Documents/Masterarbeit/Ma
+sterSchreiben/4_Loesungsansatz/pictures/4_2_Change_Var_Generic_Tree.png> <C:/Us
+ers/hansert/Documents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/pictures/4_
+2_Change_Var_Cabrio.png> <C:/Users/hansert/Documents/Masterarbeit/MasterSchreib
+en/4_Loesungsansatz/pictures/4_2_Change_Var_Cabrio_Tree.png> <C:/Users/hansert/
+Documents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/pictures/4_2_Change_Var
+_Kombi.png> <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/4_Loesungs
+ansatz/pictures/4_2_Change_Var_Kombi_Tree.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+<4_Loesungsansatz/pictures/4_3_generic.png, id=487, 904.88063pt x 351.56343pt>
+File: 4_Loesungsansatz/pictures/4_3_generic.png Graphic file (type png)
+
+<use 4_Loesungsansatz/pictures/4_3_generic.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_3_generic.png used on inpu
+t line 131.
+(pdftex.def)             Requested size: 361.94585pt x 140.62286pt.
+
+<4_Loesungsansatz/pictures/4_3_cabrio.png, id=488, 931.98187pt x 352.31625pt>
+File: 4_Loesungsansatz/pictures/4_3_cabrio.png Graphic file (type png)
+
+<use 4_Loesungsansatz/pictures/4_3_cabrio.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_3_cabrio.png used on input
+ line 139.
+(pdftex.def)             Requested size: 372.78615pt x 140.924pt.
+
+<4_Loesungsansatz/pictures/4_3_kombi.png, id=489, 930.47626pt x 352.31625pt>
+File: 4_Loesungsansatz/pictures/4_3_kombi.png Graphic file (type png)
+
+<use 4_Loesungsansatz/pictures/4_3_kombi.png>
+Package pdftex.def Info: 4_Loesungsansatz/pictures/4_3_kombi.png used on input 
+line 147.
+(pdftex.def)             Requested size: 372.18391pt x 140.924pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+[20 <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/4_Loesungsansatz/p
+ictures/4_3_generic.png> <C:/Users/hansert/Documents/Masterarbeit/MasterSchreib
+en/4_Loesungsansatz/pictures/4_3_cabrio.png> <C:/Users/hansert/Documents/Master
+arbeit/MasterSchreiben/4_Loesungsansatz/pictures/4_3_kombi.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+[21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
 )
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\5_Systementwurf/system
-entwurf.tex [22]
+entwurf.tex [23]
 Kapitel 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -1472,7 +1536,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
  []
 
 
-<5_Systementwurf/pictures/5_1_klassenuebersicht.jpg, id=502, 518.6878pt x 91.84
+<5_Systementwurf/pictures/5_1_klassenuebersicht.jpg, id=519, 518.6878pt x 91.84
 312pt>
 File: 5_Systementwurf/pictures/5_1_klassenuebersicht.jpg Graphic file (type jpg
 )
@@ -1496,7 +1560,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-[23
+[24
 
  <C:/Users/hansert/Documents/Masterarbeit/MasterSchreiben/5_Systementwurf/pictu
 res/5_1_klassenuebersicht.jpg>]
@@ -1531,7 +1595,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
@@ -1546,35 +1610,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-[25])
+[26])
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\6_Evaluierung/evaluier
-ung.tex [26]
+ung.tex [27]
 Kapitel 6.
 )
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\7_Something/something.
 tex)
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\8_Zusammenfassung_und_
-Ausblick/zusammenfassung_u_ausblick.tex [27
+Ausblick/zusammenfassung_u_ausblick.tex [28
 
 ]
 Kapitel 7.
-) [28
+) [29
 
 ] (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.lof)
 \tf@lof=\write7
 
-[29
+[30
 
 ] (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.lol)
 \tf@lol=\write8
 
-(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\anhang.tex [30
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\anhang.tex [31
 
 ]
 Anhang A.
-[31
+[32
 
-] [32]) [33]
+] [33]) [34]
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.bbl
 Overfull \hbox (48.94844pt too wide) in paragraph at lines 40--43
 []\T1/ptm/m/n/10.95 IEEE Com-pu-ter So-cie-ty, https://courses.cs.ut.ee/MTAT.03
@@ -1587,7 +1651,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--77
 -Methode.
  []
 
-) [34
+) [35
 
 
 ]
@@ -1605,13 +1669,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
  ) 
 Here is how much of TeX's memory you used:
- 11409 strings out of 493921
- 162686 string characters out of 3144870
- 300520 words of memory out of 3000000
- 14243 multiletter control sequences out of 15000+200000
+ 11439 strings out of 493921
+ 163956 string characters out of 3144870
+ 300529 words of memory out of 3000000
+ 14263 multiletter control sequences out of 15000+200000
  62125 words of font info for 100 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,12n,51p,1160b,1198s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,12n,51p,1159b,1198s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{lstnumber.-2.2} has been referenced but does not 
 exist, replaced by a fixed one
 
@@ -1624,9 +1688,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
 type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
 imes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on main.pdf (40 pages, 923508 bytes).
+Output written on main.pdf (41 pages, 1050825 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 162 named destinations out of 1000 (max. 500000)
- 403 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 167 named destinations out of 1000 (max. 500000)
+ 423 words of extra memory for PDF output out of 10000 (max. 10000000)
 

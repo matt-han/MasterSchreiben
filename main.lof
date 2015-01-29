@@ -12,11 +12,15 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite {VarMan1}}}{12}{figure.3.6}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Darstellung der TESTONA Objekte f\IeC {\"u}r die Parameterspeicherung}}{18}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Aktive Variante Generic (default)}}{19}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Cabrio}}{19}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Kombi}}{19}{figure.4.4}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Darstellung eines Baumelementes mit zwei verschiedene Parametern und vier Varianten}}{18}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Generic (default)}}{19}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Cabrio}}{19}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Aktive Variante Kombi}}{19}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Das generische Baum}}{20}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Aktive Variante Cabrio}}{20}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Aktive Variante Kombi}}{20}{figure.4.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Darstellung der Klassen}}{23}{figure.5.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Darstellung der Klassen}}{24}{figure.5.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
