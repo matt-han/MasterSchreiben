@@ -44,3 +44,26 @@ management = com.berner_mattner.testona.requirements.Activator.getDefault().getP
 			if (entry.getValue()[0].equals("doors")) {
 				this.prefList.add(entry.getKey());
 			}
+			
+
+			
+IndieModul content:
+com.berner_mattner.testona.requirements.datamodel.indie.impl.IndieModuleImpl@da6c4dce
+interId: doors, connId: localhost;36677, moduleId: /Simple Belt Warner 2/Simple Belt Warner Spec, moduleNbr: 0, id: doors,localhost;36677,/Simple Belt Warner 2/Simple Belt Warner Spec)
+
+JAVA - DOORS
+============
+
+com.berner_mattner.testona.requirements.datamodel
+Container
+Module
+Requirement
+DataInterface
+
+com.berner_mattner.testona.requirements.gui.viewparts.connector.viewer.grid
+TestonaGridRequirementsModel
+GridViewer
+
+com.berner_mattner.testona.requirements.manager
+ConnectionManager
+ConnectorManager
