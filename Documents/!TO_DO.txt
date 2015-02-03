@@ -2,8 +2,9 @@ TASKS
 =====
 - DOORS Parameterinfo. local im Rechner speichern. Wie wird das gemacht? (lesen&schreiben)
 - Anforderung aus TreeItem gelöscht
-- Variante gelöscht--> alle TreeItems durchgehen und eintrag löschen
+- Variante gelöscht--> alle TreeItems durchgehen und eintrag löschen --> TEST IT
 - Neue Variante --> alle TreeItems durchgehen und Tag refresh
+- Wenn parameterName leer, dann nicht speichern!!
 
 INFOS
 =====
