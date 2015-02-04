@@ -35,10 +35,12 @@ Der derzeitige Varianten-Management-Ansatz in TESTONA ist nicht in der Lage für
 
 \section{Variantenmanagement Software}
 \paragraph{}
-Die Erweiterung von das schon vorhanden Variantenmanagement in TESTONA wird dabei beitragen eine bessere Kopplung zwischen DOORS und TESTONA zu erzielen. Nach Recherche über schon vorhandenen Lösung zu dieser Problemfrage bin ich auch keine brauchbare Implementation die in TESTONA angewendet werden können zugestoßen. Da unter den Begriff \glqq Variante\grqq viel Freiraum gibt, sind vorhandenen Lösungen sehr Problemspezifisch. Es gibt Software die auch Variante unterstützt in ähnlicher weise wie TESTONA, aber es gibt keine Verknüpfung zur Datenbank, wo schon Varianten definiert sind.
+Die Erweiterung des schon vorhanden Variantenmanagements in TESTONA wird dabei beitragen eine bessere Kopplung zwischen DOORS und TESTONA zu erzielen. Nach Recherche über schon vorhandene Lösungen zu dieser Problemfrage bin ich auf keine brauchbare Implementation die in TESTONA angewendet werden kann gestoßen. Da es unter dem Begriff \glqq Variante\grqq viel Freiraum gibt, sind vorhandenen Lösungen sehr Problemspezifisch. Es gibt Software die Varianten in ähnlicher Weise wie TESTONA unterstützt. Aber es gibt keine Verknüpfung zu einer Datenbank, in der  schon Varianten definiert sind.
 
-Die Firma \glqq Razorcat Development GmbH\grqq bietet auch eine Klassifikationsbaumeditor was TESTONA sehr nähe ist. Zur meinem Kenntnis hat diese Software keine Schnittstelle zu einer Datenbank sowie kein Variantenmanagement\footnote{http://www.razorcat.eu/cte.html, 15/11/2014}.
+Die Firma \glqq Razorcat Development GmbH\grqq~ bietet auch einen Klassifikationsbaumeditor der TESTONA sehr ähnlich ist. Nach meiner Kenntnis hat diese Software keine Schnittstelle zu einer Datenbank und kein Variantenmanagement\footnote{http://www.razorcat.eu/cte.html, 15/11/2014}.
 
 \section{Neue Anforderungen}
 \paragraph{}
-Während der Entwicklung dieser Arbeit haben sich die Anforderung leicht verändert. Die Abhängigkeitsregeln sollen nicht mehr so beeinflussend auf das Variantenmanagement sein. Sie sind enger mit der Testfallgenerierung verbunden als mit einzelner Varianten. Es wird davon ausgegangen dass der Benutzer von TESTONA nur gültige Abhängigkeitsregel deklariert hat. Weiterhin werden Optimierungsschritte betrachtet, indem doppelte Testfälle erzeugt werden durch gleiche Parameterwerte in einer Variante. 
+Während der Programmierung haben sich die Anforderungen leicht verändert.
+
+Die Abhängigkeitsregeln sollen das Variantenmanagement nicht mehr so sehr beeinflussen. Sie  sollen  enger mit der Testfallgenerierung verbunden sein als mit den einzelnen Varianten. Es wird davon ausgegangen, dass der Benutzer von TESTONA nur gültige Abhängigkeitsregeln deklariert hat. Weiterhin werden Optimierungsschritte betrachtet. Es kann dazu kommen, dass doppelte Testfälle durch gleiche Parameterwerte in einer Variante erzeugt werden.s
