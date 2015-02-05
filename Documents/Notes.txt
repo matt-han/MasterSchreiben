@@ -4,7 +4,7 @@ FRAGEN
 - Erst (ganze) Parameter Tabelle importieren wenn Benutzer Anforderungen mit Parameter an Baumelement verknüpft? JA
 - 1 Baumelement <--> 1 Parameter bedeutet dass auch nur 1 Anforderung <--> Baumelement? => N..M, implementiere erst 1..1
 - Davon ausgehen, keine weitere Varianten werden hinzugefügt/gelöscht?
-
+- ich kenne das DOORS Modul. Gibt es ein Standard für die Speicherung der DOORS Parametertabelle?
 
 NOTES
 =====
@@ -12,7 +12,8 @@ NOTES
 - Listener für Pfeile finden --> Update Parameterwert in Label, package com.berner_mattner.testona.variants.handler ShowNextVariantHandler
 
 - Bei abfragen von Tags, muss ich immer den TAGTYPE "anhängen" Tag.TAGTYPE
-
+- Verbindung wird 2 mal geschlossen.... 
+- ResourceSetListener kann die resourcen nicht ändern
 
 FAQ
 ===
@@ -27,27 +28,6 @@ je nach aktivierte Variante und Variantenname werden die Filtergesetzt.
 mit updateTestTree und updateVisualization wird auch der Filter aktiviert
 
 
-JAVA - DOORS
-============
-Aufruf von BM_PARAMETERS_MODULE_NAME über Java ergibt den Pfad zu den Parametertabelle in DOORS.
-So können Parameter aus DOORS geladen werden. --> nicht in TESTONA implementiert....
-
-com.berner_mattner.testona.requirements.datamodel
-Container
-Module
-Requirement
-DataInterface
-
-com.berner_mattner.testona.requirements.gui.viewparts.connector.viewer.grid
-TestonaGridRequirementsModel
-GridViewer
-
-com.berner_mattner.testona.requirements.manager
-ConnectionManager
-ConnectorManager
-
-
-XML --> nicht nötig..... nur als referenz da
 ===
 Planung für Parameter
 
