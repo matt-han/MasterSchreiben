@@ -69,9 +69,11 @@ public static final String TAGTYPE = "ParameterTag";
 Das Tagmodell wird benutzt um in TESTONA überall ähnliche Objekt zu haben, die verschiedene Funktionen erfühlen, aber die gleiche Richtlinie folgen
 
 \subsubsection{ParameterTagImpl}
-Die Klasse \textit{ParameterTagImpl} erweitert die Klasse \textit{TagImpl}und implementiert \textit{ParameterTag}. In dieser Klasse wird das nutzen von das Tagmodell deutlicher. die Klasse \textit{TagImpl} definiert sehr nutzliche Methoden und Eigenschaften die in \textit{ParameterTagImpl} angewendet werden.\\
+Die Klasse \textit{ParameterTagImpl} erweitert die Klasse \textit{TagImpl} und implementiert \textit{ParameterTag}. In dieser Klasse werden die Vorteile von das Tagmodell deutlicher. Die Klasse \textit{TagImpl} definiert sehr nützliche Methoden und Eigenschaften die in \textit{ParameterTagImpl} angewendet werden.\\
 
-Jedes \textit{Tag} hat als Eingenschaft einen Namen. In diese Klasse entspricht der Name, ein Parametername der aus der Parametertabelle gelesen wurde. Weiterhin ist über \textit{ID} eine eindeutige Identifikationsnummer definiert, um \textit{Tags} voneinander zu unterscheiden. 
+Jedes \textit{Tag} hat als Eigenschaft einen Namen. In diese Klasse entspricht der Name, ein Parametername der aus der Parametertabelle gelesen wurde. Weiterhin ist über \textit{ID} eine eindeutige Identifikationsnummer definiert, um \textit{Tags} des gleichen Typs voneinander zu unterscheiden.\\
+
+Der Inhalt von das \textit{Tag} ist durch ein \textit{EcoreEMap<String, String>} definiert. Das erste String ist ein Schlüsselwert und das zweite String das Wert. Im diesem Fall ist der Schlüssel der Name einer Variante, und der Wert ist der Parameterwert des Parameters in dieser Variante.  Anhand der Methode \textit{getContent()} kann der Inhalt eines \textit{Tags} aufgerufen werden und mit der Methode \textit{addEntry()} werden Inhalte hinzugefügt. Das Gegenteil kann man mit der Methode \textit{deleteEntry()} erreichen. Wie die Methoden genauer angewendet werden, wird im Listing \ref{lst:CreateParamTag} gezeigt.
 
 
 
@@ -93,7 +95,27 @@ Die Klasse \textit{ParameterManager} beinhaltet eine private innere Klasse \text
 
 
 
-Anforderung eines Baumelementes beinhaltet Modul und Interface. wichtig für nächstes Kapitel
+Anforderung eines Baumelementes beinhaltet Modul und Interface. wichtig für nächstes Kapitel\\
+
+IndieModul : interId: doors, connId: localhost;36677, moduleId: /Simple Belt Warner 2/Simple Belt Warner Spec, moduleNbr: 0, id: doors,localhost;36677,/Simple Belt Warner 2/Simple Belt Warner Spec)\\
+
+
+\begin{lstlisting}[caption={Erstellung der ParameterTag}, captionpos=b,label={lst:CreateParamTag}]
+ParameterTag tempTag = new ParameterTagImpl();
+		
+for(int i = 0; i < attributesList.size(); i++){
+	
+	//An der nullte Stelle steht immer der Parametername
+	if(i == 0) {
+		tempTag.setName(req.getValue(attributesList.get(0)).getValueAsString());
+	} else {
+		//entferne " Value" vom Variantenamen 
+		tempTag.addEntry(sAttrList.get(i).substring(0, sAttrList.get(i).lastIndexOf("Value")-1),
+				req.getValue(attributesList.get(i)).getValueAsString());
+	}
+}
+paramTagList.add(tempTag);
+\end{lstlisting}
 
 
 %#######################################################################################
@@ -114,7 +136,7 @@ Anforderung eines Baumelementes beinhaltet Modul und Interface. wichtig für nä
 
 Die private innere Klasse \textit{DoorsConnector} baut die Verbindung zwischen den TESTONA und DOORS auf. Sie implementiert das Interface \textit{IConnectionListener}, dass ein \textit{Listener} für die Verbindung - Events umfasst. Für das Laden von Dateien aus DOORS benötigt die Klasse noch ein \textit{Listener} (IDataListener) und ein \textit{Adapter}(IReqLoadAdapter) \\
 
-Als erstes wird von der Klasse \textit{ParameterManager} die Methode \texttt{connectToDoors()} aufgerufen. Diese baut die Verbindung auf, indem gespeicherte Verbindungsdaten aufgerufen werden. Wie bereits in Kapitel \ref{sub.ParameterManager} erwähnt, beinhaltet eine Anforderung die Informationen wo die Anforderung gespeichert ist (welches DOORS Modul und über welches Interface das Modul zu erreichen ist). Für den Verbindungsaufbau werden folgende Objekte benötigt:
+Als erstes wird von der Klasse \textit{ParameterManager} die Methode \textit{connectToDoors()} aufgerufen. Diese baut die Verbindung auf, indem gespeicherte Verbindungsdaten aufgerufen werden. Wie bereits in Kapitel \ref{sub.ParameterManager} erwähnt, beinhaltet eine Anforderung die Informationen wo die Anforderung gespeichert ist (welches DOORS Modul und über welches Interface das Modul zu erreichen ist). Für den Verbindungsaufbau werden folgende Objekte benötigt:
 
 \begin{itemize}
 \item \textbf{DataInterface: }Über diese Klasse erfolgt die Datenanfrage an DOORS. Die Verbindung wird aufgebaut sowie getrennt. Es werden als erstes die Ordner geladen, danach einzelne Projekte und die nötige Module. Es können verschiedene Darstellungen der Module auch geladen werden (diese müssen in DOORS definiert sein). Hier werden auch direkt einzelne Anforderungen angefragt. Relevant für diese Arbeit ist, dass hiermit das Modul Parametertabelle in DOORS geladen wird.

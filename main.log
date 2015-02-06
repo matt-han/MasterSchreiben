@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  5 FEB 2015 17:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.7.16)  6 FEB 2015 16:28
 entering extended mode
 **main.tex
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.tex
@@ -1586,86 +1586,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 [26]
-Overfull \hbox (5.75278pt too wide) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+
+Overfull \hbox (5.75278pt too wide) in paragraph at lines 165--166
 \T1/ptm/m/n/10.95 kann über den \T1/ptm/m/it/10.95 Connec-tion-Ma-na-ger \T1/pt
 m/m/n/10.95 ei-nes neu-es \T1/ptm/m/it/10.95 Da-taIn-ter-face \T1/ptm/m/n/10.95
  er-zeugt wer-den, wo der \T1/pcr/m/n/10.95 connector
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
-[29])
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+ []
+
+[30])
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\6_Evaluierung/evaluier
-ung.tex [30]
+ung.tex [31]
 Kapitel 6.
 )
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\7_Something/something.
 tex)
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\8_Zusammenfassung_und_
-Ausblick/zusammenfassung_u_ausblick.tex [31
+Ausblick/zusammenfassung_u_ausblick.tex [32
 
 ]
 Kapitel 7.
-) [32
+) [33
 
 ] (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.lof)
 \tf@lof=\write7
 
-[33
+[34
 
 ] (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.lol)
 \tf@lol=\write8
 
-(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\anhang.tex [34
+(C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\anhang.tex [35
 
 ]
 Anhang A.
-[35
+[36
 
-] [36]) [37]
+] [37]) [38]
 (C:\Users\hansert\Documents\Masterarbeit\MasterSchreiben\main.bbl
 Overfull \hbox (48.94844pt too wide) in paragraph at lines 40--43
 []\T1/ptm/m/n/10.95 IEEE Com-pu-ter So-cie-ty, https://courses.cs.ut.ee/MTAT.03
@@ -1678,7 +1693,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--77
 -Methode.
  []
 
-) [38
+) [39
 
 
 ]
@@ -1696,13 +1711,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
  ) 
 Here is how much of TeX's memory you used:
- 11545 strings out of 493921
- 165548 string characters out of 3144870
- 302529 words of memory out of 3000000
- 14313 multiletter control sequences out of 15000+200000
- 64893 words of font info for 102 fonts, out of 3000000 for 9000
+ 11581 strings out of 493921
+ 166052 string characters out of 3144870
+ 310529 words of memory out of 3000000
+ 14331 multiletter control sequences out of 15000+200000
+ 65630 words of font info for 104 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,12n,51p,1161b,1198s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,12n,51p,1161b,1898s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{lstnumber.-2.2} has been referenced but does not 
 exist, replaced by a fixed one
 
@@ -1711,13 +1726,14 @@ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x8
 6)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
-times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8
-a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (44 pages, 1075945 bytes).
+ 2.9/fonts/type1/urw/courier/ucrro8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/ur
+w/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/ut
+mr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (45 pages, 1090384 bytes).
 PDF statistics:
- 772 PDF objects out of 1000 (max. 8388607)
- 221 named destinations out of 1000 (max. 500000)
+ 801 PDF objects out of 1000 (max. 8388607)
+ 237 named destinations out of 1000 (max. 500000)
  431 words of extra memory for PDF output out of 10000 (max. 10000000)
 
