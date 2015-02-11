@@ -1,16 +1,15 @@
 TASKS
 =====
 - DOORS Parameterinfo. local im Rechner speichern. Wie wird das gemacht? (lesen&schreiben) serialize & unserialize
-- Variante gelöscht--> alle TreeItems durchgehen und variante aus ParameterTag löschen
-- Neue Variante --> alle TreeItems durchgehen und Tag refresh
+
+- Fehlerüberprüfung!!!!!! Negativtest
+
 - ConnectionPreferences!
 
 
 FRAGEN
 ======
-- Davon ausgehen, keine weitere Varianten werden hinzugefügt/gelöscht???
-- ich kenne das DOORS Modul. Gibt es ein Standard für die Speicherung der DOORS Parametertabelle?
-	-Nicos API fragt Attribute nicht ab. Bis jetzt Konstante
+
 - Wie soll das ParameterWert angezeigt werden? Testona erlaubt nicht gleiche Namen in Klassifikationen
 - Nur Klassen oder auch Klassifikationen
 - Einheiten für die Parameterwerte

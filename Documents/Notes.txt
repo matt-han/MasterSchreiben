@@ -1,19 +1,11 @@
-FRAGEN
-======
-- Welches Tag beinhaltet die Requirements? Wie kann ich es lesen?
-- Erst (ganze) Parameter Tabelle importieren wenn Benutzer Anforderungen mit Parameter an Baumelement verknüpft? JA
-- 1 Baumelement <--> 1 Parameter bedeutet dass auch nur 1 Anforderung <--> Baumelement? => N..M, implementiere erst 1..1
-- Davon ausgehen, keine weitere Varianten werden hinzugefügt/gelöscht?
-- ich kenne das DOORS Modul. Gibt es ein Standard für die Speicherung der DOORS Parametertabelle?
+
 
 NOTES
 =====
-- Speichern der Parameter in *.testona Datei nicht am Anfang machen. Java-Object Tag wird serialisiert
 - Listener für Pfeile finden --> Update Parameterwert in Label, package com.berner_mattner.testona.variants.handler ShowNextVariantHandler
-
-- Bei abfragen von Tags, muss ich immer den TAGTYPE "anhängen" Tag.TAGTYPE
+- ich kenne das DOORS Modul. Gibt es ein Standard für die Speicherung der DOORS Parametertabelle?
+	-Nicos API fragt Attribute nicht ab. Bis jetzt Konstante
 - Verbindung wird 2 mal geschlossen.... 
-- ResourceSetListener kann die resourcen nicht ändern
 
 FAQ
 ===

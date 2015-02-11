@@ -55,7 +55,8 @@ Der \textit{VariantsManager} fragt den \textit{Editor} (beinhaltet das Klassifik
 
 
 Requirement IndieModul im connection eigenschaften!!\\
-
+- Variante gelöscht--> alle TreeItems durchgehen und variante aus ParameterTag löschen\\
+- Neue Variante --> alle TreeItems durchgehen und Tag refresh. NEIN
 
 %#######################################################################################
 \subsection{Parameter-\textit{Tag}}\label{sub.ParameterTag}
@@ -75,7 +76,7 @@ Jedes \textit{Tag} hat als Eigenschaft einen Namen. In diese Klasse entspricht d
 
 Der Inhalt von das \textit{Tag} ist durch ein \textit{EcoreEMap<String, String>} definiert. Das erste String ist ein Schlüsselwert und das zweite String das Wert. Im diesem Fall ist der Schlüssel der Name einer Variante, und der Wert ist der Parameterwert des Parameters in dieser Variante.  Anhand der Methode \textit{getContent()} kann der Inhalt eines \textit{Tags} aufgerufen werden und mit der Methode \textit{addEntry()} werden Inhalte hinzugefügt. Das Gegenteil kann man mit der Methode \textit{deleteEntry()} erreichen. Wie die Methoden genauer angewendet werden, wird im Listing \ref{lst:CreateParamTag} gezeigt.
 
-
+EINHEITEN\\
 
 serialize und unserialize\\
 
