@@ -9,14 +9,29 @@ TASKS
 
 FRAGEN
 ======
-
-- Wie soll das ParameterWert angezeigt werden? Testona erlaubt nicht gleiche Namen in Klassifikationen
-- Nur Klassen oder auch Klassifikationen
-- Einheiten für die Parameterwerte
+- Zweck von ParamListTag
+- 
 
 
 INFOS
 =====
+ParameterName: cruising speed
+ParameterUnit: [km/h]
+
+VariantName: Default
+VariantVal : 25
+-------------------
+VariantName: Cabrio
+VariantVal : 100
+-------------------
+VariantName: Kombi
+VariantVal : 200
+-------------------
+VariantName: Limo
+VariantVal : 150
+-------------------
+
+
 * Verbindung zwischen DOORS Variante und Leaf
 	
 	nach Import einer Variante keine auto. Bezeihungen / Verlinkungen?

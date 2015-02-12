@@ -1,7 +1,8 @@
 serialize ParameterTag:
 <Class id="c107" name="1" x="518" y="192"/>
 	<Tag id="c453" type="ParameterTag">
-		<Content key="ParameterName" value="Name0"/>
+		<Content key="ParameterName" value="Name1"/>
+		<Content key="ParameterName" value="Name2"/>
 	</Tag>
 </Class>
 <Class id="c107" name="2" x="518" y="192"/>
@@ -15,32 +16,3 @@ serialize ParameterTag:
 	<Content key="Name0;Var1;Var2;Var3" value="km/h;100;200;300"/>
 	<Content key="Name1;Var1;Var2;Var3" value="km/h;10;20;30"/>
 </Tag>
-
-
-
-###########################################
-<Class id="c107" name="2" x="518" y="192"/>
-	<Tag id="c365" type="ParameterTag" name="Name0" unit="km/h">
-		<Content key="Var1" value="100"/>
-		<Content key="Var2" value="200"/>
-		<Content key="Var3" value="300"/>
-	</Tag>
-
-	<Tag id="c365" type="ParameterTag" name="Name1" unit="km/h">
-		<Content key="Var1" value="10"/>
-		<Content key="Var2" value="20"/>
-		<Content key="Var3" value="30"/>
-	</Tag>
-</Class>
-
-ODER...
-=======
-#für jedes ParameterTag
-<Class id="c107" name="2" x="518" y="192"/>
-	<Tag id="c365" type="ParameterTag" >
-		<Content key="Name1" value="km/h"/>
-		<Content key="Var1" value="10"/>
-		<Content key="Var2" value="20"/>
-		<Content key="Var3" value="30"/>
-	</Tag>
-</Class>
