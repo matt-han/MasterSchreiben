@@ -5,14 +5,21 @@ serialize ParameterTag:
 		<Content key="ParameterName" value="Name2"/>
 	</Tag>
 </Class>
+
+
+
+
 <Class id="c107" name="2" x="518" y="192"/>
 	<Tag id="c454" type="ParameterTag">
-		<Content key="ParameterName" value="Name1;Name2;Name3"/>
+		<Content key="Name0;Var1;Var2;Var3" value="km/h;100;200;300"/>
+		<Content key="Name1;Var1;Var2;Var3" value="km/h;10;20;30"/>
 	</Tag>
 </Class>
 
-#ParameterTagList erzeugen (Klasse)
-<Tag id="c365" type="ParameterTagList">
-	<Content key="Name0;Var1;Var2;Var3" value="km/h;100;200;300"/>
-	<Content key="Name1;Var1;Var2;Var3" value="km/h;10;20;30"/>
-</Tag>
+
+<Class id="c107" name="1" x="518" y="192"/>
+	<Tag id="c453" type="ParameterTag">
+		<Content key="ParameterName" value="Name1"/>
+		<Content key="ParameterName" value="Name2"/>
+	</Tag>
+</Class>

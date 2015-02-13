@@ -6,11 +6,15 @@ TASKS
 
 - ConnectionPreferences!
 
+- pure variants -->schoolar
+- product line/family engeenring
+- feature modelling
 
 FRAGEN
 ======
-- Zweck von ParamListTag
-- 
+- Zweck von ParameterListTag
+- ParameterListTag beinhaltet ParametarTag
+- VariantListTag beinhalt "nur" Variant
 
 
 INFOS
