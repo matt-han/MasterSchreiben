@@ -6,23 +6,69 @@
 \section{Variantenmanagement und Parameter}
 \paragraph{}
 
-Die Lösung zum Speichern und Darstellen der Parameterwerte abhängig der aktiven Variante wurde folgendermaßen programmiert.\\
+Die Lösung zum Speichern und Darstellen der Parameterwerte abhängig der aktiven Variante wird im diesem Kapitel erläutert.\\
 
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.7]{5_1_klassenuebersicht.jpg}
-  		  \caption{Darstellung der Klassen}
+  		  \caption{Einfache Übersicht der Klassen}
      \label{ttn.verbindung.klassen.loesung}
   \end{center}
 \end{figure}
 
 
+Um eine genauere Darstellung aller Klassen, bitte siehe Anhang \ref{A.PM.Diagramm}. Der Ablauf für das Speichern eines Parameters in einem Baumelement sieht folgendermaßen aus:
+\begin{enumerate}
+\item Benutzer verknüpft eine Anforderung an einem Baumelement
+\item Der \textit{Listener} meldet das eine Änderung vorgenommen wird und gibt die Informationen weiter
+\item Der \textit{VariantsManager} lädt und übergibt die nötige Informationen an das \textit{ParameterManager}
+\item Der \textit{ParameterManager} lädt, sucht und erstellt ein \textit{ParameterTag}  und gibt das Befehl, dass ein \textit{ParameterTag} an ein Baumelement hinzugefügt werden muss.
+\item Der \textit{ParameterManager} gibt das Befehl an das \textit{Listener} weiter
+\item Das Befehl wird an die Befehlskette angehängt
+\end{enumerate}
+
+In den nächsten Unterkapiteln wird die Aufgaben der jeweiligen Klassen erläutert und der Ablauf ausführlicher erklärt.
+
 
 %#######################################################################################
-\subsection{ResourceSetListener}
-Das auslösendes Element ist, dass der Benutzer eine Anforderung mit einen Baumelement verknüpft. Um dieses Geschehen abzufragen wurde ein \textit{Listener} programmiert, der das Interface \textit{ResourceSetListener}\footnote{http://download.eclipse.org/modeling/emf/transaction/javadoc/1.0.3/org/eclipse/emf/transaction/ResourceSetListener.html} implementiert. Die Aufgabe des \textit{ResourceSetListener} ist, dem Benutzer zu benachrichtigen, wenn sich eine Ressource ändert. Der \textit{Listener}  \glqq hört\grqq~ auf die reinkommenden Nachrichten (\textit{ResourceSetChangeEvent}) und wertet den Inhalt dieses Events aus.\\
+\subsection{VariantsManager}\label{sub.VariantsManager}
+Die Hauptaufgabe des \textit{VariantsManager} ist die Varianten zu Zuordnen. Hier werden Baumelemente zu Varianten hinzugefügt und gelöscht. Dabei muss das Klassifikationsbaum neu gezeichnet werden. Diese Klasse kümmert sich auch, um die Umschaltung zwischen Varianten in der Variantenansicht (siehe Abbildung \ref{ttn.generic}) und die Richtige Darstellung der Baumelemente mit aktuelle Informationen.\\
 
-Als Inhalt der Nachricht wird folgendes empfangen: 
+
+Für die  Zwecke dieser Arbeit, wurde diese Klasse erweitert. Um die Aufgaben dieser Klasse zu erläutern, wird der Vorgang des Hinzufügen eines Parameters an einem Baumelement dargestellt. Der \textit{VariantsManager} setzt die Baumelement -ID und die Anforderungskennung in der Klasse \textit{ParameterManager}. Die Klasse dient als Schnittstelle zwischen der \textit{Listener} (siehe Kapitel \ref{sub:RSListner}) und die Klasse \textit{ParameterManager}  (siehe Kapitel \ref{sub:ParameterManager}).\\
+
+
+Die Aufgabe des \textit{Listeners} lautet, dem \textit{VariantsManager} zu melden, wenn Änderung\footnote{Aktionen werden vom Benutzer ausgelöst anhand von Bedienelemente in der Benutzeroberfläche} geschehen werden oder geschehen sind. Im \textit{Listener} werden die benötigte Informationen gefiltert und an dieser Klasse weitergegeben, damit Änderung vorgenommen werden können. Im Fall der Parameterersetzung sind es die Identifikationsnummer eines Baumelementes und die Anforderungskennung der verlinkte Anforderung. Diese beide Kennungen diesen dazu, dass der \textit{VariantsManager} die jeweiligen Objekte (ein Baumelement und eine Anforderung) laden kann. Diese Objekte werden dann an der Klasse \textit{ParameterManager} übergeben.\\
+
+
+Das angesprochene Baumelement muss aus das TESTONA-Diagramm geladen. Anhand der Identifikationsnummer werden die verschiedene Baumelemente einzeln abgefragt bis das richtige Baumelement gefunden wurde. Danach wird das Baumelement an das ParameterManager-Objekt übergeben.\\
+
+
+Im Fall von der Anforderungskennung, werden mehrere Informationen übergeben. Die Anforderungskennung wird in einer lokalen Variable vom ParameterManager-Objekt gespeichert. Damit der Inhalt der Anforderung gelesen werden kann, müssen alle in TESTONA gespeicherte Anforderung an das ParameterManager-Objekt übergeben. Die gespeicherten \textit{Tags} in das TESTONA-Objekt werden abfragt um folgende Objekte an das ParameterManager-Objekt zu übergeben:
+
+
+\begin{itemize}
+\item \textbf{RequirementsConnetionTag}: beinhaltet die Information zur Datenbankverbindung, unter anderem die Verbindungsidentifikation (DOORS), das Modul(Tabelle) wo die Anforderung gespeichert ist und die Schnittstelle zur Datenbank. Anhand dieser Informationen wird die Verbindung zur Datenbank später aufgebaut.
+\item \textbf{RequirementsListTag}: ist eine \textit{Map} mit alle in TESTONA gespeicherten Anforderungen. Das \textit{Key} ist die Anforderungsidentifikationsnummer und der Wert der Inhalt der Anforderung. Eine Anforderung aus dieser Liste wurde an das Baumelement verknüpft.
+\item \textbf{VariantListTag}: eine Liste mit alle in TESTONA definierten Varianten.
+\end{itemize}
+
+
+Anhand dieser Informationen kann die Klasse \textit{ParameterManager} ein Parameter ein ein Baumelement hinzufügen. Parameter können nicht nur hinzugefügt werden, sondern aus gelöscht werden. Ein Parameter wird aus einem Baumelement gelöscht, indem die verknüpfte Anforderung vom Baumelement entfernt wird. Der Ablauft für das Löschen eines Parameter ist im Grunde der gleiche als beim hinzufügen. Zunächst werden die Funktionen des \textit{Listeners} erörtert.
+
+
+
+
+%#######################################################################################
+\subsection{ResourceSetListener}\label{sub:RSListner}
+Das auslösendes Element ist, dass der Benutzer eine Anforderung mit einen Baumelement verknüpft. Um dieses Geschehen abzufragen muss ein \textit{Listener} programmiert werden, dass das Interface \textit{ResourceSetListener}\footnote{http://download.eclipse.org/modeling/emf/transaction/javadoc/1.0.3/org/eclipse/emf/transaction/ResourceSetListener.html} implementiert. Da dass \textit{VariantsManager} ein solcher \textit{Listener} bereits besitzt, wurde dieser erweitert. Die Aufgabe des \textit{ResourceSetListener} ist, dem Benutzer zu benachrichtigen, wenn sich eine Ressource ändert. Der \textit{Listener}  \glqq hört\grqq~ auf die reinkommenden Nachrichten (\textit{ResourceSetChangeEvent}) und wertet den Inhalt dieses Events aus.\\
+
+Das \textit{Listener} implementiert zwei Methoden die für das Abfragen der Events relevant sind. Eine davon heißt \textit{resourceSetChanged(Event e)}. Diese Methode wird aufgerufen, wenn sich eine Ressource ändert (vom Element wo das \textit{Listener} angehängt ist). Am Anfang wurde diese Methode favorisiert für das abhören wenn eine Anforderung zu einem Baumelement verknüpft wird (um danach die Parameterersetzung zu triggern). Nach der Implementierung konnte ich feststellen, dass die Methode keine Schreibrechte auf die Baumelemente besitzt. Da die Ressource zu diesem Zeitpunkt sich schon geändert hat.\\
+
+Um die Schreibrechte zu besitzen, wurde dann die Methode \textit{transactionAboutToCommit(Event e)} betrachtet. Diese Methode wird aufgerufen bevor eine Änderung geschieht. Es wird benachrichtigt, dass eine Änderung geschehen wird und welche Objekte (ein Baumelement und die angehängte Anforderung) betrachtet werden. Zu diesem Zeitpunkt besitzt die Klasse noch Schreibrechte auf die Baumelemente und kann Änderung vornehmen. Außerdem hat die Methode als Rückgabewert ein \textit{Command}. So können Kommandos an das Commandstack angekettet werden. Das Befehl, ein Parameter an ein Baumelement hinzufügen, wird zum richtigen Zeitpunkt ausgeführt, dank der Anordnung des Commandstacks. 
+
+
+Die empfangene Nachricht beinhaltet folgende Elemente: 
 
 \begin{itemize}
 \item \textbf{Event: }ResourceSetChangeEvent, heißt die Ressourcen des Objektes haben sich geändert
@@ -32,31 +78,56 @@ Als Inhalt der Nachricht wird folgendes empfangen:
 \item \textbf{NewValue: } neuer Wert, beim löschen von Werten \textit{null}
 \end{itemize}
 
-Hier wird als erstes der \textit{Notifier} abgefragt um zu unterscheiden, ob die Nachricht für uns relevant ist. Ist der \textit{Notifier} eine Instanz eines Baumelementes, so wurde eine Anforderung zum ersten mal an das Baumelement verknüpft. \\
 
-Lautet der \textit{Notifier} Instanz von \textit{RequirementTag} so wurde eine Anforderung von einem Baumelement gelöscht oder es wurde eine neue Anforderung an einen Baumelement hinzugefügt, wo schon Anforderung verknüpft waren. Für alle drei Fälle muss der \textit{Listener} wissen:
-
-\begin{itemize}
-\item An welches Element wurde das Event ausgelöst?
-\item Welche Anforderung wurde hinzugefügt oder gelöscht?
-\end{itemize}
-
-Dafür wird aus dem \textit{Notifier} mit der Methode \texttt{getID()} die Identifikationsnummer des zuständiges Baumelement abgefragt. Weiterhin steht im \textit{Notifier} auch die Kennung der Anforderung (diese wurde in DOORS vergeben). Diese beide Informationen werden gespeichert und an den \textit{VariantsManager} weiter gegeben. Diese Informationen sind für der \textit{ParameterManager} nötig, damit er aus der Anforderung die Parameter lesen kann und mit das richtige Baumelement verknüpfen kann.\\
+Hier wird als erstes der \textit{Notifier} abgefragt um auswerten zu können, ob die Nachricht für relevant ist. Es gibt drei Fälle das unterscheiden werden müssen. Eine Anforderung wird:
 
 
+\begin{enumerate}
+\item zum ersten Mal an einem Baumelement verknüpft
+\item an einem Baumelement verknüpft, wo schon ändere Anforderungen verknüpft sind
+\item gelöscht
+\end{enumerate}
 
 
-%#######################################################################################
-\subsection{VariantsManager}\label{sub.VariantsManager}
-Die Hauptaufgabe des \textit{VariantsManager} ist die Varianten zu regeln. Hier werden Baumelemente zu  Varianten hinzugefügt und gelöscht. Dabei muss das Klassifikationsbaum neu gezeichnet werden. Diese Klasse kümmert sich auch, um die Umschaltung zwischen Varianten in der Variantenansicht (siehe Abbildung \ref{ttn.generic}). Der \textit{VariantsManager} setzt die Baumelement-ID und die Anforderungskennung in der Klasse \textit{ParameterManager}. Die Klasse dient als Schnittstelle zwischen der \textit{Listener} und die Klasse \textit{ParameterManager}\\
-
-Der \textit{VariantsManager} fragt den \textit{Editor} (beinhaltet das Klassifikationsbaum) nach das benötigte Baumelement über die von \textit{Listener} übergebene Identifikationsnummer. Das Baumelement wird dann in das \textit{ParameterManager} gespeichert. Die Anforderungskennung wird auch im Objekt von \textit{ParameterManager} gespeichert.\\
+Für alle drei Fälle muss der \textit{Listener} wissen, an welches Element wurde das Event ausgelöst und welche Anforderung wurde hinzugefügt oder gelöscht. Zu bemerken ist, dass zu diesem Zeitpunkt noch nicht festgestellt werden kann, ob in der Anforderung ein Parameter definiert ist.\\
 
 
+\subsubsection{Eine Anforderung hinzufügen}
+Ist der \textit{Notifier} eine Instanz von \textit{TestonaClass}, so wurde eine Anforderung zum ersten mal an ein Baumelement verknüpft oder gelöscht. Um Unterscheiden zu können werden die Werte von \textit{NewValue} und \textit{OldValue} ausgewertet. Wenn \textit{NewValue} eine Instanz von \textit{RequirementTag} ist, dann wurde eine Anforderung hinzugefügt. Aus dem \textit{Notifier} wird die ID (repräsentiert das Baumelement) und aus der Variable \textit{NewValue} die Anforderungskennung (diese wurde in DOORS vergeben) abgefragt. Beide Werte werden an dem \textit{Variantsmanager} weitergegeben um danach der Befehl als Rückgabewert für das hinzufügen eines \textit{ParameterTags} zu bekommen.\\
 
-Requirement IndieModul im connection eigenschaften!!\\
-- Variante gelöscht--> alle TreeItems durchgehen und variante aus ParameterTag löschen\\
-- Neue Variante --> alle TreeItems durchgehen und Tag refresh. NEIN
+
+Der Befehl wird nicht sofort als Rückgabewert der Methode \textit{transactionAboutToCommit} weitergegeben. Der Grund für diese Maßnahme heißt, dass es \textit{null} sein kann. Wenn kein Parameter in der Anforderung definiert ist, muss auch kein \textit{ParameterTag} an das Baumelement hinzugefügt werden und es muss kein Kommando ausgeführt werden. Weiterhin, in der Methode \textit{transactionAboutToCommit} werden andere \textit{Events} ausgewertet die auch Kommandos ausführen. Darum wird eine lokale Variable \texttt{command} definiert. Eine Eigenschaft der Klasse \textit{Command} ist, dass Kommandos aneinander angehängt werden können.
+
+\begin{lstlisting}
+Command command = null;
+command = chain(command, manager.getParameter());
+\end{lstlisting}
+
+So wird das Kommando für das Hinzufügen eines \textit{ParameterTags} an der lokalen Variable \texttt{command} angehängt. Davor überprüft die Methode \textit{chain} ob einer der Parameter den Wert \textit{null} hat. Wenn keiner der Funktionsparameter den Wert \textit{null} hat, wird die Methode \texttt{chain(Command cmd)} der Klasse \textit{Command} aufgerufen.
+
+\begin{lstlisting}
+command.chain(CommandToAddParameter);
+\end{lstlisting}
+
+Der Vorgang für das Kommando wird für jedes zurückgegebenes Kommando durchgeführt, unabhängig vom Kommando (hinzufügen oder löschen). Am Ende der Methode kann das Kommando (wahrscheinlich bestehend aus mehrere Kommandos) als Rückgabewerte gegeben werden.\\
+
+
+Wenn das Baumelement mindestens eine Anforderung besitzt und eine weitere Anforderung wird hinzugefügt, ist der \textit{Notifier} eine Instanz von \textit{RequirementTag} und \texttt{OldValue == null \&\& NewValue != null}. Aus dem \textit{Notifier} wird die ID des Baumelements abgerufen und \textit{NewValue} ist besitzt die Anforderungskennung. Bevor die neue Anforderung hinzugefügt wird, werden die alten gelöscht (wird danach erörtert) und alle neue hinzugefügt.\\
+
+
+\subsubsection{Anforderungen löschen}
+Ist der \textit{Notifier} eine Instanz von \textit{RequirementTag} so wurde eine Anforderung von einem Baumelement gelöscht oder es wurde eine neue Anforderung an einen Baumelement hinzugefügt, indem bereits Anforderung verknüpft sind. Wird eine Anforderung gelöscht, sind die Werte \texttt{OldValue != null \&\& NewValue == null} . In \textit{OldValue} befindet sich die Anforderungskennung die gelöscht werden soll. Der Löschvorgang teilt sich in zwei Fälle.\\
+
+
+Der erste Fall beschreibt wenn eine Anforderung aus einem Baumelement gelöscht wird, dass nur eine Anforderung beinhaltet. Dieses \textit{Event} teilt sich in zwei Nachrichten. Die erste Nachricht beinhaltet die Anforderungskennung als ein \textit{String}. Die Anforderungskennung wird dann in einer lokalen Variable gespeichert, die mit der zweiten Nachricht ausgewertet wird. In der zweiten Nachricht ist der \textit{Notifier} eine Instanz von \textit{TestonaClass}. Es unterscheidet sich vom Hinzufügen einer Anforderung, weil die Variable \textit{OldValue} eine Instanz von \textit{RequirementTag} ist. Zur Sicherheit wird abgefragt ob die lokale Variable mit der Anforderungskennung ungleich \textit{null} ist. Danach kann aus dem \textit{Notifier} die ID des Bauelements abgefragt werden. Beide Werte werden an dem \textit{VariantsManager} übergeben um als Rückgabewert wird das Befehl für das Löschen eines \textit{ParameterTags}  erwartet.\\
+
+
+Der zweite Fall beschreibt, dass eine oder mehrere Anforderung aus ein Baumelement gelöscht werden, wenn ein Baumelement mindestens eine Anforderung besitzt. Bevor die Anforderung hinzugefügt werden kann, werden die im Baumelement beinhaltende Anforderung zuerst gelöscht. Danach werden alle alte Anforderungen neu hinzugefügt sowohl als die neue Anforderung.\\
+
+
+Wenn das Baumelement bereits eine Anforderung besitzt und eine zweite wird hinzugefügt, beinhaltet das \textit{Notifier} die ID des Baumelements und \textit{OldValue} die Anforderungskennung als \textit{String}. Besitzt das Baumelement mehr als eine Anforderung und eine neue wird hinzufügt, kann aus dem \textit{Notifier} die ID des Bauelements abgefragt werden. Der Unterschied liegt daran, dass \textit{OldValue} jetzt eine Liste von \textit{Stringwerte} ist. Jeder Wert in der Liste repräsentiert eine Anforderungskennung die gelöscht werden soll. So wird mit einer Schleife durch alle Elemente der Liste iteriert und jede Anforderung aus dem Baumelement gelöscht.\\
+
+
 
 %#######################################################################################
 \subsection{Parameter-\textit{Tag}}\label{sub.ParameterTag}
@@ -82,7 +153,7 @@ serialize und unserialize\\
 
 
 %#######################################################################################
-\subsection{ParameterManager}\label{sub.ParameterManager}
+\subsection{ParameterManager}\label{sub:ParameterManager}
 
 %\begin{figure}[h!]
 %  \begin{center}
@@ -120,9 +191,14 @@ paramTagList.add(tempTag);
 
 
 %#######################################################################################
-\subsection{AddParameterTagCommand}\label{sub.Command}
+\subsection{Kommandos}\label{sub.Command}
+Für die Parameterersetzung wurden zwei Klassen implementiert, dass aus die Klasse \textit{RecordingCommand} erben. Die Klasse \textit{RecordingCommand} ist eine partielle Implementierung der Klasse \textit{Command}. Diese Klasse nimmt die  Manipulierung der Objekte der Subklasse auf und erzeugt daraus ein Kommando\footnote{14.02.2015; http://download.eclipse.org/modeling/emf/transaction/javadoc/1.2.3/org/eclipse/emf/transaction/RecordingCommand.html}. Eine der implementierten Klassen erzeugt ein Kommando für das Hinzufügen eines \textit{ParameterTags} an einem Baumelement, während der zweiten für das Löschen zuständig ist. Der Konstruktor der beiden Klassen haben die gleichen Parametern. Es werden der aktuelle Editor-Objekt übergeben, sowie das Baumelement ID und das \textit{ParameterTag}.\\
 
 
+Die Methode \textit{doExecute()} wird überschrieben um die Änderung vorzunehmen. Als erstes werden alle Baumelemente geladen und durch iteriert bis das Baumelement gefunden wird, dass benötigt wird (anhand er ID). Soll ein \textit{ParameterTag} hinzugefügt werden, dann wird die Methode \textit{addTag(ParameterTag pTag)} aufgerufen.\\
+
+
+Soll eine \textit{ParameterTag} gelöscht werden, dann wird die Methode \textit{removeTag(ParameterTag pTag)} aufgerufen. Danach muss auch der Name des Baumelementes neu gesetzt werden. Wenn ein Baumelement ein Parameter besitzt, je nach aktive Variante, wird die Darstellung geändert (siehe Kapitel \ref{sec.visialisierung}). Dafür wird der Name des Baumelementes geladen und falls eine Rücksetzung nötig ist, wird diese gemacht. Genaueres dazu wird in Kapitel \ref{sec.LoesungVisualisierung} veranschaulicht.\\
 
 %#######################################################################################
 \subsection{Die DOORS Verbindng}\label{sub.DoorsConn}
@@ -169,7 +245,7 @@ Aus den in TESTONA gespeicherte Verbindungspräferenzen werden die Verbindungspa
 
 Der Grund warum ein \textit{IConnectionListener} implementiert wird, lautet dass der Verbindungsaufbau in einem neuen Thread stattfindet. Das \textit{DoorsConnetor} Objekt wird über das \textit{IConnectionListener} benachrichtigt ob die Verbindung stattgefunden hat. Die Methode\texttt{interfaceConnected} (aus dem \textit{IConnectionListener}) wird aufgerufen, wenn die Verbindung erfolgreich entstanden ist.
 
-\begin{lstlisting}[caption={Verbindungsaufbau was erfolgreich}, captionpos=b]
+\begin{lstlisting}[caption={Verbindungsaufbau war erfolgreich}, captionpos=b]
 @Override
 public void interfaceConnected() {
 	connected = true;
@@ -225,7 +301,7 @@ Zu beachten ist, dass in DOORS jede Zeile in einer Tabelle als eine Anforderung 
 \item Limo Value
 \end{itemize}
 
-Diese Attribute repräsentieren die Varianten und ein Standardwert, sowie der Name des jeweiligen Parameter. In der Schleife werden alle Zeilen im Modul iteriert und geladen. Wenn die Zeile (\texttt{baseReq}) vollständig geladen wurde, wird diese in der globalen Liste \texttt{paramReqList} als ein \texttt{Requirement} Objekt gespeichert. Die Methode \texttt{fillParamTagList} erzeugt die \textit{ParameterTags} und wurde in Kapitel \ref{sub.ParameterManager} erläutert.\\
+Diese Attribute repräsentieren die Varianten und ein Standardwert, sowie der Name des jeweiligen Parameter. In der Schleife werden alle Zeilen im Modul iteriert und geladen. Wenn die Zeile (\texttt{baseReq}) vollständig geladen wurde, wird diese in der globalen Liste \texttt{paramReqList} als ein \texttt{Requirement} Objekt gespeichert. Die Methode \texttt{fillParamTagList} erzeugt die \textit{ParameterTags} und wurde in Kapitel \ref{sub:ParameterManager} erläutert.\\
 
 Wenn eine Zeile nicht vollständig geladen werden konnte, gibt es das \textit{RequirementLoadListener}, dass sich um das vollständige laden der Zeilen kümmert. Das \textit{RequirementLoadListener} wird in dieser Klasse instantiiert und von der \textit{DoorsConnetor} Klasse gesetzt. Weiter dazu im nächsten Kapitel.
 
@@ -246,7 +322,16 @@ public void onLoad(List<BasicRequirement> requirements) {
 
 Diese Liste wird iteriert und wie in Kapitel \ref{sub.RequirementDataListener} in der globalen Liste \texttt{paramReqList} als ein \texttt{Requirement} Objekt gespeichert.\\
 
-Weiterhin meldet diese Klasse wenn alle Zeilen aus das DOORS Modul geladen wurden. Das wartenden Dialogfenster aus \ref{sub.ParameterManager} wird benachrichtigt, dass es geschlossen werden kann. Die Benutzeroberfläche von TESTONA ist somit wieder für den Benutzer erreichbar.
+Weiterhin meldet diese Klasse wenn alle Zeilen aus das DOORS Modul geladen wurden. Das wartenden Dialogfenster aus \ref{sub:ParameterManager} wird benachrichtigt, dass es geschlossen werden kann. Die Benutzeroberfläche von TESTONA ist somit wieder für den Benutzer erreichbar.
+
+
+
+%#######################################################################################
+%#######################################################################################
+\newpage
+\section{Darstellung der Parameterwerte}\label{sec.LoesungVisualisierung}
+\paragraph{}
+
 
 
 %#######################################################################################
