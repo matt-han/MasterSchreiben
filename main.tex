@@ -5,7 +5,7 @@
 %%
 %--------------------------------------------------------------%
 
-\documentclass[11pt, a4paper,twoside]{report}
+\documentclass[12pt, a4paper,twoside]{report}
 \usepackage[abgabe]{bhtThesis}
 \typeout{Masterarbeit}
 
@@ -15,6 +15,7 @@
 \usepackage{blindtext}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{multirow} %for tables
 
 \lstset{
 	literate =	{ö}{{\"o}}1
@@ -54,7 +55,7 @@
 				tabsize=2,
 				breaklines=true,
 				numbers=left,
-				numbersep=0pt,
+				numbersep=2pt,
 				numberstyle=\color{gray},
 				basicstyle=\ttfamily\color{black}\small,
 				keywordstyle=\color{black},%\bfseries,
@@ -84,7 +85,7 @@
 % Dankessage
 %##################################################################
 
-\input{dankessage.tex}
+\input{danksagung.tex}
 
 
 
@@ -128,6 +129,10 @@
 %##################################################################
 \lstlistoflistings
 
+%##################################################################
+% Tabellenverzeichnis
+%##################################################################
+\listoftables
 
 %##################################################################
 % Anhang

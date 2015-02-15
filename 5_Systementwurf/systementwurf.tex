@@ -41,7 +41,7 @@ Für die  Zwecke dieser Arbeit, wurde diese Klasse erweitert. Um die Aufgaben di
 Die Aufgabe des \textit{Listeners} lautet, dem \textit{VariantsManager} zu melden, wenn Änderung\footnote{Aktionen werden vom Benutzer ausgelöst anhand von Bedienelemente in der Benutzeroberfläche} geschehen werden oder geschehen sind. Im \textit{Listener} werden die benötigte Informationen gefiltert und an dieser Klasse weitergegeben, damit Änderung vorgenommen werden können. Im Fall der Parameterersetzung sind es die Identifikationsnummer eines Baumelementes und die Anforderungskennung der verlinkte Anforderung. Diese beide Kennungen diesen dazu, dass der \textit{VariantsManager} die jeweiligen Objekte (ein Baumelement und eine Anforderung) laden kann. Diese Objekte werden dann an der Klasse \textit{ParameterManager} übergeben.\\
 
 
-Das angesprochene Baumelement muss aus das TESTONA-Diagramm geladen. Anhand der Identifikationsnummer werden die verschiedene Baumelemente einzeln abgefragt bis das richtige Baumelement gefunden wurde. Danach wird das Baumelement an das ParameterManager-Objekt übergeben.\\
+Das angesprochene Baumelement muss aus das TESTONA-Diagramm geladen. Anhand der Identifikationsnummer werden die verschiedene Baumelemente einzeln abgefragt bis das richtige Baumelement gefunden wurde. Danach wird das Baumelement an das ParameterManager -Objekt übergeben.\\
 
 
 Im Fall von der Anforderungskennung, werden mehrere Informationen übergeben. Die Anforderungskennung wird in einer lokalen Variable vom ParameterManager-Objekt gespeichert. Damit der Inhalt der Anforderung gelesen werden kann, müssen alle in TESTONA gespeicherte Anforderung an das ParameterManager-Objekt übergeben. Die gespeicherten \textit{Tags} in das TESTONA-Objekt werden abfragt um folgende Objekte an das ParameterManager-Objekt zu übergeben:
@@ -131,48 +131,101 @@ Wenn das Baumelement bereits eine Anforderung besitzt und eine zweite wird hinzu
 
 %#######################################################################################
 \subsection{Parameter-\textit{Tag}}\label{sub.ParameterTag}
-\subsubsection{ParameterTag}
-Das Interface dient als Schnittstelle für den Zugriff auf das Inhalt von ParameterTagImpl. Das Interface erweitert \textit{Tag}. Das \textit{Tag} Interface ist ein in TESTONA allgemein implementiertes Modell, welches auf ein Interface und eine implementierende Klasse basiert. Für jedes \textit{Tag} (RequirementTag, VariantTag, etc.) gibt es ein eine Klasse. In das Interface wird immer das Tagtyp definiert um \textit{Tags} voneinander unterscheiden zu können.
 
-\begin{lstlisting}[caption={ParameterTag Interface}, captionpos=b]
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.7]{ParameterTag.png}
+  		  \caption{Darstellung der Klasse ParameterTagImplung das Interface ParameterTag}
+     \label{uml.ParameterTag}
+  \end{center}
+\end{figure}
+
+
+
+
+
+
+\subsubsection{ParameterTag}
+Das Interface \textit{ParameterTag} dient als Schnittstelle für den Zugriff auf das Inhalt von ParameterTagImpl. Das Interface erweitert \textit{Tag}. Das \textit{Tag} Interface ist ein in TESTONA allgemein implementiertes Modell, welches auf ein Interface und eine implementierende Klasse basiert (siehe Kapitel \ref{sub.Tags}). In das Interface wird immer das Tagtyp definiert um \textit{Tags} voneinander unterscheiden zu können.
+
+\begin{lstlisting}
 public static final String TAGTYPE = "ParameterTag";
 \end{lstlisting}
 
-Das Tagmodell wird benutzt um in TESTONA überall ähnliche Objekt zu haben, die verschiedene Funktionen erfühlen, aber die gleiche Richtlinie folgen
+Das \textit{Tag} wurde um die in Abbildung \ref{uml.ParameterTag} zu sehende Methoden erweitert. 
 
 \subsubsection{ParameterTagImpl}
-Die Klasse \textit{ParameterTagImpl} erweitert die Klasse \textit{TagImpl} und implementiert \textit{ParameterTag}. In dieser Klasse werden die Vorteile von das Tagmodell deutlicher. Die Klasse \textit{TagImpl} definiert sehr nützliche Methoden und Eigenschaften die in \textit{ParameterTagImpl} angewendet werden.\\
+Die Klasse \textit{ParameterTagImpl} erweitert die Klasse \textit{TagImpl} und implementiert \textit{ParameterTag}. In dieser Klasse werden die Vorteile von das Tagmodell deutlicher. Die Klasse \textit{TagImpl} definiert sehr nützliche Methoden und Eigenschaften die in \textit{ParameterTagImpl} weiter angewendet werden.\\
 
-Jedes \textit{Tag} hat als Eigenschaft einen Namen. In diese Klasse entspricht der Name, ein Parametername der aus der Parametertabelle gelesen wurde. Weiterhin ist über \textit{ID} eine eindeutige Identifikationsnummer definiert, um \textit{Tags} des gleichen Typs voneinander zu unterscheiden.\\
+Jedes \textit{Tag} hat als Eigenschaft einen Namen. In diese Klasse entspricht der Name, ein Parametername der aus der Parametertabelle gelesen wurde. Weiterhin ist über \textit{ID} eine eindeutige Identifikationsnummer definiert, um \textit{Tags} des gleichen Typs voneinander zu unterscheiden. Es wurde ein weiteres Attribut implementiert, dass die Einheit (\textit{unit}) des Parameters definiert\\
 
-Der Inhalt von das \textit{Tag} ist durch ein \textit{EcoreEMap<String, String>} definiert. Das erste String ist ein Schlüsselwert und das zweite String das Wert. Im diesem Fall ist der Schlüssel der Name einer Variante, und der Wert ist der Parameterwert des Parameters in dieser Variante.  Anhand der Methode \textit{getContent()} kann der Inhalt eines \textit{Tags} aufgerufen werden und mit der Methode \textit{addEntry()} werden Inhalte hinzugefügt. Das Gegenteil kann man mit der Methode \textit{deleteEntry()} erreichen. Wie die Methoden genauer angewendet werden, wird im Listing \ref{lst:CreateParamTag} gezeigt.
+Der Inhalt von das \textit{Tag} ist durch ein \textit{EcoreEMap<String, String>} definiert. Das erste String ist ein Schlüsselwert und das zweite String der Wert. Im diesem Fall ist der Schlüssel der Name einer Variante, und der Wert ist der Parameterwert des Parameters in dieser Variante. Der Inhalt und Struktur eines \textit{ParameterTags} sieht folgendermaßen aus:\\
 
-EINHEITEN\\
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{|l||ll|}
+	 \hline
+	 \multicolumn{3}{|c|}{ParameterTag}\\
+	 \hline\hline
+	 ID			& \multicolumn{2}{|c|}{30}\\
+	 \hline
+	 Name		& \multicolumn{2}{|c|}{max\_speed}\\
+	 \hline
+	 Unit		& \multicolumn{2}{|c|}{[km/h]}\\
+	 \hline
+	 \multirow{5}{*}{Content}	&Key			&Value\\ \cline{2-3}
+	 							&Generic		&50\\
+	 							&Cabrio		&100\\
+	 							&Kombi		&200\\
+	 							&Limo		&300\\
+	 \hline
+	\end{tabular}
+	
+	\caption{Beispiel eines ParameterTags}
+	\label{table:ParameterTagStruktur}
+\end{center}
+\end{table}
 
-serialize und unserialize\\
 
+Anhand der Methode \textit{getContent()} kann der Inhalt eines \textit{Tags} aufgerufen werden und mit der Methode \textit{addEntry()} werden Inhalte hinzugefügt. Das Gegenteil kann man mit der Methode \textit{deleteEntry()} erreichen. Wie die Methoden genauer angewendet werden, wird im Listing \ref{lst:CreateParamTag} gezeigt.\\
+
+
+Sehr relevant sind die Methoden \textit{serialize()} und \textit{unserialize(Map<String, String>)} die für das Schreiben und das Lesen der .testona Datei zuständig sind. Zum Schreiben wird ein \textit{HashMap<String, String>} Objekt zurückgegeben. Das erste \textit{String} beinhaltet der Name des Parameters gefolgt von die Variantennamen. Die Werte sind durch ein Vereinbartes Trennzeichen (;)  getrennt. Das zweite \textit{String} beinhaltet die Einheit des Parameters und die Parameterwerte (in einer geordneten Reihenfolge). Der XML Eintrag für das obige Beispiel (Tabelle \ref{table:ParameterTagStruktur}) wurde wie folgt aussehen:\\
+
+\begin{lstlisting}[caption={XML Darstellung eines ParameterTags}, captionpos=b]
+<Tag id="30" type="ParameterTag">
+	<Content key="max_speed;Generic;Cabrio;Kombi;Limo" value="km/h;50;100;200;300"/>
+<Tag/>
+\end{lstlisting}
+
+
+Beim Laden der .testona Datei erkennt das Programm anhand des Attributs \texttt{type} um welches Typ von \textit{Tag} es sich handelt. Die Methode \textit{unserialize} bekommt als Eingansparameter die in \textit{serialize()} erstellte Zeile als ein \textit{Map<String, String>} Objekt. Durch das Trennzeichen werden die jeweilige Werten voneinander unterschieden und zu den zugehörigen Variablen (name, unit, content) zugeordnet. Beider Vorgänge funktionieren automatisiert dank der Vererbung und die
 
 %#######################################################################################
 \subsection{ParameterManager}\label{sub:ParameterManager}
 
-%\begin{figure}[h!]
-%  \begin{center}
-%    \includegraphics[scale=0.7]{.jpg}
-%  		  \caption{Darstellung der Klasse ParameterManager in UML}
-%     \label{ttn.ParameterMananger}
-%  \end{center}
-%\end{figure}
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.7]{KD_ParameterManager.png}
+  		  \caption{Klasse ParameterManager}
+     \label{kd.ParameterMananger}
+  \end{center}
+\end{figure}
 
-Die Klasse \textit{ParameterManager} beinhaltet eine private innere Klasse \textit{DoorsConnector}(siehe \ref{sub.DoorsConn}), diese kümmert sich um den Verbindungsaufbau mit DOORS.\\ Weiterhin baut die Klasse die vom \textit{Listener} weitergegeben Daten (Baumelement und Anforderungskennung) auf.\\
-
-
-
-Anforderung eines Baumelementes beinhaltet Modul und Interface. wichtig für nächstes Kapitel\\
-
-IndieModul : interId: doors, connId: localhost;36677, moduleId: /Simple Belt Warner 2/Simple Belt Warner Spec, moduleNbr: 0, id: doors,localhost;36677,/Simple Belt Warner 2/Simple Belt Warner Spec)\\
+Die Klasse \textit{ParameterManager} überprüft und startet die Parameterersetzung. Sie beinhaltet die private innere Klasse \textit{DoorsConnector}, diese kümmert sich um den Verbindungsaufbau mit DOORS und das Laden von den Parameterwerten aus der Parametertabelle. Die Klasse \textit{DoorsConnector} wird genauer in siehe Kapitel \ref{sub.DoorsConn} erklärt.\\
 
 
-\begin{lstlisting}[caption={Erstellung der ParameterTag}, captionpos=b,label={lst:CreateParamTag}]
+Mit dem Aufruf der Methode \textit{addParameterToTreeItem()} wird die Parameterersetzung gestartet. Die Methode hat als Rückgabewert ein Kommando, indem ein Parameter hinzugefügt oder gelöscht wird (siehe Kapitel \ref{sub.Command}). Als erstes überprüft die Methode ob die an das Baumelement verlinkte Anforderung ein Parameter beinhaltet. Falls kein Parameter in der Anforderung gefunden wurde, gibt die Methode den Wert \textit{null} zurück. Wenn ein Parameter gefunden wurde, wird der Name in einer Variablen gespeichert um es aus DOORS laden zu können. Wenn noch keine Parameter lokal zu Verfügung stehen (in Form von \textit{ParameterTag} innerhalb einer Liste) wird die Verbindung mit DOORS gestartet. Die erforderliche Angaben zum Verbindungsaufbau befinden sich in der Variable \textit{im} vom Typ \textit{IndieModul} (diese wurde von der Klasse \textit{VariantsManager} gesetzt aus das \textit{RequirementsConnectionTag}). Das Objekt der Klasse \textit{DoorsConnetor} hat Zugriff auf \textit{im} und kann die gespeicherte Daten abfragen.\\
+
+
+Während die Verbindung entsteht und die Parametertabelle geladen wird, wird dem Benutzer ein Dialogfenster angezeigt. Dieser blockiert die Benutzeroberfläche und zeigt ein Fortschrittsbalken. Nach einem erfolgreichen Verbindungsaufbau wird die Parametertabelle geladen. Der Pfad zu der Parametertabelle in DOORS ist als Attribut des Hauptmoduls gespeichert. In das Objekt \textit{im} befindet sich der Pfad zum Hauptmodul. Die aktuell implementierte DOORS API in TESTONA kann nicht diese Attribute abfragen. Eine in Moment in Entwicklungszustand neue API wird in der Lage sein, die Attribute abfragen zu können. An dieser Stelle wurde als Kompromiss eine Konstante angelegt, in der sich der Pfad zur Tabelle befindet.\\
+
+ 
+Wenn ein Parameter und die zugehörige Werte geladen worden sind, werden sie in \textit{ParameterTag} Objekt gespeichert. Die Methode \texttt{fillParamTagList(Requirement req)} agiert als Parser und wandelt der Übergabeparameter in ein ParameterTag. Zu beachten ist, dass innerhalb DOORS jede Zeile in ein Modul als eine Anforderung betrachtet wird. Danach wurde die Namensgebung vereinbart und der Übergabeparameter ist vom Typ \textit{Requirement}. In das \textit{Requirement} Objekt befinden sich die Variantennamen und die Parameterwerte. Der folgende Quelltextausschnitt kümmert sich im die Speicherung der Parameterwerte in ein \textit{ParameterTag}.\\
+
+
+\begin{lstlisting}[caption={Auszug von der Erstellung der ParameterTags}, captionpos=b,label={lst:CreateParamTag}]
 ParameterTag tempTag = new ParameterTagImpl();
 		
 for(int i = 0; i < attributesList.size(); i++){
@@ -181,8 +234,8 @@ for(int i = 0; i < attributesList.size(); i++){
 	if(i == 0) {
 		tempTag.setName(req.getValue(attributesList.get(0)).getValueAsString());
 	} else {
-		//entferne " Value" vom Variantenamen 
-		tempTag.addEntry(sAttrList.get(i).substring(0, sAttrList.get(i).lastIndexOf("Value")-1),
+		//Füge ein Eintrag hinzu 
+		tempTag.addEntry(sAttrList.get(i),
 				req.getValue(attributesList.get(i)).getValueAsString());
 	}
 }
@@ -190,12 +243,22 @@ paramTagList.add(tempTag);
 \end{lstlisting}
 
 
+Die Variable \texttt{attributesList} beinhaltet die in DOORS definierten Varianten\footnote{Jede Variante in das DOORS Modul wird als ein Attribut definiert und in einer Spalte angezeigt. Wobei nicht jede Spalte des Moduls ein Attribut ist.}. Die Liste wird iteriert und die Werte werden in das \textit{ParameterTag} gespeichert. Zwei Attribute sind für jedes Parameter in der Liste mindestens definiert. Diese sind der Parametername und ein Standartwert. Möglicherweise ist auch die Einheit des Parameters definiert. Die geladene Werte werden kontrolliert ob sie ungleich ein leerer \textit{String} sind\footnote{Im Ladevorgang einer Anforderung und ihre Attribute in DOORS, wird nicht zwischen leeren und befüllte Zellen unterschieden. Der Rückgabewert ist immer ein \textit{String}. Wenn die Zelle leer ist, wird ein leerer \textit{String} zurückgegeben.}, bevor sie in ein \textit{ParameterTag} gespeichert werden.\\
+
+
+Wenn alle vorhandenen Varianten für dieses Parameter iteriert worden sind, wird überprüft ob der Inhalt (die Variable \textit{content} des \textit{ParameterTags}) der temporären Variable \texttt{tempTag} nicht leer ist. Es kann vorkommen, dass ein Parameter in das Modul definiert ist, aber keine weitere Informationen wurden ausgefüllt. Wenn Inhalte vorhanden sind, wird das \textit{ParameterTag} zur eine Liste hinzugefügt.\\
+
+Nachdem die Parameter geladen werden konnten und die Liste befühlt ist, wird die Verbindung mit DOORS geschlossen. Das Dialogfenster wird danach geschlossen und die Benutzeroberfläche wird freigegeben. Während dessen wird ein der Liste das richtige \textit{ParameterTag} geladen und die Methode \textit{getCommandToAddParameter()} wird aufgerufen. Diese Methode erzeugt ein Objekt der Klasse \textit{AddParameterTagCommand}. Das zurückgegebene Kommando wird an die Klasse \textit{VariantsManager} weitergeleitet, die wiederum das Kommando an das \textit{ResourSetListener} weitergibt. Dort wird das Kommando verarbeitet.\\
+
+
+Für den Fall, dass eine Anforderung aus ein Baumelement gelöscht wird, muss zuerst überprüft werden ob die Anforderung ein Parameter beinhaltet. Wenn ein Parameter gefunden worden ist, wird das \textit{ParameterTag} aus dem Baumelement geladen. Mithilfe der Klasse \textit{RemoveParameterTagCommand} wird das \textit{ParameterTag} aus dem Baumelement entfernt.
+
 %#######################################################################################
 \subsection{Kommandos}\label{sub.Command}
-Für die Parameterersetzung wurden zwei Klassen implementiert, dass aus die Klasse \textit{RecordingCommand} erben. Die Klasse \textit{RecordingCommand} ist eine partielle Implementierung der Klasse \textit{Command}. Diese Klasse nimmt die  Manipulierung der Objekte der Subklasse auf und erzeugt daraus ein Kommando\footnote{14.02.2015; http://download.eclipse.org/modeling/emf/transaction/javadoc/1.2.3/org/eclipse/emf/transaction/RecordingCommand.html}. Eine der implementierten Klassen erzeugt ein Kommando für das Hinzufügen eines \textit{ParameterTags} an einem Baumelement, während der zweiten für das Löschen zuständig ist. Der Konstruktor der beiden Klassen haben die gleichen Parametern. Es werden der aktuelle Editor-Objekt übergeben, sowie das Baumelement ID und das \textit{ParameterTag}.\\
+Für das Hinzufügen bzw. Löschen eines Parameters in einem Baumelement wurden zwei Klassen implementiert, dass aus die Klasse \textit{RecordingCommand} erben. Die Klasse \textit{RecordingCommand} ist eine partielle Implementierung der Klasse \textit{Command}. Diese Klasse nimmt die  Manipulierung der Objekte der Subklasse auf und erzeugt daraus ein Kommando\footnote{14.02.2015; http://download.eclipse.org/modeling/emf/transaction/javadoc/1.2.3/org/eclipse/emf/transaction/RecordingCommand.html}. Eine der implementierten Klassen erzeugt ein Kommando für das Hinzufügen eines \textit{ParameterTags} an einem Baumelement\footnote{AddParameterTagCommand}, während der zweiten für das Löschen zuständig ist\footnote{RemoveParameterTagCommand}. Der Konstruktor der beiden Klassen haben die gleichen Parametern. Es werden der aktuelle Editor-Objekt übergeben, sowie das Baumelement ID und das \textit{ParameterTag}.\\
 
 
-Die Methode \textit{doExecute()} wird überschrieben um die Änderung vorzunehmen. Als erstes werden alle Baumelemente geladen und durch iteriert bis das Baumelement gefunden wird, dass benötigt wird (anhand er ID). Soll ein \textit{ParameterTag} hinzugefügt werden, dann wird die Methode \textit{addTag(ParameterTag pTag)} aufgerufen.\\
+Die Methode \textit{doExecute()} wird überschrieben um die Änderung vorzunehmen. Als erstes werden alle Baumelemente geladen und iteriert bis das Baumelement gefunden wird, dass benötigt wird (anhand er ID). Soll ein \textit{ParameterTag} hinzugefügt werden, dann wird die Methode \textit{addTag(ParameterTag pTag)} aufgerufen.\\
 
 
 Soll eine \textit{ParameterTag} gelöscht werden, dann wird die Methode \textit{removeTag(ParameterTag pTag)} aufgerufen. Danach muss auch der Name des Baumelementes neu gesetzt werden. Wenn ein Baumelement ein Parameter besitzt, je nach aktive Variante, wird die Darstellung geändert (siehe Kapitel \ref{sec.visialisierung}). Dafür wird der Name des Baumelementes geladen und falls eine Rücksetzung nötig ist, wird diese gemacht. Genaueres dazu wird in Kapitel \ref{sec.LoesungVisualisierung} veranschaulicht.\\
@@ -213,7 +276,7 @@ Soll eine \textit{ParameterTag} gelöscht werden, dann wird die Methode \textit{
 
 Die private innere Klasse \textit{DoorsConnector} baut die Verbindung zwischen den TESTONA und DOORS auf. Sie implementiert das Interface \textit{IConnectionListener}, dass ein \textit{Listener} für die Verbindung - Events umfasst. Für das Laden von Dateien aus DOORS benötigt die Klasse noch ein \textit{Listener} (IDataListener) und ein \textit{Adapter}(IReqLoadAdapter) \\
 
-Als erstes wird von der Klasse \textit{ParameterManager} die Methode \textit{connectToDoors()} aufgerufen. Diese baut die Verbindung auf, indem gespeicherte Verbindungsdaten aufgerufen werden. Wie bereits in Kapitel \ref{sub.ParameterManager} erwähnt, beinhaltet eine Anforderung die Informationen wo die Anforderung gespeichert ist (welches DOORS Modul und über welches Interface das Modul zu erreichen ist). Für den Verbindungsaufbau werden folgende Objekte benötigt:
+Als erstes wird von der Klasse \textit{ParameterManager} die Methode \textit{connectToDoors()} aufgerufen. Diese baut die Verbindung auf, indem gespeicherte Verbindungsdaten aufgerufen werden. Wie bereits in Kapitel \ref{sub:ParameterManager} erwähnt, beinhaltet eine Anforderung die Informationen wo die Anforderung gespeichert ist (welches DOORS Modul und über welches Interface das Modul zu erreichen ist). Für den Verbindungsaufbau werden folgende Objekte benötigt:
 
 \begin{itemize}
 \item \textbf{DataInterface: }Über diese Klasse erfolgt die Datenanfrage an DOORS. Die Verbindung wird aufgebaut sowie getrennt. Es werden als erstes die Ordner geladen, danach einzelne Projekte und die nötige Module. Es können verschiedene Darstellungen der Module auch geladen werden (diese müssen in DOORS definiert sein). Hier werden auch direkt einzelne Anforderungen angefragt. Relevant für diese Arbeit ist, dass hiermit das Modul Parametertabelle in DOORS geladen wird.
@@ -320,7 +383,7 @@ public void onLoad(List<BasicRequirement> requirements) {
 }
 \end{lstlisting}
 
-Diese Liste wird iteriert und wie in Kapitel \ref{sub.RequirementDataListener} in der globalen Liste \texttt{paramReqList} als ein \texttt{Requirement} Objekt gespeichert.\\
+Diese Liste wird iteriert und wie in \textit{RequirementDataListener} in der globalen Liste \texttt{paramReqList} als ein \texttt{Requirement} Objekt gespeichert.\\
 
 Weiterhin meldet diese Klasse wenn alle Zeilen aus das DOORS Modul geladen wurden. Das wartenden Dialogfenster aus \ref{sub:ParameterManager} wird benachrichtigt, dass es geschlossen werden kann. Die Benutzeroberfläche von TESTONA ist somit wieder für den Benutzer erreichbar.
 
@@ -332,6 +395,16 @@ Weiterhin meldet diese Klasse wenn alle Zeilen aus das DOORS Modul geladen wurde
 \section{Darstellung der Parameterwerte}\label{sec.LoesungVisualisierung}
 \paragraph{}
 
+Nachdem Parameter in Baumelement vorhanden sind, sollten die Werte angezeigt werden. Wenn ein Pfeil oder die Kombo-Box (siehe Kapitel \ref{sec.visialisierung}) für eine Änderung der Variantenansicht betätigt wird, muss für jedes Baumelement überprüft. Es wird überprüft, ob für die aktive Variante ein Parameterwert definiert worden ist.\\
+
+In \textit{VariantsManager}\\
+
+ \textit{setNamesWithValues} \\
+ \textit{executeEMFCommand} \\
+ \textit{RenameTreeItemCommand}\\
+ \textit{arrangeAll}\\
+ 
+ 
 
 
 %#######################################################################################

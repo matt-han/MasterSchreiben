@@ -4,24 +4,26 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Richtige Auswahl der Klassen und Klassifikationen f\IeC {\"u}r die Testfallgenerierung}}{4}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ung\IeC {\"u}ltige Auswahl der Klassen (Gr\IeC {\"u}n und Blau) und Klassifikationen (Regularit\IeC {\"a}t und Ecken) f\IeC {\"u}r die Testfallgenerierung}}{4}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Baum und Testf\IeC {\"a}lle ohne Kombinatorik}}{7}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln Bearbeitung}}{9}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln \IeC {\"U}bersicht}}{9}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Testf\IeC {\"a}lle mit Anwendung der Abh\IeC {\"a}ngigkeitsregeln aus \ref {ttn.depencyRulesEdit} und \ref {ttn.depencyRules}}}{10}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Beispiel einer Tabelle in DOORS}}{11}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite {VarMan1}}}{12}{figure.3.6}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Baum und Testf\IeC {\"a}lle ohne Kombinatorik}}{8}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln Bearbeitung}}{10}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln \IeC {\"U}bersicht}}{11}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Testf\IeC {\"a}lle mit Anwendung der Abh\IeC {\"a}ngigkeitsregeln aus \ref {ttn.depencyRulesEdit} und \ref {ttn.depencyRules}}}{11}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Beispiel einer Tabelle in DOORS}}{12}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite {VarMan1}}}{13}{figure.3.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Darstellung der TESTONA Objekte f\IeC {\"u}r die Parameterspeicherung}}{18}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Darstellung eines Baumelementes mit zwei verschiedene Parametern und vier Varianten}}{18}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Generic (default)}}{19}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Cabrio}}{19}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Aktive Variante Kombi}}{19}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Das generische Baum}}{20}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Aktive Variante Cabrio}}{20}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Aktive Variante Kombi}}{20}{figure.4.8}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Darstellung der TESTONA Objekte f\IeC {\"u}r die Parameterspeicherung}}{20}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Darstellung eines Baumelementes mit zwei verschiedene Parametern und vier Varianten}}{21}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Generic (default)}}{21}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Cabrio}}{21}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Aktive Variante Kombi}}{21}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Das generische Baum}}{23}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Aktive Variante Cabrio}}{23}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Aktive Variante Kombi}}{24}{figure.4.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Darstellung der Klassen}}{23}{figure.5.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Einfache \IeC {\"U}bersicht der Klassen}}{26}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Darstellung der Klasse ParameterTagImplung das Interface ParameterTag}}{31}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Klasse ParameterManager}}{33}{figure.5.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Klassendiagramm von ParameterManager.java}}{41}{figure.A.1}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Klassendiagramm von ParameterManager.java}}{49}{figure.A.1}

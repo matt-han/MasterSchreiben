@@ -198,7 +198,7 @@ Das Variantenmanagement wird im Fall von TESTONA dazu benutzt, um bei Produktvar
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[scale=0.6]{varianten.png}
+    \includegraphics[scale=0.4]{varianten.png}
   		  \caption{Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite{VarMan1}}
      \label{doors.bespiel}
   \end{center}
@@ -310,7 +310,23 @@ SWT ist komplett unabhängig von JFace (und Plattform Code), aber JFace wurde ko
 
 
 %#######################################################################################
-\subsection{Tags}
+\subsection{Tags}\label{sub.Tags}
 \paragraph{}
-TODO\\
-Das Tag System erläutern......
+
+Ein \textit{Tag} ist ein Object, dass auf EMF (Eclipse Modeling Framework) basiert. EMF ist ein Java Framework der Eclipse-Open-Source Gemeinschaft für die automatische Erzeugung von Quelltext aus Modellen \cite{EclipseRCP}.  Bei EMF wird die Problemstellung in einem Klassendiagramm beschrieben. Hier werden die Eigenschaften und Attribute der Klassen eingetragen um daraus wird Quelltext generiert. Die Objekte können ohne großen Aufwand serialisiert und validiert werden, und mögliche Fehlerquellen werden ausgeschlossen. In das Ecore-Modell werden die Klassen definiert und in Pakete eingeteilt . Das erzeugte Quelltext kann dann vom Benutzer ergänzt werden.\\
+
+
+Im Fall von \textit{Tags}, diese dienen hauptsächlich um Eigenschaften andere Objekte zu beschreiben. Zum Beispiel gibt es unter anderem ein \textit{Tag} dass wo die Varianten gespeichert werden (\textit{VariantsTag}). Wenn in einem Projekt verschiedene Varianten zur Verfügung stehen, wird es dazu kommen, dass ein Baumelement nicht in alle Varianten auftritt. Das Baumelement wird ein \textit{VariantsTag} besitzen, dass spezifiziert zur welchen Varianten das Baumelement gehört. Ein weiterer Beispiel sind die \textit{RequirementTags}. Hier werden die Anforderungen gespeichert, die an einem Baumelement verknüpft worden sind. Für die farbige Trennung zwischen Knotenpunkten im Klassifikationsbaumeditor ist ein \textit{ColoringTag} zuständig.\\
+
+Die Grundstruktur eines \textit{Tags} besteht aus:
+
+\begin{itemize}
+\item Name
+\item Identifikationsnummer
+\item Typ
+\item Inhalt
+\item Zugriffsrechte
+\end{itemize}
+
+
+Weiterhin können die Klassen um weitere Attribute erweitert werden, je nachdem welchem Zweck gedient wird. Durch die Vererbung und Quelltextgenerierung wird sichergestellt, dass alle \textit{Tags} innerhalb TESTONA kompatibel sind. Anhand der Serialisierung können die \textit{Tags} in die .testona Datei im XML-Format gespeichert werden (dem entsprechend auch ausgelesen werden). Um Parameter in Baumelementen zur speichern, wird auf dieses Modell aufgebaut. Weiter dazu wird in Kapitel \ref{sec.parameterspeicherung} und \ref{sub.ParameterTag} erörtert.
