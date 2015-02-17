@@ -54,6 +54,10 @@ Christopher Robinson-Mallet, Matthias Grochtmann, Joachim Wegener, Kens
 \newblock {\em Third International Conference on Software Testing,
   Verification, and Validation Workshops}, 2010.
 
+\bibitem{TestAbdeckung}
+Softscheck, http://www.softscheck.com/publications/120725\_Code\_Coverage.pdf.
+\newblock {\em Code coverage tools}, June 2012.
+
 \bibitem{ApplicationEngineering}
 H.~Tremp and M.~Ruggiero.
 \newblock {\em Application Engineering: Grundlagen für die objektorientierte

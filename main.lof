@@ -9,21 +9,21 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln \IeC {\"U}bersicht}}{11}{figure.3.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Testf\IeC {\"a}lle mit Anwendung der Abh\IeC {\"a}ngigkeitsregeln aus \ref {ttn.depencyRulesEdit} und \ref {ttn.depencyRules}}}{11}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Beispiel einer Tabelle in DOORS}}{12}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite {VarMan1}}}{13}{figure.3.6}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite {VarMan1}}}{14}{figure.3.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Darstellung der TESTONA Objekte f\IeC {\"u}r die Parameterspeicherung}}{20}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Darstellung eines Baumelementes mit zwei verschiedene Parametern und vier Varianten}}{21}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Generic (default)}}{21}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Cabrio}}{21}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Aktive Variante Kombi}}{21}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Das generische Baum}}{23}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Aktive Variante Cabrio}}{23}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Aktive Variante Kombi}}{24}{figure.4.8}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Darstellung der TESTONA Objekte f\IeC {\"u}r die Parameterspeicherung}}{23}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Darstellung eines Baumelementes mit zwei verschiedene Parametern und vier Varianten}}{24}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Generic (default)}}{24}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Cabrio}}{24}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Aktive Variante Kombi}}{24}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Das generische Baum}}{26}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Aktive Variante Cabrio}}{26}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Aktive Variante Kombi}}{27}{figure.4.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Einfache \IeC {\"U}bersicht der Klassen}}{26}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Darstellung der Klasse ParameterTagImplung das Interface ParameterTag}}{31}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Klasse ParameterManager}}{33}{figure.5.3}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Einfache \IeC {\"U}bersicht der Klassen}}{29}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Darstellung der Klasse ParameterTagImplung das Interface ParameterTag}}{34}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Klasse ParameterManager}}{36}{figure.5.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Klassendiagramm von ParameterManager.java}}{49}{figure.A.1}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Klassendiagramm von ParameterManager.java}}{52}{figure.A.1}

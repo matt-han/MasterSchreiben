@@ -14,7 +14,7 @@ Mehr zu Testfällen und der Arbeitsweise dieses Programms werden in den nächste
 %#######################################################################################
 \subsection{Klassifikationsbaum-Methode}\label{ssec:KM}
 \paragraph{}
-1993 entwickelten K. Grimm und M. Grochtmann die Klassifikationsbaum-Methode zur Ermittlung funktionaler Backbox-Tests im Bereich von eingebetteter Software. Die Methode wurde im Forschungslabor von Daimler-Benz in Berlin als Weiterentwicklung der Category-Partition Method (CPM) erforscht. Gegenüber CPM hat die Klassifikationsbaum-Methode eine graphische Baum-Darstellung und hierarchische Verfeinerungen für implizite Abhängigkeiten. Als Werkzeug wurde der \glqq Classification Tree Editor\grqq~ (CTE) \footnote{Entwickelt von Grochtmann und Wegener\cite{TestCaseDesign}. Bei Berner  \& Mattner aus rechtlichen Gründen zu TESTONA umbenannt} programmiert und unterstützt Partitionierung und Testfallgenerierung. Das Werkzeug von CPM konnte nur Testfälle generieren ohne Bestimmung der Testaspekte\cite{ClassificationTrees}.
+1993 entwickelten K. Grimm und M. Grochtmann die Klassifikationsbaum-Methode zur Ermittlung funktionaler Blackbox-Tests im Bereich von eingebetteter Software. Die Methode wurde im Forschungslabor von Daimler-Benz in Berlin als Weiterentwicklung der Category-Partition Method (CPM) erforscht. Gegenüber CPM hat die Klassifikationsbaum-Methode eine graphische Baum-Darstellung und hierarchische Verfeinerungen für implizite Abhängigkeiten. Als Werkzeug wurde der \glqq Classification Tree Editor\grqq~ (CTE) \footnote{Entwickelt von Grochtmann und Wegener\cite{TestCaseDesign}. Bei Berner  \& Mattner aus rechtlichen Gründen zu TESTONA umbenannt} programmiert und unterstützt Partitionierung und Testfallgenerierung. Das Werkzeug von CPM konnte nur Testfälle generieren ohne Bestimmung der Testaspekte\cite{ClassificationTrees}.
 
  Diese Methode besteht aus zwei wichtigen Schritten:
 \begin{itemize}
@@ -42,7 +42,7 @@ Verwenden wir dafür den kombinatorischen Testentwurf \glqq paarweise Kombinatio
 	\begin{tabular}{|r||c|c|c|}
 	 \hline
 	 No. &OS &CPU &Protokoll\\
-	 \hline
+	 \hline \hline
 	 1. &Linux &AMD &IPv6\\
 	 \hline
 	 4. &Linux &Intel &IPv4\\
@@ -62,7 +62,7 @@ Verwenden wir dafür den kombinatorischen Testentwurf \glqq paarweise Kombinatio
 
 Die Effizienz von diesem einfachen kombinatorischen Entwurf ist beim komplexeren System zu sehen. Hat ein System $20$ verschiedene Schalter und jeder Schalter $10$ verschiedene Einstellungen, so gibt es $10^{20}$ verschiedene Kombinationen. Durch Anwendung der paarweisen Kombination muss der Tester nur 180 Testfälle betrachten.\\
 
-Ein Experiment hat gezeigt, dass durch die Verwendung von der paarweisen Kombinatorik die gleichen oder meistens mehrere Fehler entdeckt wurden, als mit der manuellen Testauswahl\footnote{Basierend auf funktionelle und technische Anforderungen, Use-Cases}. Paarweise Kombinatorik ist am meisten verbreitet, aber man kann durchaus auch die Drei-Wege-Kombinatorik verwenden. TESTONA implementiert standardmäßig Minimalabdeckung, Paarweise-, Drei-Wege- und N-Kombinatorik (wo N die maximale Anzahl an möglichen Parametern im Klassifikationsbaum ist, auch vollständige Kombinatorik genannt)\cite{CombinatorialSoftTesting}.\\
+Verschiedene Experimenten haben gezeigt, dass durch die Verwendung von der paarweisen Kombinatorik die gleichen oder meistens mehrere Fehler entdeckt wurden, als mit der manuellen Testauswahl\footnote{Basierend auf funktionelle und technische Anforderungen, Use-Cases}. Paarweise Kombinatorik ist am meisten verbreitet, aber man kann durchaus auch die Drei-Wege-Kombinatorik verwenden. TESTONA implementiert standardmäßig Minimalabdeckung, Paarweise-, Drei-Wege- und N-Kombinatorik (wo N die maximale Anzahl an möglichen Parametern im Klassifikationsbaum ist, auch vollständige Kombinatorik genannt)\cite{CombinatorialSoftTesting}.\\
 
 
 
@@ -89,9 +89,9 @@ Der Prozess, der aus allen Aktivitäten des Lebenszyklus besteht (sowohl statisc
 
 \end{center}
 
-Anhand der generierten Testfälle und die Benutzung von kombinatorischen Möglichkeiten kann der Tester einfach eine präzise Testtiefe erreichen. Die Testtiefe wird anhand der Durchführung einer Risikoanalyse und der Auswertung der Kritikalitätsstufe (sehr hoch, hoch, mittel und tief) des Systems vereinbart. Das soll heißen, dass die Testtiefe für ein Flugzeug (Kritikalitätsstufe = sehr hoch\footnote{Das Fehlverhalten kann zu Verlust von Menschenleben führen, die Existen des Unternehmens gefährden}) viel höher und genauer ist, als die Kompatibilität eines Bildschirmes mit ein Graphiktreiber (Kritikalitätsstufe = tief\footnote{Das Fehlverhalten kann zu geringen materiellen oder immateriellen Schäden fuhren}).\\
+Anhand der generierten Testfälle und die Benutzung von kombinatorischen Möglichkeiten kann der Tester einfach eine präzise Testtiefe erreichen. Die Testtiefe wird anhand der Durchführung einer Risikoanalyse und der Auswertung der Kritikalitätsstufe (sehr hoch, hoch, mittel und tief) des Systems vereinbart. Das soll heißen, dass die Testtiefe für ein Flugzeug (Kritikalitätsstufe = sehr hoch\footnote{Das Fehlverhalten kann zu Verlust von Menschenleben führen, die Existen des Unternehmens gefährden}) viel höher und genauer ist, als die Kompatibilität eines Bildschirmes mit ein Graphiktreiber (Kritikalitätsstufe = tief\footnote{Das Fehlverhalten kann zu geringen materiellen oder immateriellen Schäden führen}).\\
 
-Anhand der Risikoanalyse und der Kritikalitätsstufe wird auch eine vereinbarte Testabdeckung und ein Testfallermittlungsverfahren erreicht. Im Falle des Flugzeugs wird eine Kombination von White und Blackbox-Methoden mit sehr hoher Testtiefe ausgeführt. Dagegen im Falle des Bildschirms wird intuitives Testen mit geringer Testtiefe angewendet.\cite{ApplicationEngineering}
+Anhand der Risikoanalyse und der Kritikalitätsstufe wird auch eine vereinbarte Testabdeckung und ein Testfallermittlungsverfahren erreicht. Im Falle des Flugzeugs wird eine Kombination von White und Blackbox-Methoden mit sehr hoher Testtiefe ausgeführt. Dagegen, im Falle des Bildschirmes, kann intuitives Testen mit geringer Testtiefe angewendet werden.\cite{ApplicationEngineering}
 
 %#######################################################################################
 %#######################################################################################
@@ -122,7 +122,8 @@ XOR &: ausschließende Disjunktion\\
 NOT &: Negation\\
 \end{tabular}
 
-Durch die Verwendung dieser Operatoren werden folgende Abhängigkeitsregeln definiert:
+
+Durch die Verwendung dieser Operatoren wurde folgende Abhängigkeitsregel definiert:
 
 \begin{figure}[h]
   \begin{center}
@@ -132,25 +133,25 @@ Durch die Verwendung dieser Operatoren werden folgende Abhängigkeitsregeln defi
   \end{center}
 \end{figure}
 
-Nehmen wir das Beispiel wahr, so will der Tester die Klasse \glqq IPv4\grqq~ für diese Tests ignorieren. Also werden nur Testfälle erzeugt, in denen dieser Parameter nicht vorkommt.
+Nehmen wir die Regeln wahr, so will der Tester die Klasse \glqq IPv4\grqq~ für diese Tests nicht betrachten. Also werden nur Testfälle erzeugt, in denen dieser Parameter nicht vorkommt.
 
 
 \begin{figure}[h]
   \begin{center}
     \includegraphics[scale=0.5]{dependency_rules_noParam.png}
   		  \caption{Testfälle mit Anwendung der Abhängigkeitsregeln aus \ref{ttn.depencyRulesEdit} und \ref{ttn.depencyRules}}
-     \label{ttn.depencyRules}
+     \label{ttn.testsequence}
   \end{center}
 \end{figure}
 
-In diesem einfachen Beispiel wird nur ein Parameter ignoriert, aber durch die Abhängigkeitsregeln kann der Tester durchaus komplexere Fälle einleiten. Es kann die Reaktion eines Systems getestet werden, in dem sich die Spannung in einem niedrigen Bereich befindet. Es soll die Spannung einer Batterie geprüft werden, wenn ein Lichtschalter bedient wird. So ein Fall wird geprüft, indem verschiedene Regeln angelegt werden, die folgendermaßen aussehen:
+In diesem einfachen Beispiel wird nur ein Parameter ausgeschlossen, aber durch die Abhängigkeitsregeln kann der Tester durchaus komplexere Fälle einleiten. Betrachten wir folgendes Szenario: Ein Licht wird mit einer 5V Spannung durch eine Batterie versorgt. Die Spannung der Batterie befindet sich momentan im niedrigen Bereich. Das System hat zwei Lichtschaltern um das Licht zu steuern. Es soll die Reaktion des Systems getestet werden, wenn eins der beiden Lichtschaltern betätigt wird. Um so ein Fall zu prüfen, werden zwei verschiedene Regeln angelegt:
 
-\begin{center}
-\textit{Lichtschalter1 XOR Lichtschalter2}\\
-\textit{NOT > 5V}
-\end{center}
+\begin{enumerate}
+\item \textit{Lichtschalter1 XOR Lichtschalter2}
+\item \textit{Spannung NOT 5V}
+\end{enumerate}
 
-Mit diesen Regeln, werden nur Testfälle betrachtet, in denen die Spannung der Batterie kleiner als $5V$ ist, und ein der beiden Lichtschalter betätigt wird.
+Die erste Regel besagt, dass mindestens einer der beiden Lichtschalter betätigt werden muss, um das Licht einzuschalten. Die zweite Regel spezifiziert, dass nur der Fall betrachtet wird, wenn die Spannung der Batterie unter die 5V Grenze liegt. Daraus werden nur Testfälle erzeugt, die diese beide Kriterien erfüllen.
 
 
 
@@ -162,25 +163,27 @@ Mit diesen Regeln, werden nur Testfälle betrachtet, in denen die Spannung der B
 \section{IBM Rational DOORS}\label{sec:DOORS}
 \paragraph{}
 
-Quality Systems \& Software (QSS) hat am Anfang der 90er Jahre DOORS (Dynamic Object Oriented Requirements System) entwickelt. Die Firma Telelogic kaufte im Jahr 2000 QSS, die wiederum 2008 von IBM übernommen wurde. DOORS ist eine Anforderungsmanagement Software und ermöglicht die Verwaltung und strukturierte Aufzeichnung von Anforderungen (als Objekte). Durch eine tabellarische Ansicht der Anforderungen können geordnet die Anforderungen und die zugehörige Eingenschaften abgelesen werden. Als Eingenschaften sind eine eindeutige Identifikationsnummer, sowie vom Benutzer ausgewählte Attribute.\\
+Quality Systems \& Software (QSS) hat Anfang der 90er Jahre DOORS (Dynamic Object Oriented Requirements System) entwickelt. Die Firma Telelogic kaufte im Jahr 2000 QSS, die wiederum 2008 von IBM übernommen wurde. DOORS ist eine Anforderungsmanagement Software und ermöglicht die Verwaltung und strukturierte Aufzeichnung von Anforderungen (als Objekte). Durch eine tabellarische Ansicht der Anforderungen können die Anforderungen und die zugehörige Eingenschaften abgelesen werden. Als Eingenschaften sind eine eindeutige Identifikationsnummer, sowie vom Benutzer ausgewählte Attribute.\\
 
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[scale=0.3]{doorsTable.png}
+    \includegraphics[scale=0.5]{doorsTable.png}
   		  \caption{Beispiel einer Tabelle in DOORS}
      \label{doors.bespiel}
   \end{center}
 \end{figure}
 
 
-In DOORS heißt eine Tabelle \glqq Modul\grqq~, jede Zeile innerhalb eines Moduls nennt sich \glqq Object\grqq~ und die Spalten für jedes Object bezeichnet man als \glqq Attribut\grqq~. Ein Object kann Unterobjekte besitzen, indem Alternativen und weitere Anforderungen beschrieben werden (siehe Abbildung \ref{doors.bespiel}).
+In DOORS wird eine Tabelle \glqq Modul\grqq~ genannt. Jede Zeile innerhalb eines Moduls  ist ein Objekt und die Spalten für jedes Objekt bezeichnet man als Attribut. Ein Objekt kann Unterobjekte besitzen, indem Alternativen und weitere Anforderungen beschrieben werden (siehe Abbildung \ref{doors.bespiel}).
+
 
 Um Anforderungen im Laufe des Projektes zu verfolgen (Tracing), können Anforderungen miteinander verlinkt werden. DOORS basiert sich auf eine Client - Server Anwendung mit einer proprietären Datenbank. \\
-\\
-Es werden auch Schnittstellen für den Datenaustausch zur Verfügung gestellt (Testmanagement-, Modellierungs- und Changemanagementwerkzeuge) dank der Unterstützung von RIF (Requirements Interchange Format). Durch die Skriptsprache \glqq DXL\grqq~ (DOORS eXtention Language) erhält TESTONA Zugriff auf die gespeicherten Anforderungen in DOORS (durch die Ausführung von Skripts). \cite{Doors} \cite{Anforderungsmanagement}\\
 
-Um diese Aufgabe kümmert sich der TESTONA Plug-in \textit{com.berner\_mattner.testona.requirements.doors}. Dieses Plug-in beinhaltet den Java-Code für TESTONA, sowie die \textit{dxl} Scripts für DOORS.
+
+Es werden auch Schnittstellen für den Datenaustausch zur Verfügung gestellt (Testmanagement -, Modellierungs - und Changemanagementwerkzeuge) dank der Unterstützung von RIF (Requirements Interchange Format). Durch die Skriptsprache \glqq DXL\grqq~ (DOORS eXtention Language) erhält TESTONA Zugriff auf die gespeicherten Module in DOORS. \cite{Doors} \cite{Anforderungsmanagement}\\
+
+TESTONA besitzt Klassen die DXL-Scripte ausführen, damit der Entwickler einfach und sicher Daten in DOORS abrufen kann.
 
 
 %#######################################################################################
@@ -189,20 +192,29 @@ Um diese Aufgabe kümmert sich der TESTONA Plug-in \textit{com.berner\_mattner.t
 \section{Variantenmanagement}\label{sec:VarManag}
 \paragraph{}
 
-Variantenmanagement, wie das Wort schon verrät, behandelt verschiedene Varianten eines Produktes. Leider gibt es oft Verwechslungen mit Feature Management. Für eine bessere Unterscheidung betrachten wir folgendes Beispiel: Ein Wagen kann in verschiedenen Modellen gebaut werden: Coup\'{e}, Limousine, Cabrio. Alle sind Wagen und haben alle groben Eigenschaften eines Wagens (4 Räder, Personenkraftwagen, etc), aber sie unterscheiden sich durch die Anzahl der Passagiere oder der Größe des Wagens. Diese sind Varianten eines Wagens der in verschiedene Modellen angeboten wird. \cite{VarMan1} \\
+Variantenmanagement, wie das Wort schon verrät, behandelt verschiedene Varianten eines Produktes. Um eine Variante besser zu definieren, betrachten wir folgendes Beispiel: ein Auto \glqq A\grqq~ soll in verschiedenen Modellen gebaut werden: Kombi, Limousine und Cabrio. Alle Modellen von \glqq A\grqq~ haben die Eigenschaften eines Wagens (4 Räder, Personenkraftwagen, Türen, etc), aber sie unterscheiden sich untereinander durch die Anzahl der Passagiere oder der Größe des Wagens. Daher kann jedes gebaute Modell von \glqq A\grqq~ als eine Variante betrachtet werden.\\
 
-Hier wird klar, dass durch die steigenden Produktkomplexität bzw. -vielfalt die Identifikationsmerkmale zur Definition einer Produktvariante immer schwieriger zu vereinbaren sind. Für diese Masterarbeit ist eher wichtig, Identifikationsmerkmale zu definieren, die dazu führen, dass die Tests oder der Testablauf eines Produktes geändert werden kann (mehrere Testfälle sind nötig, neue Parameterwerte). Das heißt, wenn ein Wagen als Coup\'{e} gebaut wird und danach als Cabrio angeboten wird, müssen (unter anderem) die ganze Dachfunktionen geprüft werden. So sollte man die Karosseriefarbe als ein Feature betrachten, weil theoretisch eine Änderung der Farbe keine Änderung in der Funktionalität oder sich auf die Leistung des Wagens auswirkt (somit werden die Tests oder Testabläufe nicht beeinflusst). \cite{VarMan2}\\
 
-Das Variantenmanagement wird im Fall von TESTONA dazu benutzt, um bei Produktvarianten ein besseren Überblick zu halten und eine bessere Testabdeckung zu sichern. Nennenswert ist, dass TESTONA für das Variantenmanagement die Testspezifikation als Ziel hat. Das hilft bei der Entscheidung zwischen einem Feature und einer Variante. Da wie bereits erwähnt, sind Varianten Änderungen eines Produktes, in der es mehr Gemeinsamkeiten als Unterschiede gibt. Mit dem Eintragen der Änderungen in TESTONA kann sich der Tester viel Arbeit ersparen, da neue Tests und Testabläufe besser erkannt werden.\\
+Anhand des Beispieles wird klar, dass durch die steigenden Produktkomplexität bzw. -vielfalt die Identifikationsmerkmale zur Definition einer Produktvariante immer schwieriger zu vereinbaren sind. Für diese Masterarbeit ist eher wichtig, Identifikationsmerkmale zu definieren, die dazu führen, dass die Tests oder der Testablauf eines Produktes geändert werden muss (mehrere Testfälle sind nötig, neue Parameterwerte). Das heißt, wenn ein Auto als Kombi gebaut wird und danach als Cabrio angeboten wird, müssen (unter anderem) die ganze Dachfunktionen geprüft werden. Das führt dazu neue Testspezifikationen, Testabläufe und Testfälle zu erstellen, die die Funktionalität des Daches überprüfen.\\
+
+
+Varianten werden oft mit Features verwechselt. Der Unterschied zwischen ein Feature und einer Variante ist sehr fein und oft abhängig vom Betrachtungspunkt. Um dem Unterschied deutlicher zu machen, werden Änderung in der Funktionalität oder Konstruktion des Autos als einer Variante betrachtet. So sollte man die Karosseriefarbe als ein Feature betrachten, weil theoretisch eine Änderung der Farbe keine Änderung in der Funktionalität oder sich auf die Leistung des Autos auswirkt (somit werden die Tests oder Testabläufe nicht beeinflusst). Ein Auto mit verschiedener Lackierung des selben Modells erzeugt keine Änderung im Testaufwand.\cite{VarMan2}\\
 
 
 \begin{figure}[h]
   \begin{center}
     \includegraphics[scale=0.4]{varianten.png}
   		  \caption{Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite{VarMan1}}
-     \label{doors.bespiel}
+     \label{variantsOverview}
   \end{center}
 \end{figure}
+
+
+Das Variantenmanagement wird im Allgemeinen dazu benutzt um bei komplexere Produkte einen besseren Überblick zu haben. Hinsichtlich das Testen, können Änderung des Produktes besser erkannt werden. Somit werden die Testfälle und Testabläufe an der jeweiligen Variante angepasst. Die Abbbildung \ref{variantsOverview} betrachtet die Länge jedes Modell und erstellt aus die generische Spezifikation einzelnen Spezifikationen für jede Variante. Die Testfälle werden mit den richtigen Werten erstellt und eine bessere Testabdeckung kann gewährleistet werden.\\
+
+
+In TESTONA werden  die in DOORS definierten Produktvarianten importiert. Baumelement werden an der jeweiligen Variante hinzugefügt. Wenn der Benutzer eine Variante auswählt, werden nur die in dieser Variante gültige Baumelemente angezeigt. So wird die Übersicht verbessert und der Tester kann Testfälle genauer erstellen.
+
 
 
 
@@ -218,8 +230,7 @@ TESTONA wurde ursprünglich in der Programmiersprache \glqq Pascal\grqq entwicke
 \paragraph{}
 Eclipse ist der Nachfolger von \glqq IMB Visual Age for Java\grqq~ und ist ein quelloffenes Programmierwerkzeug zur Entwicklung verschiedener Arten von Software. Ursprünglich wurde Eclipse als integrierte Entwicklungsumgebung für Java benutzt. Dank seiner Bedienbarkeit und Erweiterung ist Eclipse mittlerweile für die Entwicklung in verschiedenen Programmiersprachen bekannt (unter anderem C/C++ und PHP). Die am 25 Juni 2014 veröffentliche Version \glqq Luna\grqq~ (Eclipse 4.4) ist der aktuellste Stand der Software. \\
 
-Mit Eclipse 3.0 hat sich die Grundarchitektur von Eclipse geändert. Seit diesem Zeitpunkt ist Eclipse nur ein Kern, der einzelne Plug-ins lädt. Jedes Plug-in stellt eine oder verschiedene Funktionalitäten zur Verfügung. Darauf aufbauend existiert die \glqq Rich Client Platform\grqq~ (RCP). Diese ermöglicht Entwicklern Anwendungen zu programmieren, die auf das Eclipse Framework aufbauen, aber unabhängig von der Eclipse IDE ist\cite{EclipseRCP} \cite{Eclipse}. Dies ist einer der Hauptgründe warum TESTONA zu Java und Eclipse migriert wurde. Durch die RCP können verschiedene Programmversionen (Light, Express, Professional, Enterprise) besser verwaltet werden. Durch die RCP Architektur können auch verschiedene Funktionalitäten voneinander getrennt werden. Das hilft bei der Weiterentwicklung sowie bei der Pflege des Programms, da mehrere Programmierer gleichzeitig an verschiedenen Plug-ins arbeiten können.\\
-
+Mit Eclipse 3.0 hat sich die Grundarchitektur von Eclipse geändert. Seit diesem Zeitpunkt ist Eclipse nur ein Kern, der einzelne Plug-ins lädt. Jedes Plug-in stellt eine oder verschiedene Funktionalitäten zur Verfügung. Darauf aufbauend existiert die \glqq Rich Client Platform\grqq~ (RCP). Diese ermöglicht Entwicklern Anwendungen zu programmieren, die auf das Eclipse Framework aufbauen, aber unabhängig von der Eclipse IDE ist\cite{EclipseRCP} \cite{Eclipse}. Dies ist einer der Hauptgründe warum TESTONA zu Java und Eclipse migriert wurde. Durch RCP können verschiedene Programmversionen (Light, Express, Professional, Enterprise) besser verwaltet werden. Durch die RCP Architektur werden auch verschiedene Funktionalitäten voneinander getrennt. Das hilft bei der Weiterentwicklung sowie bei der Pflege des Programms, da mehrere Entwickler gleichzeitig an verschiedenen Plug-ins arbeiten können. Der Aufwand wird niedrig gehalten, weil nur ein Workspace genutzt wird. Bei der Erstellung von verschiedene Versionen werden nur die Plug-ins geladen, die nötig sind.
 
 
 %#######################################################################################
@@ -237,7 +248,7 @@ Weitere Plug-Ins, von der Eclipse Foundation implementiert, stehen den Programmi
 
 Plug-ins beinhalten den Java-Code der, wie gewöhnlich, in verschiedene Pakete und Klassen strukturiert werden kann. Sinnvoll ist, dass jedes Plug-in eine Funktionalität des gesamten Programms repräsentiert, wie zum Beispiel, Variantenmanagement oder Autosave.\\
 
-Testona besteht momentan aus 129 verschiedene Plug-ins, wobei jedes Plug-in eine bestimmte Funktion oder Feature des Programms implementiert. Zum Beispiel gibt es für jede Version (Light, Express, Professional und Enterprise) von TESTONA ein Plug-in indem die nötige Plug-ins für die gewünschte Version geladen werden.\\
+Testona besteht momentan aus viele verschiedene Plug-ins, wobei jedes Plug-in eine bestimmte Funktion oder Feature des Programms implementiert. Zum Beispiel gibt es für jede Version (Light, Express, Professional und Enterprise) von TESTONA ein Plug-in indem die nötige Plug-ins für die gewünschte Version geladen werden.\\
 
 Ein Plug-in besteht in der Regel aus folgenden Einheiten:
 
@@ -290,6 +301,13 @@ SWT beinhaltet sehr viele komplexe Eigenschaften. Aber für eine robuste und ben
    }
 \end{lstlisting}
 
+
+SWT wird in TESTONA eingesetzt, damit das Aussehen der Benutzeroberfläche automatisch aktualisiert an des jeweilige Betriebssystem angepasst wird. Es erspart auch sehr viel Entwicklungszeit, da die Grafikkomponenten des Programms nicht für jedes Betriebssystem programmiert werden müssen.
+
+
+
+
+
 %#######################################################################################
 \subsection{JFace}
 \paragraph{}
@@ -313,10 +331,10 @@ SWT ist komplett unabhängig von JFace (und Plattform Code), aber JFace wurde ko
 \subsection{Tags}\label{sub.Tags}
 \paragraph{}
 
-Ein \textit{Tag} ist ein Object, dass auf EMF (Eclipse Modeling Framework) basiert. EMF ist ein Java Framework der Eclipse-Open-Source Gemeinschaft für die automatische Erzeugung von Quelltext aus Modellen \cite{EclipseRCP}.  Bei EMF wird die Problemstellung in einem Klassendiagramm beschrieben. Hier werden die Eigenschaften und Attribute der Klassen eingetragen um daraus wird Quelltext generiert. Die Objekte können ohne großen Aufwand serialisiert und validiert werden, und mögliche Fehlerquellen werden ausgeschlossen. In das Ecore-Modell werden die Klassen definiert und in Pakete eingeteilt . Das erzeugte Quelltext kann dann vom Benutzer ergänzt werden.\\
+Ein \textit{Tag} ist ein Objekt, dass auf EMF (Eclipse Modeling Framework) basiert. EMF ist ein Java Framework der Eclipse-Open-Source Gemeinschaft für die automatische Erzeugung von Quelltext aus Modellen \cite{EclipseRCP}.  Bei EMF wird die Problemstellung in einem Klassendiagramm beschrieben. Hier werden die Eigenschaften und Attribute der Klassen eingetragen um daraus wird Quelltext generiert. Die Objekte können ohne großen Aufwand serialisiert und validiert werden, und mögliche Fehlerquellen werden ausgeschlossen. In das Ecore-Modell werden die Klassen definiert und in Pakete eingeteilt . Das erzeugte Quelltext kann dann vom Benutzer ergänzt werden.\\
 
 
-Im Fall von \textit{Tags}, diese dienen hauptsächlich um Eigenschaften andere Objekte zu beschreiben. Zum Beispiel gibt es unter anderem ein \textit{Tag} dass wo die Varianten gespeichert werden (\textit{VariantsTag}). Wenn in einem Projekt verschiedene Varianten zur Verfügung stehen, wird es dazu kommen, dass ein Baumelement nicht in alle Varianten auftritt. Das Baumelement wird ein \textit{VariantsTag} besitzen, dass spezifiziert zur welchen Varianten das Baumelement gehört. Ein weiterer Beispiel sind die \textit{RequirementTags}. Hier werden die Anforderungen gespeichert, die an einem Baumelement verknüpft worden sind. Für die farbige Trennung zwischen Knotenpunkten im Klassifikationsbaumeditor ist ein \textit{ColoringTag} zuständig.\\
+Im Fall von \textit{Tags}, diese dienen hauptsächlich um Eigenschaften andere Objekte zu beschreiben. Zum Beispiel gibt es unter anderem ein \textit{Tag} indem Varianten gespeichert werden (\textit{VariantsTag}). Wenn in einem Projekt verschiedene Varianten zur Verfügung stehen, wird es dazu kommen, dass ein Baumelement nicht in alle Varianten auftritt. Das Baumelement wird ein \textit{VariantsTag} besitzen, dass spezifiziert zur welchen Varianten das Baumelement gehört. Ein weiterer Beispiel sind die \textit{RequirementTags}. Hier werden die Anforderungen gespeichert, die an einem Baumelement verknüpft worden sind. Für die farbige Trennung zwischen Knotenpunkten im Klassifikationsbaumeditor ist ein \textit{ColoringTag} zuständig.\\
 
 Die Grundstruktur eines \textit{Tags} besteht aus:
 
