@@ -3,7 +3,7 @@
 
 \section{Anforderungen}
 \paragraph{}
-Ziel dieser Masterarbeit ist die Verbesserung der Testfallgenerierung und der Testabdeckung bei mehreren Produktvarianten, die Ersetzung von Parametern, die Prozessoptimierung sowie die Handhabung für den Benutzer in der TESTONA-Umgebung. Jedes Produkt kann unterschiedliche Produktvarianten beinhalten und jede Variante besteht aus unterschiedlichen Komponenten mit unterschiedlichen Parametern. In Abhängigkeit von der ausgewählten Variante sollen bei der Testfallgenerierung die dazugehörigen Komponenten berücksichtigt werden und die erzeugten Testfälle dargestellt werden. Besonders zu beachten sind dabei die definierten Abhängigkeitsregeln sowie die darauf bezogene Testabdeckung.\\
+Ziel dieser Masterarbeit ist die Verbesserung der Testfallgenerierung und der Testabdeckung bei mehreren Produktvarianten. Dafür soll die Ersetzung von Parametern aus den Varianten implementiert werden. Die Prozessoptimierung sowie die Handhabung für den Benutzer in der TESTONA-Umgebung soll verbessert werden. Jedes Produkt kann unterschiedliche Produktvarianten beinhalten und jede Variante besteht aus unterschiedlichen Komponenten mit unterschiedlichen Parametern. In Abhängigkeit von der ausgewählten Variante sollen bei der Testfallgenerierung die dazugehörigen Komponenten berücksichtigt werden und die erzeugten Testfälle dargestellt werden. Besonders zu beachten sind dabei die definierten Abhängigkeitsregeln sowie die darauf bezogene Testabdeckung.\\
 
 Abhängigkeitsregeln werden definiert um redundante Testfälle zu vermeiden, bzw. um Vorbedingungen für die Testfälle zu erstellen. Da Varianten verschiedene Baumelemente beinhalten, kann es dazu kommen, dass Baumelemente für Abhängigkeitsregeln nicht vorhanden sind. Dadurch könnte TESTONA bei der Testfallgenerierung die Testabdeckung verfälschen, indem die Gültigkeit eines Testfalles nicht garantiert werden kann. Um dieses Problem zu umgehen, muss bei der Erzeugung von Abhängigkeitsregeln auf mögliche Konflikte hingewiesen werden. Für den Lösungsansatz gibt es verschiedene Thesen die analysiert werden müssen, um eine optimale Prozessoptimierung zu erreichen.\\
 
@@ -37,9 +37,16 @@ Der derzeitige Varianten-Management-Ansatz in TESTONA ist nicht in der Lage für
 \newpage
 \section{Variantenmanagement Software}
 \paragraph{}
-Die Erweiterung des schon vorhanden Variantenmanagements in TESTONA wird dabei beitragen eine bessere Kopplung zwischen DOORS und TESTONA zu erzielen. Nach Recherche über schon vorhandene Lösungen zu dieser Problemfrage bin ich auf keine brauchbare Implementation die in TESTONA angewendet werden kann gestoßen. Da es unter dem Begriff \glqq Variante\grqq viel Freiraum gibt, sind vorhandenen Lösungen sehr Problemspezifisch. Es gibt Software die Varianten in ähnlicher Weise wie TESTONA unterstützt. Aber es gibt keine Verknüpfung zu einer Datenbank, in der  schon Varianten definiert sind.
+Die Erweiterung des schon vorhanden Variantenmanagements in TESTONA wird dabei beitragen eine bessere Kopplung zwischen DOORS und TESTONA zu erzielen. Nach Recherche über schon vorhandene Lösungen zu dieser Problemfrage bin ich auf keine brauchbare Implementation die in TESTONA angewendet werden kann gestoßen. Da es unter dem Begriff \glqq Variante\grqq viel Freiraum gibt, sind vorhandenen Lösungen sehr Problemspezifisch.\\
 
-Die Firma \glqq Razorcat Development GmbH\grqq~ bietet auch einen Klassifikationsbaumeditor der TESTONA sehr ähnlich ist. Nach meiner Kenntnis hat diese Software keine Schnittstelle zu einer Datenbank und kein Variantenmanagement\footnote{http://www.razorcat.eu/cte.html, 15/11/2014}.
+
+Im englischen Sprechraum werden die Begriffe \glqq feature modelling\grqq~ und \glqq domain engineering\grqq~ benutzt. Unter \glqq domain engineering\grqq~ ist die Wiederverwendung von Wissensgebiet für die Produktion einer neuen Software zu verstehen \cite{DomainEng}. Obwohl beide Begriffe sich auf die Softwareentwicklung spezialisieren, werden die Prinzipien allgemein in der Produktion verschiedener Produkte verwendet. Betrachten man TESTONA, so sind die Editionen Light, Express, Professional und Enterprise Varianten.\\
+
+
+Es existiert Software die Variantenmanagement unterstützt. Aber es gibt keine Software die eine Schnittstelle zu einer Datenbank zur Verfügung stellt. Weiterhin wird das Import von Varianten aus der Datenbank nicht befördert.\\
+
+
+Die Firma \glqq Razorcat Development GmbH\grqq~ bietet auch einen Klassifikationsbaumeditor der TESTONA sehr ähnlich ist. Nach meiner Kenntnis hat diese Software keine Schnittstelle zu einer Datenbank und implementiert kein Variantenmanagement\footnote{http://www.razorcat.eu/cte.html, 15/11/2014}.
 
 
 
@@ -48,6 +55,11 @@ Die Firma \glqq Razorcat Development GmbH\grqq~ bietet auch einen Klassifikation
 \newpage
 \section{Neue Anforderungen}
 \paragraph{}
-Während der Programmierung haben sich die Anforderungen leicht verändert.
 
-Die Abhängigkeitsregeln sollen das Variantenmanagement nicht mehr so sehr beeinflussen. Sie  sollen  enger mit der Testfallgenerierung verbunden sein als mit den einzelnen Varianten. Es wird davon ausgegangen, dass der Benutzer von TESTONA nur gültige Abhängigkeitsregeln deklariert hat. Weiterhin werden Optimierungsschritte betrachtet. Es kann dazu kommen, dass doppelte Testfälle durch gleiche Parameterwerte in einer Variante erzeugt werden.s
+Im Laufe des Projektes haben sich die Anforderungen leicht verändert. Die Parameterersetzung wird als Hauptpunkt dieser Arbeit betrachtet. Die in DOORS Module definierte Parameterwerte sollen in TESTONA importiert und angezeigt werden. Die Zuordnung von Parametern an Baumelemente erfolgt über die Verknüpfung von (aus DOORS importiert) Anforderungen mit ein Baumelement. In jeder Varianten kann der Parameter ein anderer Wert darstellen. Bei Änderung der Variantenansicht in TESTONA soll der jeweilige Parameterwert für die aktive Variante angezeigt werden.\\
+
+
+Die Abhängigkeitsregeln sollen das Variantenmanagement nicht mehr so sehr beeinflussen. Sie  sollen  enger mit der Testfallgenerierung verbunden sein als mit den einzelnen Varianten. Es wird davon ausgegangen, dass der Benutzer von TESTONA nur gültige Abhängigkeitsregeln deklariert hat.\\
+
+
+Weiterhin sollen Optimierungsschritte bei der Testgenerierung werden betrachtet. Anhand der Parameterwerte kann es dazu kommen, dass doppelte Testfälle erstellt werden. Wenn die Endknoten unter einen Knoten die gleichen Werten besitzen, können vorher gültige Testfälle dadurch verdoppelt werden. Dabei soll der Benutzer aufmerksam gemacht werden oder diese Testfälle sollen automatisch gelöscht werden.

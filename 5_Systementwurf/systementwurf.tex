@@ -262,18 +262,12 @@ Für das Hinzufügen bzw. Löschen eines Parameters in einem Baumelement wurden 
 Die Methode \textit{doExecute()} wird überschrieben um die Änderung vorzunehmen. Als erstes werden alle Baumelemente geladen und iteriert bis das Baumelement gefunden wird, dass benötigt wird (anhand er ID). Soll ein \textit{ParameterTag} hinzugefügt werden, dann wird die Methode \textit{addTag(ParameterTag pTag)} aufgerufen.\\
 
 
-Soll eine \textit{ParameterTag} gelöscht werden, dann wird die Methode \textit{removeTag(ParameterTag pTag)} aufgerufen. Danach muss auch der Name des Baumelementes neu gesetzt werden. Wenn ein Baumelement ein Parameter besitzt, je nach aktive Variante, wird die Darstellung geändert (siehe Kapitel \ref{sec.visialisierung}). Dafür wird der Name des Baumelementes geladen und falls eine Rücksetzung nötig ist, wird diese gemacht. Genaueres dazu wird in Kapitel \ref{sec.LoesungVisualisierung} veranschaulicht.\\
+Soll eine \textit{ParameterTag} gelöscht werden, dann wird die Methode \textit{removeTag(ParameterTag pTag)} aufgerufen. Danach muss auch der Name des Baumelementes neu gesetzt werden. Wenn ein Baumelement ein Parameter besitzt, je nach aktive Variante, wird die Darstellung geändert (siehe Kapitel \ref{sec.visualisierung}). Dafür wird der Name des Baumelementes geladen und falls eine Rücksetzung nötig ist, wird diese gemacht. Genaueres dazu wird in Kapitel \ref{sec.LoesungVisualisierung} veranschaulicht.\\
 
 %#######################################################################################
 \subsection{Die DOORS Verbindng}\label{sub.DoorsConn}
 \subsubsection{DoorsConnector}
-%\begin{figure}[h!]
-%  \begin{center}
-%    \includegraphics[scale=0.7]{.jpg}
-%  		  \caption{Darstellung der innere Klasse DoorsConnector in UML}
-%     \label{ttn.DoorsConnetor}
-%  \end{center}
-%\end{figure}
+
 
 Die private innere Klasse \textit{DoorsConnector} baut die Verbindung zwischen den TESTONA und DOORS auf. Sie implementiert das Interface \textit{IConnectionListener}, dass ein \textit{Listener} für die Verbindung - Events umfasst. Für das Laden von Dateien aus DOORS benötigt die Klasse noch ein \textit{Listener} (IDataListener) und ein \textit{Adapter}(IReqLoadAdapter) \\
 
@@ -396,16 +390,89 @@ Weiterhin meldet diese Klasse wenn alle Zeilen aus das DOORS Modul geladen wurde
 \section{Darstellung der Parameterwerte}\label{sec.LoesungVisualisierung}
 \paragraph{}
 
-Nachdem Parameter in Baumelement vorhanden sind, sollten die Werte angezeigt werden. Wenn ein Pfeil oder die Kombo-Box (siehe Kapitel \ref{sec.visialisierung}) für eine Änderung der Variantenansicht betätigt wird, muss für jedes Baumelement überprüft. Es wird überprüft, ob für die aktive Variante ein Parameterwert definiert worden ist.\\
+Nachdem Parameter in Baumelemente vorhanden sind, sollten die Werte angezeigt werden. Wenn ein Pfeil oder die Kombo-Box (siehe Kapitel \ref{sec.visualisierung}) für eine Änderung der Variantenansicht betätigt werden, muss für jedes Baumelement überprüft werden. Gibt es ein gültiger Wert für die aktive Variante, muss dieser angezeigt werden.\\
 
-In \textit{VariantsManager}\\
+ 
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{|l||ll|}
+	 \hline
+	 \multicolumn{3}{|c|}{ParameterTag}\\
+	 \hline\hline
+	 Name		& \multicolumn{2}{|c|}{max\_speed}\\
+	 \hline
+	 Unit		& \multicolumn{2}{|c|}{[km/h]}\\
+	 \hline
+	 \multirow{5}{*}{Content}	&Key			&Value\\ \cline{2-3}
+	 							&Generic		&50\\
+	 							&Cabrio		&100\\
+	 							&Kombi		&200\\
+	 							&Limo		&300\\
+	 \hline
+	\end{tabular}
+	\caption{Parameter \textit{max\_speed}}
+	\label{table:ParameterTagStruktur}
+\end{center}
+\end{table}
 
- \textit{setNamesWithValues} \\
- \textit{executeEMFCommand} \\
- \textit{RenameTreeItemCommand}\\
- \textit{arrangeAll}\\
- 
- 
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{52Generic.png}
+  \caption{Das generische Baum}
+  \label{ttn.52Generic}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{52Cabrio.png}
+  \caption{Aktive Variante Cabrio}
+  \label{ttn.52Cabrio}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{52Limo.png}
+  \caption{Aktive Variante Limo}
+  \label{ttn.52Limo}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{52Kombi.png}
+  \caption{Aktive Variante Kombi}
+  \label{ttn.52Kombi}
+\end{minipage}
+\end{figure}
+
+
+Wenn die Einheit des Parameters definiert ist, wird diese auch angezeigt. Zwischen Baumelementname und der Wert befinden sich die Zeichen \glqq :=\grqq~ als Trennzeichen. Diese Maßnahme wurde eingeführt, da Baumelemente unter einem Knoten dürfen nicht den gleichen Namen besitzen. So kann das Programm und der Benutzer jedes Baumelemente eindeutig identifizieren.\\
+
+
+Nachdem einer der Schaltflächen zum Ändern der Variantenansicht betätigt wird, wird die Methode \textit{activateVariant()} in der Klasse \textit{VariantsManager} aufgerufen. Innerhalb der Methode werden alle Baumelemente, falls es nötig ist, neu benannt. \\
+
+
+Die Umbenennung der Baumelemente erfolgt, wie bei das Hinzufügen eines \textit{ParameterTags}, über ein Kommando. Im diesem Fall wird kein Objekt des Typs \textit{Command} zurückgegeben, sondern die Methode \textit{executeEMFCommand} bekommt als Parameter das Kommando. Die Methode hängt das Kommando and den Stack und verhindert, dass das Kommando vom \textit{Garbage Collector} gelöscht wird.\\
+
+
+Das Kommando ist eine Klasse in der die \textit{ParameterTags} ausgewertet werden. Wenn das Baumelement ein \textit{ParameterTag} hat, wird überprüft ob für die aktive Variante ein Parameterwert definiert ist. Wenn ein Parameterwert gefunden wurde, wird das Baumelement immer mit dem folgenden Format neu benannt:
+
+\begin{center}
+\textit{name} := \textit{wert}[\textit{einheit}]
+\end{center}
+
+Wobei nur \textit{einheit} ein optionaler Wert ist. Falls es kein Parameterwert für die Variante definiert wurden ist, wir der Standartname angezeigt (name).\\
+
+Alle Baumelemente müssen aus zwei Gründen geprüft werden. Der erste Grund lautet, dass nicht für alle Varianten Parameterwerte zur Verfügung stehen können. Der zweite Grund ist, dass eine Anforderung aus ein Baumelement gelöscht werden kann, nachdem die Werte schon angezeigt worden sind. In beiden Fällen muss der Name des Baumelements auf den Standartname gesetzt werden.\\
+
+
+Nachdem alle Baumelemente überprüft worden sind, muss die Anzeige (Editor) von TESTONA aktualisiert werden. Durch das Ändern der Namen, ändert sich auch die Breite der Baumelemente und diese müssen neu organisiert werden. 
+Danach wird das Befehl gegeben die Anzeige neu zu zeichnen. Das Ergebnis wird in den Abbildungen \ref{ttn.52Generic} bis \ref{ttn.52Kombi} dargestellt.
+
 
 
 %#######################################################################################
