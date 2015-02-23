@@ -8,10 +8,10 @@ Um  den Lösungsansatz besser zu verstehen, wird erst der Ablauf von der Erstell
 Das Auto hat eine Maximalgeschwindigkeit von \#param[max\_geschwindigkeit] km/h
 \end{center}
 
-Die Parameter sind in einer Parameter-Tabelle definiert, in der die jeweiligen Parameterwerte eingetragen werden. Der Grund, warum es eine gesonderte Tabelle für Parameter gibt, kommt daher, dass die Parameter in der Regel pro Variante verschiedene Werte annehmen. Zum Beispiel beträgt die maximale Geschwindigkeit bei einem Cabrio 100 km/h  und bei einem Kombi 150 km/h. Dank dieser Tabelle werden den Varianten (Cabrio und Kombi) die richtige Parameterwerte zugewiesen.\\
+Die Parameter sind in einer Parameter-Tabelle definiert, in der die jeweiligen Parameterwerte eingetragen werden. Es gibt eine gesonderte Tabelle für Parameter da die Parameter in der Regel pro Variante verschiedene Werte annehmen. Zum Beispiel beträgt die maximale Geschwindigkeit bei einem Cabrio 100 km/h  und bei einem Kombi 150 km/h. Dank dieser Tabelle werden den Varianten (Cabrio und Kombi) die richtigen Parameterwerte zugewiesen.\\
 
 
-Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, die Parameter beinhalten, mit der Parametertabelle manuell verlinkt werden. Wenn dieser Vorgang abgeschlossen ist, kann über die TESTONA Oberfläche die Verbindung zu DOORS aufgebaut werden um die nötigen Informationen zu importieren. Voraussetzung ist, dass der Tester bereits einen Klassifikationsbaum passend zum zu testenden Produkt und die dazu gehörige Anforderungen erstellt hat. Jetzt können die in DOORS definierten Varianten importiert werden. Zunächst muss der Tester die Baumelemente der richtigen Variante zuordnen (durch ein Ausschlussverfahren wird angenommen, dass alle Baumelemente in allen Varianten gültig sind). 
+Da Parameterwerte und Varianten schon verlinkt sind müssen die Anforderungen, die Parameter beinhalten, mit der Parametertabelle manuell verlinkt werden. Wenn dieser Vorgang abgeschlossen ist, kann über die TESTONA Oberfläche die Verbindung zu DOORS aufgebaut werden um die nötigen Informationen zu importieren. Voraussetzung ist, dass der Tester bereits einen Klassifikationsbaum passend zum zu testenden Produkt und die dazu gehörige Anforderungen erstellt hat. Jetzt können die in DOORS definierten Varianten importiert werden. Zunächst muss der Tester die Baumelemente der richtigen Variante zuordnen (durch ein Ausschlussverfahren wird angenommen, dass alle Baumelemente in allen Varianten gültig sind). 
 
 
 %#######################################################################################
@@ -26,10 +26,10 @@ Um die Parameter erfolgreich in TESTONA zu speichern, müssen diese aus DOORS im
 Einer der Besonderheiten von TESTONA ist, dass Anforderungen und Baumelemente per Drag\&Drop verknüpft werden können. Mit dieser Funktion muss der Tester die Anforderung mit einem dazu gehörigen Baumelement verknüpfen (auslösendes Ereignis der Parameterspeicherung). Damit das Programm die Aktion des Benutzers mitbekommt, wird an dieser Stelle ein \textit{Listener} implementiert. Der \textit{Listener} bekommt verschiedene Nachrichten von Ereignissen die gefiltert werden müssen. Wenn die Nachricht empfangen wird, dass eine Anforderung an ein Baumelement verknüpft wurde, muss eine zu programmierende Methode den Anforderungstext von diesem Baumelement lesen und nach Parametern suchen. Als erstes wird davon ausgegangen, dass ein Baumelement nur eine Anforderung beinhalten kann und eine Anforderung nur ein Parameter beinhaltet. Wird in der gelesenen Anforderung ein Parameter gefunden, so müssen die möglichen Werte dieses Parameters aus der DOORS Parametertabelle gelesen und gespeichert werden. An dieser Stelle beginnt die Parameterspeicherung.\\
 
 
-Für die Parameterspeicherung ergeben sich zwei Lösungswege. Die erste Lösung lautet, die Parametertabelle beim Import der Anforderung gleich in TESTONA zu speichern. Diese Lösung hat den Vorteil, dass später eine Verbindung zu DOORS nicht mehr notwendig ist. Somit muss während der Parametersuche auf eine Verbindung mit DOORS nicht geprüft werden, bzw. die Verbindung muss nicht wieder aufgebaut werden. Das heißt der Benutzer muss sich nur einmal mit DOORS verbinden und kann in der Zukunft problemlos die Anforderungen an einem Baumelement verlinken und gleichzeitig werden die Parameter gelesen und gespeichert. Der Nachteil ist, dass möglicherweise unnötige Daten in TESTONA gespeichert werden.\\
+Für die Parameterspeicherung ergeben sich zwei Lösungswege. Die erste Lösung lautet, die Parametertabelle beim Import der Anforderung gleich in TESTONA zu speichern. Diese Lösung hat den Vorteil, dass später eine Verbindung zu DOORS nicht mehr notwendig ist. Somit muss während der Parametersuche auf eine Verbindung mit DOORS nicht geprüft werden, bzw. die Verbindung muss nicht wieder aufgebaut werden. Das heißt der Benutzer muss sich nur einmal mit DOORS verbinden und kann in der Zukunft problemlos die Anforderungen an einem Baumelement verlinken und gleichzeitig werden die Parameter gelesen und gespeichert. Der Nachteil dieser Vorgehensweise ist, dass möglicherweise unnötige Daten in TESTONA gespeichert werden.\\
 
 
-Die zweite Lösung ist gegensätzlich zu der ersten Lösung. Hier werden jeweils nur die Daten gespeichert, die der Benutzer im Moment benötigt. Wird eine Anforderung an einem Baumelement verlinkt, so muss eine Verbindung zu DOORS aufgebaut werden und die Parametertabelle aufgerufen und in TESTONA gespeichert werden. Der große Nachteil dieser Lösung ist, dass der Benutzer möglicherweise keine Verbindung zu DOORS aufbauen kann. Zum Beispiel, wenn der Server nicht vorhanden ist, keine Zugriffsmöglichkeiten, etc. Welcher der beiden Lösungen implementiert wird, wird erst noch genauer analysiert. Die Lösung ist auch abhängig von den Anforderungen verschiedener Kunden und wie diese TESTONA anwenden. Die implementierte Lösung wird in Kapitel \ref{chp:systementwurf} vorgestellt und begründet.\\
+Die zweite Lösung ist gegensätzlich zu der ersten Lösung. Hier werden jeweils nur die Daten gespeichert, die der Benutzer im Moment benötigt. Wird eine Anforderung an einem Baumelement verlinkt, so muss eine Verbindung zu DOORS aufgebaut werden, die Parametertabelle aufgerufen und in TESTONA gespeichert werden. Der große Nachteil dieser Lösung ist, dass der Benutzer möglicherweise keine Verbindung zu DOORS aufbauen kann. Zum Beispiel, wenn der Server nicht vorhanden ist, keine Zugriffsmöglichkeiten, etc. Welcher der beiden Lösungen implementiert wird, wird erst noch genauer analysiert. Die Lösung ist auch abhängig von den Anforderungen verschiedener Kunden und wie diese TESTONA anwenden werden. Die implementierte Lösung wird in Kapitel \ref{chp:systementwurf} vorgestellt und begründet.\\
 
 
 Sind die Parameterwerte in TESTONA vorhanden, müssen diese der richtigen Variante zugeordnet werden. Dafür ist vorgesehen, dass der Parameterwert als Eigenschaft des Baumelementes gespeichert wird (als ein \textit{Tag} Objekt). Die Darstellungsstruktur für die Variantenansicht ist folgendermaßen definiert:\\
@@ -69,12 +69,12 @@ Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und einem Baume
 \end{center}
 \end{table}
 
-Wichtig ist auch, dass ein Baumelement verschiedene Parameter repräsentieren kann. Wenn ein Baumelement mehr als eine Anforderung mit verschiedenen Parametern beinhaltet, wird die aktive Variante entscheiden, welches Parameter ausgewertet  und angezeigt wird. Dabei muss beachtet werden, dass vorhandene Parameterwerte und Anforderung (innerhalb eines Baumelementes) nicht gelöscht oder überschrieben werden.\\
+Wichtig ist auch, dass ein Baumelement verschiedene Parameter repräsentieren kann. Wenn ein Baumelement mehr als eine Anforderung mit verschiedenen Parametern beinhaltet, wird die aktive Variante entscheiden, welches Parameter ausgewertet  und angezeigt wird. Dabei muss beachtet werden, dass vorhandene Parameterwerte und Anforderungen (innerhalb eines Baumelementes) nicht gelöscht oder überschrieben werden.\\
 
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.7]{4_1_UML_TreeItem_ParameterTags.jpg}
-  		  \caption{Darstellung eines Baumelementes mit zwei verschiedene Parametern und vier Varianten}
+  		  \caption{Darstellung eines Baumelementes mit zwei verschiedenen Parametern und vier Varianten}
      \label{ttn.treeitem_vars}
   \end{center}
 \end{figure}
@@ -82,10 +82,10 @@ Wichtig ist auch, dass ein Baumelement verschiedene Parameter repräsentieren ka
 %#######################################################################################
 %#######################################################################################
 \newpage
-\section{Visualisierung}\label{sec.visualisierung}
+\section{Visualisierung der Parameterwerte}\label{sec.visualisierung}
 \paragraph{}
 
-Wenn die Beziehungen zwischen Varianten, Parametern und Anforderungen erfolgreich entstanden sind, können jetzt die gespeicherten Parameterwerte angezeigt werden. Wenn der Benutzer die Varianatenansicht in der Benutzeroberfläche ändert, die Beschriftung (\textit{Label}) des Bauelementes (Maximalgeschwindigkeit von Generic = X, Cabrio = 150, Kombi = 200) muss eine Aktualisierung erfolgen.
+Wenn die Beziehungen zwischen Varianten, Parametern und Anforderungen erfolgreich entstanden sind, können jetzt die gespeicherten Parameterwerte angezeigt werden. Wenn der Benutzer die Variantenansicht in der Benutzeroberfläche ändert, muss die Beschriftung (\textit{Label}) des Bauelementes (Maximalgeschwindigkeit von Generic = X, Cabrio = 150, Kombi = 200) aktualisiert werden.
 
 
 \begin{figure}[h!]
@@ -115,8 +115,7 @@ Wenn die Beziehungen zwischen Varianten, Parametern und Anforderungen erfolgreic
   \end{center}
 \end{figure}
 
-Dafür muss ein \textit{Listener} beim Ändern der Variantenansicht eine Methode aufrufen. Diese aktualisiert die Werte und die Neuzeichnung der Baumelemente. Die Werten werden dynamisch aus den Inhalten der Baumelemente gelesen. Zur Erinnerung: Die Werte sind als \textit{Tag} im jeden Baumelement gespeichert (siehe Abbildungen \ref{ttn.objectGraph} und \ref{ttn.treeitem_vars}).
-
+Dafür muss ein \textit{Listener} beim Ändern der Variantenansicht eine Methode aufrufen. Diese aktualisiert die Werte und die Neubezeichnung der Baumelemente. Die Werte werden dynamisch aus den Inhalten der Baumelemente gelesen, da die Werte als Tag in jedem Baumelement  gespeichert sind, siehe Abbildungen \ref{ttn.objectGraph} und \ref{ttn.treeitem_vars}).
 
 %#######################################################################################
 %#######################################################################################
@@ -130,7 +129,7 @@ Wenn TESTONA in der Lage ist, die Parameterwerte abhängig von der Variante darz
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.4]{4_3_generic.png}
-  		  \caption{Das generische Baum}
+  		  \caption{Der generische Baum}
      \label{ttn.cases_generic}
   \end{center}
 \end{figure}
@@ -155,7 +154,7 @@ Es ist leicht zu erkennen, dass die Testfälle eins bis vier in der Variante \gl
 
 Bei der Testfallgenerierung muss zusätzlich darauf geachtet werden (vorausgesetzt es gibt Varianten und Parameterwerte), dass nicht nur die Baumelemente sondern auch die Parameterwerte betrachtet werden.\\
 
-Dafür müssen alle Klassen (Endknoten) unterhalb der gleichen Klassifikation überprüft werden. Nach dem obenstehenden Beispiel, müssen die Klassen \glqq 70 km/h\grqq , \glqq 100 km/h\grqq~ und \glqq Maximale\grqq~ verglichen werden. Da \glqq Maximale\grqq~ bei jeder Variante einen anderen Wert annimmt, muss hier überprüft werden, dass bei jeder Variante, sich der Wert nicht wiederholt. Die Werte werden aus dem geplanten \textit{ParameterTag} (siehe Abbildung \ref{ttn.objectGraph}) gelesen.
+Dafür müssen alle Klassen (Endknoten) unterhalb der gleichen Klassifikation überprüft werden. Nach dem obenstehenden Beispiel, müssen die Klassen \glqq 70 km/h\grqq , \glqq 100 km/h\grqq~ und \glqq Maximale\grqq~ verglichen werden. Da \glqq Maximale\grqq~ bei jeder Variante einen anderen Wert annimmt, muss hier überprüft werden, dass sich bei jeder Variante der Wert nicht wiederholt. Die Werte werden aus dem geplanten \textit{ParameterTag} (siehe Abbildung \ref{ttn.objectGraph}) gelesen.
 
 %#######################################################################################
 %#######################################################################################
@@ -165,7 +164,11 @@ Dafür müssen alle Klassen (Endknoten) unterhalb der gleichen Klassifikation ü
 
 Eine Änderung der Benutzeroberfläche von TESTONA wurde mit Kollegen in der Entwicklung offen diskutiert. Als Ergebnis konnten wir aus Sicht der Entwickler feststellen, dass die bisherige Lösung als gut und intuitiv zu bezeichnen ist.\\
 
-Um weitere Meinungen und Lösungsvorschläge zu sammeln habe ich Testingenieure die TESTONA mit Kunden anwenden in der Firma Berner \& Mattner befragt. Ein Ingenieur stellte fest, dass die Aktivierung der Variantenansicht unnötig ist. Er wünschte, dass die Variantenansicht als Hauptansicht definiert wird. 
-Dass es einen Unterschied zwischen beiden Ansichten gibt liegt daran, dass verschiedene Etappen repräsentiert werden. Die Hauptansicht bietet verschiedene Features die in der Variantenansicht mit Variantenmanagement Features ergänzt werden. Dabei wird noch begründet, dass die Trennung zur Übersicht sehr viel beiträgt.\\
 
-Als Ergebnis wurde festgelegt, dass für in dieser Arbeit gestellte Problemfrage nicht zur Unübersichtlichkeit der Benutzeroberfläche beiträgt. Es wird erhofft, dass außer der Erweiterung der Funktionalität, dass auch die Übersicht verbessert wird. Die Trennung zwischen der Hauptansicht und der Variantenansicht wird beibehalten ebenso die Lösung der Pfeile und des Drop-Down Menüs (siebe Abbildungen \ref{ttn.generic}, \ref{ttn.2}, \ref{ttn.3}).
+Um weitere Meinungen und Lösungsvorschläge zu sammeln habe ich Testingenieure die TESTONA mit Kunden anwenden in der Firma Berner \& Mattner befragt. Ein Ingenieur stellte fest, dass die Aktivierung der Variantenansicht unnötig ist. Er wünschte, dass die Variantenansicht als Hauptansicht definiert wird.\\
+
+
+Dass es einen Unterschied zwischen beiden Ansichten gibt liegt daran, dass verschiedene Etappen repräsentiert werden. Die Hauptansicht bietet verschiedene Features die in der Variantenansicht mit Variantenmanagement Features ergänzt werden. Die Trennung der Ansichten trägt sehr viel zur Übersicht bei.\\
+
+
+Als Ergebnis wurde festgestellt, dass die in dieser Arbeit gestellte Problemfrage trägt nicht zur Unübersichtlichkeit der Benutzeroberfläche bei. Es wird erhofft, dass außer der Erweiterung der Funktionalität, dass auch die Übersicht verbessert wird. Die Trennung zwischen der Hauptansicht und der Variantenansicht wird beibehalten ebenso die Lösung der Pfeile und des Drop-Down Menüs (siehe Abbildungen \ref{ttn.generic}, \ref{ttn.2}, \ref{ttn.3}).
