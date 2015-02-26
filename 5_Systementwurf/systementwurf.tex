@@ -154,15 +154,17 @@ Das Interface \textit{ParameterTag} dient als Schnittstelle für den Zugriff auf
 public static final String TAGTYPE = "ParameterTag";
 \end{lstlisting}
 
-Das \textit{Tag} wurde um die in Abbildung \ref{uml.ParameterTag} zu sehende Methoden erweitert. 
+Das \textit{Tag} wurde um die in Abbildung \ref{uml.ParameterTag} zu sehende Methoden erweitert. Die Konstanten \textit{DELIMETER} (\glqq~| \grqq) und \textit{SEPARATOR} (\glqq~ ; \grqq) werden benutzt um den Inhalt des Tags beim speichern und lesen zu trennen.
 
 \subsubsection{ParameterTagImpl}
 Die Klasse \textit{ParameterTagImpl} erweitert die Klasse \textit{TagImpl} und implementiert \textit{ParameterTag}. In dieser Klasse werden die Vorteile von das Tagmodell deutlicher. Die Klasse \textit{TagImpl} definiert sehr nützliche Methoden und Eigenschaften die in \textit{ParameterTagImpl} weiter angewendet werden.\\
 
 
-Jedes \textit{Tag} hat als Eigenschaft einen Namen. In dieser Klasse entspricht der Name einem Parameternamen der aus der Parametertabelle gelesen wird. Weiterhin ist über \textit{ID} eine eindeutige Identifikationsnummer definiert, um \textit{Tags} des gleichen Typs voneinander zu unterscheiden. Es wird ein weiteres Attribut implementiert, dass die Einheit (\textit{unit}) des Parameters definiert\\
+Jedes \textit{Tag} hat als Eigenschaft einen Namen. In dieser Klasse entspricht der Name einem Parameternamen der aus der Parametertabelle gelesen wird. Weiterhin ist über \textit{ID} eine eindeutige Identifikationsnummer definiert, um \textit{Tags} des gleichen Typs voneinander zu unterscheiden. Es werden zwei weitere Attribute implementiert. Das erste Attribut ist die Einheit (\textit{unit}) des Parameters. Das zweite Attribut ist der Status \textit{merged}. Dieser besagt, ob der \textit{ParameterTag} ein oder mehrere Parameter beinhaltet. \\
 
-Der Inhalt von dem \textit{Tag} ist durch ein \textit{EcoreEMap<String, String>} definiert. Der erste String ist ein Schlüsselwert und das zweite String der Wert. Im diesem Fall ist der Schlüssel der Name einer Variante, und der Wert ist der Parameterwert des Parameters in dieser Variante. Der Inhalt und Struktur eines \textit{ParameterTags} sieht folgendermaßen aus:\\
+Das Attribut \textit{merge} wurde vereinbart, weil ein Baumelement nur ein Objekt pro Tagtyp beinhalten darf. Wenn ein Baumelement zwei oder mehrere Parameter repräsentiert, müssen die Werte der Parameter sich in einen \textit{ParameterTag} befinden. Diese Änderung musste an dem Ansatz (siehe Abbildung \ref{ttn.treeitem_vars}) angepasst werden.\\
+
+Der Inhalt von dem \textit{Tag} ist durch ein \textit{EcoreEMap<String, String>} definiert. Der erste String ist ein Schlüsselwert und das zweite String der Wert. Wenn das \textit{ParameterTag} nur ein Parameter repräsentiert, ist der Schlüssel der Name einer Variante, und der Wert ist der Parameterwert des Parameters in dieser Variante. Der Inhalt und Struktur eines \textit{ParameterTags} sieht folgendermaßen aus:\\
 
 \begin{table}[h]
 \begin{center}
@@ -175,6 +177,8 @@ Der Inhalt von dem \textit{Tag} ist durch ein \textit{EcoreEMap<String, String>}
 	 Name		& \multicolumn{2}{|c|}{max\_speed}\\
 	 \hline
 	 Unit		& \multicolumn{2}{|c|}{[km/h]}\\
+	 \hline
+	 Merged		& \multicolumn{2}{|c|}{false}\\
 	 \hline
 	 \multirow{5}{*}{Content}	&Key			&Value\\ \cline{2-3}
 	 							&Generic		&50\\
@@ -193,11 +197,50 @@ Der Inhalt von dem \textit{Tag} ist durch ein \textit{EcoreEMap<String, String>}
 Anhand der Methode \textit{getContent()} kann der Inhalt eines \textit{Tags} aufgerufen werden und mit der Methode \textit{addEntry()} werden Inhalte hinzugefügt. Die Löschung erfolgt mit der Methode \textit{deleteEntry()}. Wie die Methoden genauer angewendet werden, wird im Listing \ref{lst:CreateParamTag} gezeigt.\\
 
 
+Wenn ein \textit{ParameterTag} zwei oder mehrere Parameter repräsentiert sieht die Struktur des \textit{ParameterTags} folgendermaßen aus:
+
+\begin{table}[h]
+\begin{center}
+	\begin{tabular}{|l||ll|}
+	 \hline
+	 \multicolumn{3}{|c|}{ParameterTag}\\
+	 \hline\hline
+	 ID			& \multicolumn{2}{|c|}{31}\\
+	 \hline
+	 Name		& \multicolumn{2}{|c|}{}\\
+	 \hline
+	 Unit		& \multicolumn{2}{|c|}{}\\
+	 \hline
+	 Merged		& \multicolumn{2}{|c|}{true}\\
+	 \hline
+	 \multirow{3}{*}{Content}	&Key			&Value\\ \cline{2-3}
+	 							&speed1|Generic;Cabrio &[km/h]|50;100\\
+	 							&speed2|Kombi;Limo     &[km/h]|200;300\\
+	 \hline
+	\end{tabular}
+	
+	\caption{Beispiel eines ParameterTags mit zwei Parametern}
+	\label{table:PTagMergeStruktur}
+\end{center}
+\end{table}
+
+Wenn ein Baumelement schon ein \textit{ParameterTag} besitzt, muss das neue Parameter mit dem aktuellen \textit{ParameterTag} vereinigt werden. Dafür wurde die Methode \textit{mergeTags (ParameterTag)} definiert. Diese Methode wandelt die Strultur des \textit{ParameterTags} von Tabelle \ref{table:ParameterTagStruktur} zu der Struktur von Tabelle \ref{table:PTagMergeStruktur}. Die Statusvariable \textit{merge} wird dann auf \textit{true} gesetzt. Der Inhalt des \textit{ParameterTags} ändert sich auf folgendes Format:\\
+
+\begin{center}
+\begin{tabular}{l l}
+Key									&Value\\
+\textit{ParameterName}|\textit{Variante1};\textit{Variante2}		&\textit{Einheit}|\textit{Wert1};\textit{Wert2}\\
+\end{tabular}
+\end{center}
+
+
+Um ein Parameter aus ein \textit{ParameterTag} zu löschen, wurde die Methode \textit{removeMergedTag (ParameterName)} programmiert.
+
 Sehr relevant sind die Methoden \textit{serialize()} und \textit{unserialize(Map<String, String>)} die für das Schreiben und das Lesen der TESTONA Datei zuständig sind. Zum Schreiben wird ein \textit{HashMap<String, String>} Objekt zurückgegeben. Das erste \textit{String} beinhaltet den Namen des Parameters gefolgt von den Variantennamen. Die Werte sind durch ein vereinbartes Trennzeichen (;)  getrennt. Der zweite \textit{String} beinhaltet die Einheit des Parameters und die Parameterwerte (in einer geordneten Reihenfolge). Der XML Eintrag für das obige Beispiel (Tabelle \ref{table:ParameterTagStruktur}) wurde wie folgt aussehen:\\
 
 \begin{lstlisting}[caption={XML Darstellung eines ParameterTags}, captionpos=b]
 <Tag id="30" type="ParameterTag">
-	<Content key="max_speed;Generic;Cabrio;Kombi;Limo" value="km/h;50;100;200;300"/>
+	<Content key="max_speed|Generic;Cabrio;Kombi;Limo" value="[km/h]|50;100;200;300"/>
 <Tag/>
 \end{lstlisting}
 
