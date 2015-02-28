@@ -16,18 +16,15 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Generic (default)}}{24}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Cabrio}}{24}{figure.4.4}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Aktive Variante Kombi}}{24}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Der generische Baum}}{26}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Aktive Variante Cabrio}}{26}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Aktive Variante Kombi}}{27}{figure.4.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Einfache \IeC {\"U}bersicht der Klassen}}{29}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Darstellung der Klasse ParameterTagImplung das Interface ParameterTag}}{34}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Klasse ParameterManager}}{37}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Der generische Baum}}{44}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Aktive Variante Cabrio}}{44}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Aktive Variante Limo}}{44}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Aktive Variante Kombi}}{44}{figure.5.7}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Einfache \IeC {\"U}bersicht der Klassen}}{27}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Darstellung der Klasse ParameterTagImpl und das Interface ParameterTag}}{32}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Klasse ParameterManager}}{35}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Der generische Baum}}{42}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Aktive Variante Cabrio}}{42}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Aktive Variante Limo}}{42}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Aktive Variante Kombi}}{42}{figure.5.7}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Klassendiagramm von ParameterManager.java}}{55}{figure.A.1}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Klassendiagramm von ParameterManager.java}}{57}{figure.A.1}

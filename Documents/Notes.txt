@@ -10,28 +10,8 @@ NOTES
 FAQ
 ===
 - Wenn die Variantenansicht geändert wird, was passiert genau?
-Ein Filter wird neu gesetzt, dann updateTestRee und updateVisualization
+Ein Filter wird neu gesetzt, dann updateTesTree und updateVisualization
 
-- Genauer zu Tags / GST
-ich muss mich um das schreiben und lesen nicht kümmern!
-
-- Filter, was genau wird filtiert, wie funktioniert es?
+- Filter, was genau wird gefiltert, wie funktioniert es?
 je nach aktivierte Variante und Variantenname werden die Filtergesetzt.
 mit updateTestTree und updateVisualization wird auch der Filter aktiviert
-
-
-===
-Planung für Parameter
-
-<Tag id="c165" type="VariantsList">
-        <Content key="2" value="Cabrio"/>
-        <Content key="1" value="Kombi"/>
-        <Content key="0" value="Limo"/>
-</Tag>
-
-<Tag id="cXXX" type="ParametersList">
-		<Param id="cDDD" name="EEE" value="ZZZ" key="2"/>
-		<Param id="cXXX" name="YYY" value="AAA" key="2"/>
-		<Param id="cXXX" name="YYY" value="BBB" key="1"/>
-		<Param id="cXXX" name="YYY" value="CCC" key="0"/>		
-<Tag/>

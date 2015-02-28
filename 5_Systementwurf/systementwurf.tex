@@ -137,7 +137,7 @@ Besitzt das Baumelement mehr als eine Anforderung und eine neue wird hinzufügt,
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.7]{ParameterTag.png}
-  		  \caption{Darstellung der Klasse ParameterTagImplung das Interface ParameterTag}
+  		  \caption{Darstellung der Klasse ParameterTagImpl und das Interface ParameterTag}
      \label{uml.ParameterTag}
   \end{center}
 \end{figure}
@@ -224,7 +224,7 @@ Wenn ein \textit{ParameterTag} zwei oder mehrere Parameter repräsentiert sieht 
 \end{center}
 \end{table}
 
-Wenn ein Baumelement schon ein \textit{ParameterTag} besitzt, muss das neue Parameter mit dem aktuellen \textit{ParameterTag} vereinigt werden. Dafür wurde die Methode \textit{mergeTags (ParameterTag)} definiert. Diese Methode wandelt die Strultur des \textit{ParameterTags} von Tabelle \ref{table:ParameterTagStruktur} zu der Struktur von Tabelle \ref{table:PTagMergeStruktur}. Die Statusvariable \textit{merge} wird dann auf \textit{true} gesetzt. Der Inhalt des \textit{ParameterTags} ändert sich auf folgendes Format:\\
+Wenn ein Baumelement schon ein \textit{ParameterTag} besitzt, muss das neue Parameter mit dem aktuellen \textit{ParameterTag} vereinigt werden. Dafür wurde die Methode \textit{mergeTags (ParameterTag)} definiert. Diese Methode wandelt die Struktur des \textit{ParameterTags} von Tabelle \ref{table:ParameterTagStruktur} zu der Struktur von Tabelle \ref{table:PTagMergeStruktur}. Die Statusvariable \textit{merge} wird dann auf \textit{true} gesetzt. Der Inhalt des \textit{ParameterTags} ändert sich auf folgendes Format:
 
 \begin{center}
 \begin{tabular}{l l}
@@ -234,9 +234,10 @@ Key									&Value\\
 \end{center}
 
 
-Um ein Parameter aus ein \textit{ParameterTag} zu löschen, wurde die Methode \textit{removeMergedTag (ParameterName)} programmiert.
+Um ein Parameter aus ein \textit{ParameterTag} mit mehreren Parametern zu löschen, wurde die Methode \textit{removeMergedTag (ParameterName)} programmiert. Die Methode sucht den richtigen Eintrag anhand des Parameternames in \textit{content} und lösche den Eintrag. Falls nur ein Eintrag übrig bleicht, bedeutet es, dass es nur ein Parameter im \textit{ParameterTag} vorhanden ist. Wenn dieser Fall auftritt, wird die Struktur des \textit{ParameterTags} von Tabelle \ref{table:PTagMergeStruktur} wieder auf die Struktur von Tabelle \ref{table:ParameterTagStruktur} umgewandelt.\\
 
-Sehr relevant sind die Methoden \textit{serialize()} und \textit{unserialize(Map<String, String>)} die für das Schreiben und das Lesen der TESTONA Datei zuständig sind. Zum Schreiben wird ein \textit{HashMap<String, String>} Objekt zurückgegeben. Das erste \textit{String} beinhaltet den Namen des Parameters gefolgt von den Variantennamen. Die Werte sind durch ein vereinbartes Trennzeichen (;)  getrennt. Der zweite \textit{String} beinhaltet die Einheit des Parameters und die Parameterwerte (in einer geordneten Reihenfolge). Der XML Eintrag für das obige Beispiel (Tabelle \ref{table:ParameterTagStruktur}) wurde wie folgt aussehen:\\
+
+Sehr relevant sind die Methoden \textit{serialize()} und \textit{unserialize(Map<String, String>)} die für das Schreiben und das Lesen der TESTONA Datei zuständig sind. Zum Schreiben wird ein \textit{HashMap<String, String>} Objekt zurückgegeben. Das erste \textit{String} beinhaltet den Namen des Parameters gefolgt von den Variantennamen. Der zweite \textit{String} beinhaltet die Einheit des Parameters und die Parameterwerte (in einer geordneten Reihenfolge). Das Format von jedem Eintrag hält sich an das Format von der Tabelle \ref{table:PTagMergeStruktur}. Der XML Eintrag für das obige Beispiel (Tabelle \ref{table:ParameterTagStruktur}) wurde wie folgt aussehen:\\
 
 \begin{lstlisting}[caption={XML Darstellung eines ParameterTags}, captionpos=b]
 <Tag id="30" type="ParameterTag">
@@ -245,12 +246,12 @@ Sehr relevant sind die Methoden \textit{serialize()} und \textit{unserialize(Map
 \end{lstlisting}
 
 
-Beim Laden der TESTONA Datei erkennt das Programm anhand des Attributs \texttt{type} um welchem Typen von \textit{Tag} es sich handelt. Die Methode \textit{unserialize} erhält als Eingansparameter die in \textit{serialize()} erstellte Zeile als ein \textit{Map<String, String>} Objekt. Durch das Trennzeichen werden die jeweiligen Werte voneinander unterschieden und zu den zugehörigen Variablen (name, unit, content) zugeordnet. Beider Vorgänge funktionieren durch die Vererbung automatisiert.
+Beim Laden der TESTONA Datei erkennt das Programm anhand des Attributs \texttt{type} um welchem Typen von \textit{Tag} es sich handelt. Die Methode \textit{unserialize} erhält als Eingansparameter die in \textit{serialize()} erstellte Zeile als ein \textit{Map<String, String>} Objekt. Durch die Trennzeichen (\textit{SEPARATOR} und \textit{DELIMETER}) werden die jeweiligen Werte voneinander unterschieden und zu den zugehörigen Variablen (name, unit, content) zugeordnet. Beider Vorgänge funktionieren durch die Vererbung automatisiert.
 
 %#######################################################################################
 \subsection{ParameterManager}\label{sub:ParameterManager}
 
-\begin{figure}[h!]
+\begin{figure}[h]
   \begin{center}
     \includegraphics[scale=0.7]{KD_ParameterManager.png}
   		  \caption{Klasse ParameterManager}
@@ -458,7 +459,7 @@ Nachdem Parameter in den Baumelementen vorhanden sind, sollten die Werte angezei
 	 \hline
 	\end{tabular}
 	\caption{Parameter \textit{max\_speed}}
-	\label{table:ParameterTagStruktur}
+	\label{table:ParameterTagStruktur2}
 \end{center}
 \end{table}
 
@@ -523,7 +524,7 @@ Nachdem alle Baumelemente überprüft worden sind, muss die Anzeige (Editor) von
 
 %#######################################################################################
 %#######################################################################################
-\newpage
-\section{Testfallgenerierung und Optimierung}
-\paragraph{}
-Erläuterung der Lösungen zu 4.3
+%\newpage
+%\section{Testfallgenerierung und Optimierung}
+%\paragraph{}
+%Erläuterung der Lösungen zu 4.3

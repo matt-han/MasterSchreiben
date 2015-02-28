@@ -38,40 +38,47 @@
 \contentsline {paragraph}{}{22}{section*.18}
 \contentsline {section}{\numberline {4.2}Visualisierung der Parameterwerte}{24}{section.4.2}
 \contentsline {paragraph}{}{24}{section*.19}
-\contentsline {section}{\numberline {4.3}Testg\IeC {\"u}ltigkeit}{26}{section.4.3}
+\contentsline {section}{\numberline {4.3}Benutzeroberfl\IeC {\"a}che}{26}{section.4.3}
 \contentsline {paragraph}{}{26}{section*.20}
-\contentsline {section}{\numberline {4.4}Benutzeroberfl\IeC {\"a}che}{28}{section.4.4}
-\contentsline {paragraph}{}{28}{section*.21}
-\contentsline {chapter}{\numberline {5}Systementwurf}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Variantenmanagement und Parameter}{29}{section.5.1}
-\contentsline {paragraph}{}{29}{section*.22}
-\contentsline {subsection}{\numberline {5.1.1}VariantsManager}{30}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}ResourceSetListener}{31}{subsection.5.1.2}
-\contentsline {subsubsection}{Eine Anforderung hinzuf\IeC {\"u}gen}{32}{section*.23}
-\contentsline {subsubsection}{Anforderungen l\IeC {\"o}schen}{33}{section*.24}
-\contentsline {subsection}{\numberline {5.1.3}Parameter-\textit {Tag}}{34}{subsection.5.1.3}
-\contentsline {subsubsection}{ParameterTag}{34}{section*.25}
-\contentsline {subsubsection}{ParameterTagImpl}{35}{section*.26}
-\contentsline {subsection}{\numberline {5.1.4}ParameterManager}{36}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Kommandos}{39}{subsection.5.1.5}
-\contentsline {subsection}{\numberline {5.1.6}Die DOORS Verbindng}{39}{subsection.5.1.6}
-\contentsline {subsubsection}{DoorsConnector}{39}{section*.27}
-\contentsline {subsubsection}{RequirementDataListener}{41}{section*.28}
-\contentsline {subsubsection}{RequirementLoadListener}{42}{section*.29}
-\contentsline {section}{\numberline {5.2}Darstellung der Parameterwerte}{44}{section.5.2}
+\contentsline {chapter}{\numberline {5}Systementwurf}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Variantenmanagement und Parameter}{27}{section.5.1}
+\contentsline {paragraph}{}{27}{section*.21}
+\contentsline {subsection}{\numberline {5.1.1}VariantsManager}{28}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}ResourceSetListener}{29}{subsection.5.1.2}
+\contentsline {subsubsection}{Eine Anforderung hinzuf\IeC {\"u}gen}{30}{section*.22}
+\contentsline {subsubsection}{Anforderungen l\IeC {\"o}schen}{31}{section*.23}
+\contentsline {subsection}{\numberline {5.1.3}Parameter-\textit {Tag}}{32}{subsection.5.1.3}
+\contentsline {subsubsection}{ParameterTag}{32}{section*.24}
+\contentsline {subsubsection}{ParameterTagImpl}{33}{section*.25}
+\contentsline {subsection}{\numberline {5.1.4}ParameterManager}{35}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Kommandos}{37}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}Die DOORS Verbindng}{38}{subsection.5.1.6}
+\contentsline {subsubsection}{DoorsConnector}{38}{section*.26}
+\contentsline {subsubsection}{RequirementDataListener}{40}{section*.27}
+\contentsline {subsubsection}{RequirementLoadListener}{41}{section*.28}
+\contentsline {section}{\numberline {5.2}Darstellung der Parameterwerte}{42}{section.5.2}
+\contentsline {paragraph}{}{42}{section*.29}
+\contentsline {chapter}{\numberline {6}Evaluierung}{44}{chapter.6}
 \contentsline {paragraph}{}{44}{section*.30}
-\contentsline {section}{\numberline {5.3}Testfallgenerierung und Optimierung}{46}{section.5.3}
-\contentsline {paragraph}{}{46}{section*.31}
-\contentsline {chapter}{\numberline {6}Evaluierung}{47}{chapter.6}
-\contentsline {paragraph}{}{47}{section*.32}
-\contentsline {section}{\numberline {6.1}Chances of Failure}{47}{section.6.1}
-\contentsline {paragraph}{}{47}{section*.33}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{48}{chapter.7}
-\contentsline {section}{\numberline {7.1}Optimierungskriterien}{49}{section.7.1}
-\contentsline {paragraph}{}{49}{section*.34}
-\contentsline {paragraph}{}{49}{section*.35}
-\contentsline {chapter}{\numberline {A}Anhang}{54}{appendix.A}
-\contentsline {section}{\numberline {A.1}CD}{54}{section.A.1}
-\contentsline {section}{\numberline {A.2}ParameterMananger Klassendiagramm}{55}{section.A.2}
-\contentsline {section}{\numberline {A.3}code 2}{56}{section.A.3}
-\contentsline {chapter}{Literatur- und Quellenverzeichnis}{57}{lstnumber.-4.2}
+\contentsline {section}{\numberline {6.1}Testaufbau und -Ablauf}{45}{section.6.1}
+\contentsline {paragraph}{}{45}{section*.31}
+\contentsline {subsubsection}{Listeners}{45}{section*.32}
+\contentsline {subsubsection}{DOORS Verbindung und Import der Parameter}{45}{section*.33}
+\contentsline {subsubsection}{Speichern der Parameter}{46}{section*.34}
+\contentsline {subsubsection}{Darstellung der Parameterwerte}{46}{section*.35}
+\contentsline {subsubsection}{L\IeC {\"o}schen von Parametern}{46}{section*.36}
+\contentsline {subsubsection}{Lesen und Schreiben der TESTONA Datei}{47}{section*.37}
+\contentsline {section}{\numberline {6.2}Ausfallrisiko}{48}{section.6.2}
+\contentsline {paragraph}{}{48}{section*.38}
+\contentsline {section}{\numberline {6.3}Bekannte Fehler}{49}{section.6.3}
+\contentsline {paragraph}{}{49}{section*.39}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{50}{chapter.7}
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{51}{section.7.1}
+\contentsline {paragraph}{}{51}{section*.40}
+\contentsline {section}{\numberline {7.2}Optimierungskriterien}{52}{section.7.2}
+\contentsline {paragraph}{}{52}{section*.41}
+\contentsline {chapter}{\numberline {A}Anhang}{56}{appendix.A}
+\contentsline {section}{\numberline {A.1}CD}{56}{section.A.1}
+\contentsline {section}{\numberline {A.2}ParameterMananger Klassendiagramm}{57}{section.A.2}
+\contentsline {section}{\numberline {A.3}code 2}{58}{section.A.3}
+\contentsline {chapter}{Literatur- und Quellenverzeichnis}{59}{lstnumber.-4.2}

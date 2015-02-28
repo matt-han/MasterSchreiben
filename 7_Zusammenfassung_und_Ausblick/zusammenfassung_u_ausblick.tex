@@ -1,0 +1,46 @@
+\chapter{Zusammenfassung und Ausblick}\label{chp:zusammenfassung}
+%Lehnen Sie sich zurück von Ihrem Terminal und versuchen ein wenig Abstand zu den vielen Detail-Problemen Ihrer Diplomarbeit zu gewinnen:
+%Was war wirklich wichtig bei der Arbeit? 
+%Wie sieht das Ergebnis aus?
+%Wie schätzen Sie das Ergebnis ein?
+%Gab es Randbedingungen, Ereignisse, die die Arbeit wesentlich beeinflußt haben?
+%Gibt es noch offene Probleme?
+%Wie könnten diese vermutlich gelöst werden?
+
+
+
+%#######################################################################################
+%#######################################################################################
+\newpage
+\section{Zusammenfassung}
+\paragraph{}
+Durch Verwendung der Programmiersprache Java konnte ich meine Kenntnisse und Erfahrungen in dieser Sprache bereichern. Anhand des Arbeiten in ein umfangreiches Programm wie TESTONA habe ich gelernt Teil eines größeren Entwicklungsteams zu sein. Der Ablauf von Team absprachen, wöchentliche Statusmeetings sowie Vereinbarung sind mir vertrauter geworden.\\
+
+
+Da TESTONA auf RCP basiert, konnte ich viele neue Aspekte von Java und von Programmarchitekturen lernen. Diese Masterarbeit befasst Themen wie Testen, Qualitätssicherung und Softwareentwicklung, die an meiner Interessen sehr nähe liegen. Diese erworbenen Kenntnissen werde ich in meiner zukünftiger Karriere erfolgreich anwenden können.\\
+
+
+Da während der Arbeit mein Betreuer aus Berner \& Mattner sich geändert hat, haben sich auch die Anforderungen um etwas geändert. Die Änderung der Betreuer hat auch dazu gesteuert, dass organisatorisch nicht alles optimal lief. Ich schätze das Ergebniss als durchaus positiv und bereichern für TESTONA. Ich glaube es wäre auch sehr interessant gewesen, die Abhängigkeitsregeln für die Testfallgenerierung genauer zu betrachten.\\
+
+
+Durch das Speichern und Darstellen von importierten Parameterwerte aus DOORS wurde die Testfallgenerierung in TESTONA verbessert. Mit dem automatischen Import der Parameterwerte hat man den Benutzer viel Arbeit abgenommen. Dabei erhält der Benutzer eine bessere Übersicht von den erzeugten Testfälle und kann diese mit reellen Werten gegenüberstellen. Dies führt zur Zeitersparnis und niedrige Kosten beim Testen.\\
+
+
+Es können auch gezielt spezielle Testfälle erzeugt werden, anhand der vorhandenen Parameterwerte. Ist zum Beispiel ein Teil eines Produktes sehr komplex, kann der Benutzer anhand der Vorhandene Parameterwerte, speziell für dieses Produkt die nötige Testfälle generieren.\\
+
+
+Weiterhin besteht die Möglichkeit doppelte Testfälle leichter zu erkennen und vermeiden. Diese entstehen durch gleiche Parameterwerte in verschiedene Baumelemente in der gleichen Variante.\\
+
+
+
+
+%#######################################################################################
+%#######################################################################################
+\newpage
+\section{Optimierungskriterien}
+\paragraph{}
+%Testablauf optimieren in Betrachtung auf nur gültige Baumelemente in einer Variante und mögliche Testduplikate,
+Die geleistete Arbeit konnte noch in zwei Punkte optimiert werden. Doppelte Testfälle konnten automatisch erkennt werden und den Benutzer warnen oder sofort gelöscht werden. Diese doppelte Testfälle entstehen durch gleiche Parameterwerte innerhalb eines Knotens bei einer aktiven Variante. So kann der Fall auftreten, dass die Landgeschwindigkeit eines bestimmtes Autos gleich die Maximalgeschwindigkeit ist. Dabei wurden sich einige Test wiederholen, weil der Parameterwert für Land- und Maximalgeschwindigkeit gleich ist.\\
+
+
+Weiterhin besteht die Möglichkeit ein Algorithmus zu entwickeln, indem ähnliche Testfälle erkannt und nicht betrachtet werden. Immerhin soll die maximale Testabdeckung garantiert sein. Sind die Geschwindigkeiten verschiedener Varianten ähnlich, so konnten manche Testfälle übersprungen werden. Das wurde zu weniger Testfälle führen, aber die Qualität des Produkt konnte noch gewährleistet werden.

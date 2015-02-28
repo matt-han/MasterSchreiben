@@ -1,7 +1,5 @@
 TASKS
 =====
-- DOORS Parameterinfo. local im Rechner speichern. Wie wird das gemacht? (lesen&schreiben) serialize & unserialize
-
 - Fehlerüberprüfung!!!!!! Negativtest
 
 - ConnectionPreferences!
@@ -12,9 +10,6 @@ TASKS
 
 FRAGEN
 ======
-- Zweck von ParameterListTag
-- ParameterListTag beinhaltet ParametarTag
-- VariantListTag beinhalt "nur" Variant
 
 
 INFOS

@@ -119,42 +119,42 @@ Dafür muss ein \textit{Listener} beim Ändern der Variantenansicht eine Methode
 
 %#######################################################################################
 %#######################################################################################
-\newpage
-\section{Testgültigkeit}
-\paragraph{}
-%Innerhalb einer Variante auf Testfallduplikate überprüfen anhand der Paramerterwerte
-%Testfallabdeckung + Prozessoptmierung
-Wenn TESTONA in der Lage ist, die Parameterwerte abhängig von der Variante darzustellen, soll möglicherweise nach duplizierten Testfällen gesucht werden. Es kann dazu kommen, dass sich ein Testfall dupliziert, da zwei oder mehrere Parameter den gleichen Wert besitzen. Ein einfaches Beispiel:\\
-
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[scale=0.4]{4_3_generic.png}
-  		  \caption{Der generische Baum}
-     \label{ttn.cases_generic}
-  \end{center}
-\end{figure}
-
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[scale=0.4]{4_3_cabrio.png}
-  		  \caption{Aktive Variante Cabrio}
-     \label{ttn.cases_cabrio}
-  \end{center}
-\end{figure}
-
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[scale=0.4]{4_3_kombi.png}
-  		  \caption{Aktive Variante Kombi}
-     \label{ttn.cases_kombi}
-  \end{center}
-\end{figure}
-
-Es ist leicht zu erkennen, dass die Testfälle eins bis vier in der Variante \glqq Cabrio\grqq~ dupliziert sind. Bei einem minimalistischen Baum sind solche Fälle einfach zu erkennen. Bei einem komplexeren Baum mit sehr vielen Klassen kann es schnell zur Unübersichtlichkeit kommen. Duplizierte Testfälle könnten übersehen oder nicht erkannt werden.\\
-
-Bei der Testfallgenerierung muss zusätzlich darauf geachtet werden (vorausgesetzt es gibt Varianten und Parameterwerte), dass nicht nur die Baumelemente sondern auch die Parameterwerte betrachtet werden.\\
-
-Dafür müssen alle Klassen (Endknoten) unterhalb der gleichen Klassifikation überprüft werden. Nach dem obenstehenden Beispiel, müssen die Klassen \glqq 70 km/h\grqq , \glqq 100 km/h\grqq~ und \glqq Maximale\grqq~ verglichen werden. Da \glqq Maximale\grqq~ bei jeder Variante einen anderen Wert annimmt, muss hier überprüft werden, dass sich bei jeder Variante der Wert nicht wiederholt. Die Werte werden aus dem geplanten \textit{ParameterTag} (siehe Abbildung \ref{ttn.objectGraph}) gelesen.
+%\newpage
+%\section{Testgültigkeit}
+%\paragraph{}
+%%Innerhalb einer Variante auf Testfallduplikate überprüfen anhand der Paramerterwerte
+%%Testfallabdeckung + Prozessoptmierung
+%Wenn TESTONA in der Lage ist, die Parameterwerte abhängig von der Variante darzustellen, soll möglicherweise nach duplizierten Testfällen gesucht werden. Es kann dazu kommen, dass sich ein Testfall dupliziert, da zwei oder mehrere Parameter den gleichen Wert besitzen. Ein einfaches Beispiel:\\
+%
+%\begin{figure}[h!]
+%  \begin{center}
+%    \includegraphics[scale=0.4]{4_3_generic.png}
+%  		  \caption{Der generische Baum}
+%     \label{ttn.cases_generic}
+%  \end{center}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%  \begin{center}
+%    \includegraphics[scale=0.4]{4_3_cabrio.png}
+%  		  \caption{Aktive Variante Cabrio}
+%     \label{ttn.cases_cabrio}
+%  \end{center}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%  \begin{center}
+%    \includegraphics[scale=0.4]{4_3_kombi.png}
+%  		  \caption{Aktive Variante Kombi}
+%     \label{ttn.cases_kombi}
+%  \end{center}
+%\end{figure}
+%
+%Es ist leicht zu erkennen, dass die Testfälle eins bis vier in der Variante \glqq Cabrio\grqq~ dupliziert sind. Bei einem minimalistischen Baum sind solche Fälle einfach zu erkennen. Bei einem komplexeren Baum mit sehr vielen Klassen kann es schnell zur Unübersichtlichkeit kommen. Duplizierte Testfälle könnten übersehen oder nicht erkannt werden.\\
+%
+%Bei der Testfallgenerierung muss zusätzlich darauf geachtet werden (vorausgesetzt es gibt Varianten und Parameterwerte), dass nicht nur die Baumelemente sondern auch die Parameterwerte betrachtet werden.\\
+%
+%Dafür müssen alle Klassen (Endknoten) unterhalb der gleichen Klassifikation überprüft werden. Nach dem obenstehenden Beispiel, müssen die Klassen \glqq 70 km/h\grqq , \glqq 100 km/h\grqq~ und \glqq Maximale\grqq~ verglichen werden. Da \glqq Maximale\grqq~ bei jeder Variante einen anderen Wert annimmt, muss hier überprüft werden, dass sich bei jeder Variante der Wert nicht wiederholt. Die Werte werden aus dem geplanten \textit{ParameterTag} (siehe Abbildung \ref{ttn.objectGraph}) gelesen.
 
 %#######################################################################################
 %#######################################################################################
