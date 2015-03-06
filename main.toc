@@ -17,66 +17,69 @@
 \contentsline {paragraph}{}{9}{section*.8}
 \contentsline {subsection}{\numberline {3.1.3}Abh\IeC {\"a}ngigskeitsregeln}{10}{subsection.3.1.3}
 \contentsline {paragraph}{}{10}{section*.9}
-\contentsline {section}{\numberline {3.2}IBM Rational DOORS}{12}{section.3.2}
-\contentsline {paragraph}{}{12}{section*.10}
-\contentsline {section}{\numberline {3.3}Variantenmanagement}{14}{section.3.3}
-\contentsline {paragraph}{}{14}{section*.11}
-\contentsline {section}{\numberline {3.4}Entwicklungsumgebung und Programmiersprache}{16}{section.3.4}
-\contentsline {paragraph}{}{16}{section*.12}
-\contentsline {subsection}{\numberline {3.4.1}Eclipse}{16}{subsection.3.4.1}
-\contentsline {paragraph}{}{16}{section*.13}
-\contentsline {subsection}{\numberline {3.4.2}Plug-ins}{16}{subsection.3.4.2}
-\contentsline {paragraph}{}{16}{section*.14}
-\contentsline {subsection}{\numberline {3.4.3}Standard Widget Toolkit (SWT)}{17}{subsection.3.4.3}
-\contentsline {paragraph}{}{17}{section*.15}
-\contentsline {subsection}{\numberline {3.4.4}JFace}{18}{subsection.3.4.4}
-\contentsline {paragraph}{}{18}{section*.16}
-\contentsline {subsection}{\numberline {3.4.5}Tags}{19}{subsection.3.4.5}
-\contentsline {paragraph}{}{19}{section*.17}
-\contentsline {chapter}{\numberline {4}L\IeC {\"o}sungsansatz}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Parameterspeicherung}{22}{section.4.1}
-\contentsline {paragraph}{}{22}{section*.18}
-\contentsline {section}{\numberline {4.2}Visualisierung der Parameterwerte}{24}{section.4.2}
-\contentsline {paragraph}{}{24}{section*.19}
-\contentsline {section}{\numberline {4.3}Benutzeroberfl\IeC {\"a}che}{26}{section.4.3}
-\contentsline {paragraph}{}{26}{section*.20}
-\contentsline {chapter}{\numberline {5}Systementwurf}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Variantenmanagement und Parameter}{27}{section.5.1}
-\contentsline {paragraph}{}{27}{section*.21}
-\contentsline {subsection}{\numberline {5.1.1}VariantsManager}{28}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}ResourceSetListener}{29}{subsection.5.1.2}
-\contentsline {subsubsection}{Eine Anforderung hinzuf\IeC {\"u}gen}{30}{section*.22}
-\contentsline {subsubsection}{Anforderungen l\IeC {\"o}schen}{31}{section*.23}
-\contentsline {subsection}{\numberline {5.1.3}Parameter-\textit {Tag}}{32}{subsection.5.1.3}
-\contentsline {subsubsection}{ParameterTag}{32}{section*.24}
-\contentsline {subsubsection}{ParameterTagImpl}{33}{section*.25}
-\contentsline {subsection}{\numberline {5.1.4}ParameterManager}{35}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Kommandos}{37}{subsection.5.1.5}
-\contentsline {subsection}{\numberline {5.1.6}Die DOORS Verbindng}{38}{subsection.5.1.6}
-\contentsline {subsubsection}{DoorsConnector}{38}{section*.26}
-\contentsline {subsubsection}{RequirementDataListener}{40}{section*.27}
-\contentsline {subsubsection}{RequirementLoadListener}{41}{section*.28}
-\contentsline {section}{\numberline {5.2}Darstellung der Parameterwerte}{42}{section.5.2}
-\contentsline {paragraph}{}{42}{section*.29}
-\contentsline {chapter}{\numberline {6}Evaluierung}{44}{chapter.6}
-\contentsline {paragraph}{}{44}{section*.30}
-\contentsline {section}{\numberline {6.1}Testaufbau und -Ablauf}{45}{section.6.1}
-\contentsline {paragraph}{}{45}{section*.31}
-\contentsline {subsubsection}{Listeners}{45}{section*.32}
-\contentsline {subsubsection}{DOORS Verbindung und Import der Parameter}{45}{section*.33}
-\contentsline {subsubsection}{Speichern der Parameter}{46}{section*.34}
-\contentsline {subsubsection}{Darstellung der Parameterwerte}{46}{section*.35}
-\contentsline {subsubsection}{L\IeC {\"o}schen von Parametern}{46}{section*.36}
-\contentsline {subsubsection}{Lesen und Schreiben der TESTONA Datei}{47}{section*.37}
-\contentsline {section}{\numberline {6.2}Ausfallrisiken}{48}{section.6.2}
-\contentsline {paragraph}{}{48}{section*.38}
-\contentsline {section}{\numberline {6.3}Bekannte Fehler}{49}{section.6.3}
-\contentsline {paragraph}{}{49}{section*.39}
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{50}{chapter.7}
-\contentsline {section}{\numberline {7.1}Zusammenfassung}{51}{section.7.1}
+\contentsline {section}{\numberline {3.2}IBM Rational DOORS}{13}{section.3.2}
+\contentsline {paragraph}{}{13}{section*.10}
+\contentsline {section}{\numberline {3.3}Variantenmanagement}{15}{section.3.3}
+\contentsline {paragraph}{}{15}{section*.11}
+\contentsline {section}{\numberline {3.4}Entwicklungsumgebung und Programmiersprache}{17}{section.3.4}
+\contentsline {paragraph}{}{17}{section*.12}
+\contentsline {subsection}{\numberline {3.4.1}Eclipse}{17}{subsection.3.4.1}
+\contentsline {paragraph}{}{17}{section*.13}
+\contentsline {subsection}{\numberline {3.4.2}Plug-ins}{17}{subsection.3.4.2}
+\contentsline {paragraph}{}{17}{section*.14}
+\contentsline {subsection}{\numberline {3.4.3}Standard Widget Toolkit (SWT)}{18}{subsection.3.4.3}
+\contentsline {paragraph}{}{18}{section*.15}
+\contentsline {subsection}{\numberline {3.4.4}JFace}{19}{subsection.3.4.4}
+\contentsline {paragraph}{}{19}{section*.16}
+\contentsline {subsection}{\numberline {3.4.5}Tags}{20}{subsection.3.4.5}
+\contentsline {paragraph}{}{20}{section*.17}
+\contentsline {chapter}{\numberline {4}L\IeC {\"o}sungsansatz}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}Parameterspeicherung}{23}{section.4.1}
+\contentsline {paragraph}{}{23}{section*.18}
+\contentsline {section}{\numberline {4.2}Visualisierung der Parameterwerte}{25}{section.4.2}
+\contentsline {paragraph}{}{25}{section*.19}
+\contentsline {section}{\numberline {4.3}Benutzeroberfl\IeC {\"a}che}{27}{section.4.3}
+\contentsline {paragraph}{}{27}{section*.20}
+\contentsline {chapter}{\numberline {5}Systementwurf}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}Variantenmanagement und Parameter}{28}{section.5.1}
+\contentsline {paragraph}{}{28}{section*.21}
+\contentsline {subsection}{\numberline {5.1.1}VariantsManager}{29}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}ResourceSetListener}{30}{subsection.5.1.2}
+\contentsline {subsubsection}{Eine Anforderung hinzuf\IeC {\"u}gen}{31}{section*.22}
+\contentsline {subsubsection}{Anforderungen l\IeC {\"o}schen}{32}{section*.23}
+\contentsline {subsection}{\numberline {5.1.3}Parameter-\textit {Tag}}{33}{subsection.5.1.3}
+\contentsline {subsubsection}{ParameterTag}{33}{section*.24}
+\contentsline {subsubsection}{ParameterTagImpl}{34}{section*.25}
+\contentsline {subsection}{\numberline {5.1.4}ParameterManager}{36}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Kommandos}{38}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}Die DOORS Verbindng}{39}{subsection.5.1.6}
+\contentsline {subsubsection}{DoorsConnector}{39}{section*.26}
+\contentsline {subsubsection}{RequirementDataListener}{41}{section*.27}
+\contentsline {subsubsection}{RequirementLoadListener}{42}{section*.28}
+\contentsline {section}{\numberline {5.2}Darstellung der Parameterwerte}{43}{section.5.2}
+\contentsline {paragraph}{}{43}{section*.29}
+\contentsline {chapter}{\numberline {6}Evaluierung}{45}{chapter.6}
+\contentsline {paragraph}{}{45}{section*.30}
+\contentsline {section}{\numberline {6.1}Testaufbau und -Ablauf}{46}{section.6.1}
+\contentsline {paragraph}{}{46}{section*.31}
+\contentsline {subsubsection}{Listeners}{46}{section*.32}
+\contentsline {subsubsection}{DOORS Verbindung und Import der Parameter}{46}{section*.33}
+\contentsline {subsubsection}{Speichern der Parameter}{47}{section*.34}
+\contentsline {subsubsection}{Darstellung der Parameterwerte}{47}{section*.35}
+\contentsline {subsubsection}{L\IeC {\"o}schen von Parametern}{47}{section*.36}
+\contentsline {subsubsection}{Lesen und Schreiben der TESTONA Datei}{48}{section*.37}
+\contentsline {section}{\numberline {6.2}Ausfallrisiken}{49}{section.6.2}
+\contentsline {paragraph}{}{49}{section*.38}
+\contentsline {section}{\numberline {6.3}Bekannte Fehler}{50}{section.6.3}
+\contentsline {paragraph}{}{50}{section*.39}
+\contentsline {section}{\numberline {6.4}Optimierungskriterien}{51}{section.6.4}
 \contentsline {paragraph}{}{51}{section*.40}
-\contentsline {section}{\numberline {7.2}Optimierungskriterien}{52}{section.7.2}
-\contentsline {paragraph}{}{52}{section*.41}
-\contentsline {chapter}{\numberline {A}Anhang}{56}{appendix.A}
-\contentsline {section}{\numberline {A.1}ParameterMananger Klassendiagramm}{57}{section.A.1}
-\contentsline {chapter}{Literatur- und Quellenverzeichnis}{58}{figure.A.1}
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{52}{chapter.7}
+\contentsline {section}{\numberline {7.1}Zusammenfassung}{53}{section.7.1}
+\contentsline {paragraph}{}{53}{section*.41}
+\contentsline {section}{\numberline {7.2}Pers\IeC {\"o}nliches Fazit}{54}{section.7.2}
+\contentsline {paragraph}{}{54}{section*.42}
+\contentsline {chapter}{\numberline {A}Anhang}{58}{appendix.A}
+\contentsline {section}{\numberline {A.1}CD}{58}{section.A.1}
+\contentsline {section}{\numberline {A.2}ParameterMananger Klassendiagramm}{59}{section.A.2}
+\contentsline {chapter}{Literatur- und Quellenverzeichnis}{60}{figure.A.1}

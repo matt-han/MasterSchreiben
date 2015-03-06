@@ -64,7 +64,11 @@
 		}
 
 
-		
+%Dont reset footnotes numbers after each chapter
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
+
 \begin{document}
 %##################################################################
 % Titelpage

@@ -8,23 +8,23 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln Bearbeitung}}{10}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Abh\IeC {\"a}ngigkeitsregeln \IeC {\"U}bersicht}}{11}{figure.3.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Testf\IeC {\"a}lle mit Anwendung der Abh\IeC {\"a}ngigkeitsregeln aus \ref {ttn.depencyRulesEdit} und \ref {ttn.depencyRules}}}{11}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Beispiel einer Tabelle in DOORS}}{12}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation aus \cite {VarMan1}}}{14}{figure.3.6}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Beispiel einer Tabelle in DOORS}}{13}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Betrachtung von Varianten eines Wagens von der generischen Testspezifikation zur variantenspezifische Testspezifikation (aus \cite {VarMan1}).}}{15}{figure.3.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Darstellung der TESTONA Objekte f\IeC {\"u}r die Parameterspeicherung}}{23}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Darstellung eines Baumelementes mit zwei verschiedenen Parametern und vier Varianten}}{24}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Generic (default)}}{24}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Cabrio}}{24}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Aktive Variante Kombi}}{24}{figure.4.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Darstellung der TESTONA Objekte f\IeC {\"u}r die Parameterspeicherung}}{24}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Darstellung eines Baumelementes mit zwei verschiedenen Parametern und vier Varianten}}{25}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Aktive Variante Generic (default)}}{25}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Aktive Variante Cabrio}}{25}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Aktive Variante Kombi}}{25}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Einfache \IeC {\"U}bersicht der Klassen}}{27}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Darstellung der Klasse ParameterTagImpl und das Interface ParameterTag}}{32}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Klasse ParameterManager}}{35}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Der generische Baum}}{42}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Aktive Variante Cabrio}}{42}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Aktive Variante Limo}}{42}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Aktive Variante Kombi}}{42}{figure.5.7}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Einfache \IeC {\"U}bersicht der Klassen}}{28}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Darstellung der Klasse ParameterTagImpl und das Interface ParameterTag}}{33}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Klasse ParameterManager}}{36}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Der generische Baum}}{43}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Aktive Variante Cabrio}}{43}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Aktive Variante Limo}}{43}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Aktive Variante Kombi}}{43}{figure.5.7}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Klassendiagramm von ParameterManager.java}}{57}{figure.A.1}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Klassendiagramm von ParameterManager.java}}{59}{figure.A.1}

@@ -9,10 +9,10 @@ Als letzter Schritt für die Beendigung der Entwicklung des Testprogrammes müss
 \newpage
 \section{Testaufbau und -Ablauf} \label{sec:test}
 \paragraph{}
-Um das Programm evaluieren zu können müssen verschiedene Tests durchgeführt werden. Für die Tests wurde das Programm nach Aufgabe unterteilt:
+Um das Programm evaluieren zu können, müssen verschiedene Tests durchgeführt werden. Für die Tests wurde das Programm nach Aufgaben unterteilt:
 
 \begin{enumerate}
-\item Listeners
+\item Listener
 \item DOORS Verbindung und Import der Parameter
 \item Speichern der Parameter
 \item Darstellung der Parameter
@@ -22,12 +22,12 @@ Um das Programm evaluieren zu können müssen verschiedene Tests durchgeführt w
 
 
 \subsubsection{Listeners}
-Die Erweiterung des \textit{ResourceSetListeners} wurde getestet, indem alle ankommenden Nachrichten mit Hilfe des Debuggers überprüft worden sind. Da das \textit{Listener} erweitert wurde, musste überprüft werden, dass die Erweiterung die anderen Funktionalitäten nicht negativ beeinflusst. Dafür wurde mit dem Debugger Schritt für Schritt überprüft, dass der neu implementierte Quelltext nur in den richtigen Fällen aufgerufen wird. Die Fälle sind das Löschen oder das Hinzufügen eines \textit{ParameterTags} zu einem Baumelement.\\
+Die Erweiterung des \textit{ResourceSetListeners} wurde getestet, indem alle ankommenden Nachrichten mit Hilfe des Debuggers überprüft worden sind. Da der \textit{Listener} erweitert wurde, musste überprüft werden, dass die Erweiterung die anderen Funktionalitäten nicht negativ beeinflusst. Dafür wurde mit dem Debugger Schritt für Schritt überprüft, dass der neu implementierte Quelltext nur in den richtigen Fällen aufgerufen wird. Die Fälle sind das Löschen oder das Hinzufügen eines \textit{ParameterTags} zu einem Baumelement.\\
 
 
 
 \subsubsection{DOORS Verbindung und Import der Parameter}
-Da die Bibliothek für die DOORS Verbindung schon existierte und bereits getestet war, musste hier nur die Funktionalität der Verbindung überprüft werden. Es wurden Negativtests\footnote{Reaktion des Programms auf eine falsche Eingabe.} durchgeführt. Die Negativtests bestanden aus falsche Log-in Parameter für die DOORS Datenbank. Dabei wurde der Benutzer aufmerksam gemacht, dass die Verbindung nicht entstehen konnte. Dieser Fall sollte eigentlich nicht auftreten, da die Log-in Daten in TESTONA gespeichert worden sind. Wären diese falsch, hätte der Benutzer es bereits bei dem Import der Anforderungen bemerkt.\\
+Da die Bibliothek für die DOORS Verbindung schon existierte und bereits getestet war, musste hier nur die Funktionalität der Verbindung überprüft werden. Es wurden Negativtests\footnote{Reaktion des Programms auf eine falsche Eingabe.} durchgeführt. Die Negativtests bestanden aus falschen Log-in Parameter für die DOORS Datenbank. Dabei wurde der Benutzer aufmerksam gemacht, dass die Verbindung nicht entstehen konnte. Dieser Fall sollte eigentlich nicht auftreten, da die Log-in Daten in TESTONA gespeichert worden sind. Wären diese falsch, hätte der Benutzer es bereits bei dem Import der Anforderungen bemerkt.\\
 
 
 Weiterhin wurden das Öffnen und Schließen der DOORS Module getestet und der Verbindungsaufbau und - abbau. Dabei wurde überprüft, dass die Verbindungen richtig getrennt worden sind. Nach das Öffnen der DOORS Module wurde auch überprüft, ob die Parameterwerte richtig in TESTONA gespeichert werden konnten. Hier wurde Positiv\footnote{Reaktion des Programms auf eine (nach den Anforderung) richtige Eingabe.} - und Negativtest durchgeführt. Für die Positivtest wurden plausible Werten in die Parametertabelle eingetragen. In den Negativtest wurden Zellen leer gelassen oder mit Escape - Sequenzen (\textbackslash n, \textbackslash r oder \textbackslash b) befüllt. Dabei musste das Programm erkennen, dass die Zelle kein Wert beinhaltete. Als richtige Werte wurden Buchstaben, Zahlen und Sondereichen bewertet.\\
@@ -38,7 +38,7 @@ Weiterhin wurden das Öffnen und Schließen der DOORS Module getestet und der Ve
 Die Speicherung der Parameter in TESTONA musste an zwei Stellen getestet werden. Die erste Stelle ist nach dem Import der Parametertabelle und die Erstellung der \textit{ParameterTags}. Hier wurde überprüft, dass die in die Parametertabelle eingegebenen Werte richtig in TESTONA übernommen worden sind. Weiterhin mussten die Werte in der richtigen Reihenfolge in das \textit{ParameterTag} Objekt gespeichert und dargestellt werden. Die Escape - Sequenzen und leeren Zellen sollten ignoriert werden. \\
 
 
-Die zweite Stelle an der die Parameterspeicherung getestet werden musste, war bei Speichern eines Parameters in einem Baumelement. Als erstes musste getestet werden, dass das \textit{ParameterTag} an das Baumelement hinzugefügt worden ist. Parallel dazu wurde das richtige Ausführen des \textit{AddParameterTagCommand} Kommandos getestet. Weiterhin musste auch betrachtet werden, dass ein \textit{ParameterTag} in einem Baumelement mehrere Parameter beinhalten kann. Hier wurde auch getestet, dass der \textit{ParameterTag} richtig die verschiedenen Parameter mit den zugehörigen Varianten und Parameterwerten speichert.\\
+Die zweite Stelle, an der die Parameterspeicherung getestet werden musste, war bei Speichern eines Parameters in einem Baumelement. Als erstes musste getestet werden, dass das \textit{ParameterTag} an das Baumelement hinzugefügt worden ist. Parallel dazu wurde das richtige Ausführen des \textit{AddParameterTagCommand} Kommandos getestet. Weiterhin musste auch betrachtet werden, dass ein \textit{ParameterTag} in einem Baumelement mehrere Parameter beinhalten kann. Hier wurde auch getestet, dass der \textit{ParameterTag} richtig die verschiedenen Parameter mit den zugehörigen Varianten und Parameterwerten speichert.\\
 
 
 
@@ -47,14 +47,14 @@ Bei der Darstellung der Parameterwerte musste beachtet werden, dass der richtige
 
 
 \subsubsection{Löschen von Parametern}
-Wie beim Speichern von Parametern gibt es hier auch zwei Fälle die betrachten werden mussten. Der erste Fall ist, wenn einem \textit{ParameterTag} aus ein Baumelement gelöscht werden muss. Hier wird auch parallel das Ausführen des \textit{removeParameterTagCommand} Kommandos getestet. Dabei musste das \textit{ParameterTag} aus das Baumelement gelöscht werden.\\
+Wie beim Speichern von Parametern gibt es hier auch zwei Fälle, die betrachten werden mussten. Der erste Fall ist, wenn einem \textit{ParameterTag} aus ein Baumelement gelöscht werden muss. Hier wird auch parallel das Ausführen des \textit{removeParameterTagCommand} Kommandos getestet. Dabei musste das \textit{ParameterTag} aus das Baumelement gelöscht werden.\\
 
 
 Der zweite Fall ist, wenn ein Parameter aus einem \textit{ParameterTag} gelöscht werden muss (im \textit{ParameterTag} befinden sich mindestens zwei verschiedene Parameter). Hier musste beachtet werden, dass nur der richtige Eintrag entfernt wurde. Falls nach das Entfernen des Parameters, das \textit{ParameterTag} nur noch einen Parameter beinhaltete, musste die Struktur des \textit{ParameterTags} umgestellt werden.\\
 
 
 \subsubsection{Lesen und Schreiben der TESTONA Datei}
-Der letzte wichtige Aspekt der noch getestet werden musste, ist das Schreibe und Lesen der TESTONA Datei. Wenn der Benutzer Parameter importiert und an Baumelement verknüpft hat, müssen diese in der TESTONA Datei gespeichert werden. Dafür wurde den Inhalt vom \textit{ParameterTag} Objekt mit dem XML - Eintrag der TESTONA Datei verglichen.\\
+Der letzte wichtige Aspekt der noch getestet werden musste, ist das Schreibe und Lesen der TESTONA Datei. Wenn der Benutzer Parameter importiert und an Baumelement verknüpft hat, müssen diese in der TESTONA Datei gespeichert werden. Dafür wurde der Inhalt vom \textit{ParameterTag} Objekt mit dem XML"=Eintrag der TESTONA Datei verglichen.\\
 
 
 Wenn das Speichern erfolgreich war, musste das Lesen getestet werden. Dafür wurde den Inhalt des erzeugten \textit{ParameterTags} dem Eintrag in der XML Datei gegenüber gestellt.
@@ -66,13 +66,13 @@ Wenn das Speichern erfolgreich war, musste das Lesen getestet werden. Dafür wur
 \newpage
 \section{Ausfallrisiken}
 \paragraph{}
-Nachdem alle in Kapitel \ref{sec:test} Tests erfolgreich durchgeführt worden sind, entstand immer noch ein Ausfallrisiko. Der neue Quellcode befand sich in der \textit{pre - Alpha} Version. Das Bestehen der durchgeführten Tests ergab die erste Alpha Version\footnote{Nicht vom Entwickler durchgeführte Tests} des Programmes.\\
+Nachdem alle in Kapitel \ref{sec:test} Tests erfolgreich durchgeführt worden sind, entstand immer noch ein Ausfallrisiko. Der neue Quellcode befand sich in der \textit{pre"=Alpha} Version. Das Bestehen der durchgeführten Tests ergab die erste Alpha Version\footnote{Nicht vom Entwickler durchgeführte Tests} des Programmes.\\
 
 
-Die programmierten Erweiterungen von TESTONA basierten nicht auf dem sogenannte \glqq vier Augen Prinzip\grqq. Da Programm konnte noch Fehler beinhalten. Da nur der Entwickler bis jetzt die neue Erweiterung getestet hatte, konnte die Objektivität der Tests nicht gewährleistet werden. An dieser Stelle mussten genauere White - Box Tests erstellt und durchgeführt werden. Als nächster Schritt mussten die Black - Box Tests erfolgen.\\
+Die programmierten Erweiterungen von TESTONA basierten nicht auf dem sogenannte \glqq vier Augen Prinzip\grqq. Das Programm konnte noch Fehler beinhalten. Da nur der Entwickler bis jetzt die neue Erweiterung getestet hatte, konnte die Objektivität der Tests nicht gewährleistet werden. An dieser Stelle mussten genauere White"=Box Tests erstellt und durchgeführt werden. Als nächster Schritt mussten die Black"=Box Tests erfolgen.\\
 
 
-Ein weiterer Punkt für das Ausfallrisiko war, dass die durchgeführten Tests auf einfachen Beispielen basierten. Das heißt die Klassifikationsbäume und Parametertabellen recht simpel und klein waren. Es war nötig durchaus komplexere Beispiele zu betrachten, indem der Klassifikationsbaum aus mehreren Klassen und Klassifikationen besteht. Ebenso muss die Parametertabelle viele Parameter definieren. Aus der Grundlagen der Kombinatorik (siehe \ref{ssec:KM}) war klar geworden, dass Fehlverhalten nicht unbedingt aus einzelnen falschen Parametern entstanden, sondern oft aus der Interaktion verschiedener Parameter.
+Ein weiterer Punkt für das Ausfallrisiko war, dass die durchgeführten Tests auf einfachen Beispielen basierten. Das heißt, die Klassifikationsbäume und Parametertabellen waren recht simpel und klein. Es war nötig, durchaus komplexere Beispiele zu betrachten, indem der Klassifikationsbaum aus mehreren Klassen und Klassifikationen besteht. Ebenso muss die Parametertabelle viele Parameter definieren. Aus der Grundlagen der Kombinatorik (siehe \ref{ssec:KM}) war klar geworden, dass Fehlverhalten nicht unbedingt aus einzelnen falschen Parametern entstanden, sondern oft aus der Interaktion verschiedener Parameter.
 
 
 %#######################################################################################
@@ -83,4 +83,17 @@ Ein weiterer Punkt für das Ausfallrisiko war, dass die durchgeführten Tests au
 Nach der Durchführung des in Kapitel \ref{sec:test} beschriebenen Testaufbaus und - ablaufs wurden verschiedene Fehler behoben. Bisher war nur noch ein Fehler bekannt, der nicht behoben werden konnte. Nachdem sich das Programm erfolgreich mit DOORS verbinden konnte, konnte später die Verbindung nicht richtig getrennt werden. Das Programm versuchte die Verbindung zwei Mal zu trennen. Im ersten Versuch wurde die Verbindung erfolgreich getrennt und geschlossen. Aus bis jetzt unbekannten Gründen versuchte das Programm ein zweites Mal die Verbindung zu DOORS zu trennen. Hier entstand der Fehler, dass das \textit{ConnectionInterface} für die Verbindung nicht mehr zu Verfügung stand.\\
 
 
-Nach mühsames Suchen und Debuggen mithilfe eines Mitarbeiters, konnten wir die Ursache des Fehlverhaltens nicht finden. Dieser Fehler wurde mit einer niedrigen Priorität versehen, da in der näheren Zukunft die DOORS API durch eine neuere API ersetzt wird. Dabei wird der Quellcode für die Verbindung, Import und Trennung der DOORS Datenbank überarbeitet. Es ist sehr wahrscheinlich, dass dabei dieser Fehler behoben wird. Weiterhin brachte dieser Fehler TESTONA nicht zum Absturz. 
+Nach mühsames Suchen und Debuggen mithilfe eines Mitarbeiters, konnten wir die Ursache des Fehlverhaltens nicht finden. Dieser Fehler wurde mit einer niedrigen Priorität versehen, da in der näheren Zukunft die DOORS API durch eine neuere API ersetzt wird. Dabei wird der Quellcode für die Verbindung, Import und Trennung der DOORS Datenbank überarbeitet. Es ist sehr wahrscheinlich, dass dabei dieser Fehler behoben wird. Weiterhin brachte dieser Fehler TESTONA nicht zum Absturz.\\
+
+
+
+%#######################################################################################
+%#######################################################################################
+\newpage
+\section{Optimierungskriterien}
+\paragraph{}
+%Testablauf optimieren in Betrachtung auf nur gültige Baumelemente in einer Variante und mögliche Testduplikate,
+Die geleistete Arbeit könnte noch in zwei Punkten optimiert werden. Doppelte Testfälle könnten automatisch erkannt werden. Der Benutzer könnte dabei gewarnt werden oder die Testfälle könnten sofort gelöscht werden. Diese doppelten Testfälle entstehen durch gleiche Parameterwerte innerhalb eines Knotens bei einer aktiven Variante. So konnte der Fall auftreten, dass die Landgeschwindigkeit eines bestimmten Autos zugleich die Maximalgeschwindigkeit ist. Bei dieser Konstellation würden sich einige Test wiederholen, weil der Parameterwert für Land- und Maximalgeschwindigkeit gleich ist.\\
+
+
+Weiterhin besteht die Möglichkeit, einen Algorithmus zu entwickeln, in dem ähnliche Testfälle erkannt werden. Diese konnten nicht betrachtet werden, um die Testmenge zu verkleinern. Immerhin sollte die maximale Testabdeckung garantiert sein. Sind die Geschwindigkeiten verschiedener Varianten ähnlich, so könnten manche Testfälle übersprungen werden. Das würde zu weniger Testfälle führen, aber die Qualität des Produkts konnte immer noch gewährleistet werden.

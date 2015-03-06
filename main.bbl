@@ -18,7 +18,7 @@ Eclipse Foundation, http://eclipse.org/swt.
 
 \bibitem{SoftwareTestEmbSys}
 Stephan Grünfelder.
-\newblock {\em Software-Test für Embedded Systems}.
+\newblock {\em Software"=Test für Embedded Systems}.
 \newblock dpunkt.verlag, 2013.
 
 \bibitem{ClassificationTrees}
@@ -28,33 +28,44 @@ M.~Grochtmann and K.~Grimm.
 \newblock Wiley, 1993.
 
 \bibitem{Doors}
-IBM, http://www-03.ibm.com/software/products/de/ratidoor.
+IBM, http://www"=03.ibm.com/software/products/de/ratidoor.
 \newblock {\em IBM DOORS}, Oktober 2014.
 
 \bibitem{CombinatorialSoftTesting}
-IEEE Computer Society,
-  https://courses.cs.ut.ee/MTAT.03.159/2013\_spring/uploads/Main/SWT\_comb-paper1.pdf.
+IEEE Computer Society, https://courses.cs.ut.ee/MTAT.03.159/2013\_spring/up
+  loads/Main/SWT\_comb"=paper1.pdf.
 \newblock {\em Combinatorial Software Testing}, 2009.
 
+\bibitem{Kombinatorisches}
+National Institute of Standards and Technology,
+  http://mse.isri.cmu.edu/software"=engineering/documents/faculty"=publications/miranda/kuhnintroductioncombinatorialtesting.pdf.
+\newblock {\em Introduction to Combinatorial Testing}, 2011.
+
+\bibitem{CPM}
+T.~J. Ostrand and M.~J. Balcer.
+\newblock The category"=partition method for specifying and generating
+  functional tests.
+\newblock {\em Communications of the ACM}, 1988.
+
 \bibitem{TestCaseDesign}
-Quality Week 1995,
-  http://www.systematic-testing.com/documents/qualityweek1995\_1.pdf.
+Quality Week, http://www.systematic"=testing.com/documents/qualityweek1995\_1
+  .pdf.
 \newblock {\em Test Case Design Using Classification Trees and the
-  Classification-Tree Editor CTE}, 1995.
+  Classification"=Tree Editor CTE}, 1995.
 
 \bibitem{DomainEng}
-Iris Reinhartz-Berger, Arnon Sturm, Tony Clark, Sholom Cohen, and John Bettin.
+Iris Reinhartz"=Berger, Arnon Sturm, Tony Clark, Sholom Cohen, and John Bettin.
 \newblock {\em Domain Engineering: Product Lines, Languages, and Conceptual
   Models}.
 \newblock Springer, 2013.
 
 \bibitem{VarMan2}
-Christopher Robinson-Mallet.
+Christopher Robinson"=Mallet.
 \newblock An approach on integrating models and textual specifications.
-\newblock {\em Model-Driven Requirements Engineering Workshop (MoDRE)}, 2012.
+\newblock {\em Model"=Driven Requirements Engineering Workshop (MoDRE)}, 2012.
 
 \bibitem{VarMan1}
-Christopher Robinson-Mallet, Matthias Grochtmann, Joachim Wegener, Kens
+Christopher Robinson"=Mallet, Matthias Grochtmann, Joachim Wegener, Kens
   Köhnlein, and Steffen Kühn.
 \newblock Modelling requierements to support testing of product lines.
 \newblock {\em Third International Conference on Software Testing,
@@ -80,9 +91,5 @@ Gerhard Versteegen.
 Lars Vogel and Mike Milinkovich.
 \newblock {\em Eclipse 4 RCP}.
 \newblock Lars Vogel, 2013.
-
-\bibitem{KlassifikationsbaumMethode}
-Wikipedia, http://de.wikipedia.org/wiki/Klassifikationsbaum-Methode.
-\newblock {\em Klassifikationsbaum-Methode}, Oktober 2014.
 
 \end{thebibliography}
