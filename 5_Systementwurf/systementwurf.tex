@@ -374,7 +374,7 @@ Wenn die Parametertabelle komplett geladen wurde, ermöglicht die Methode \texti
 
 \subsubsection{RequirementDataListener}\label{sub.RequirementDataListener}
 
-Das \textit{RequirementDataListener} ist ein Event-Listener. Dieses Listener wartet auf die Rückmeldung eines Moduls, bis das Modul fertig geladen worden ist. Relevant ist die Methode \texttt{onModuleLoad}, die die Zeilen aus der Tabelle liest und speichert.\\
+Der \textit{RequirementDataListener} ist ein Event"=Listener. Dieser Listener wartet auf die Rückmeldung eines Moduls, bis das Modul fertig geladen worden ist. Relevant ist die Methode \texttt{onModuleLoad}, die die Zeilen aus der Tabelle liest und speichert.\\
 
 \begin{lstlisting}[caption={Laden der Parametertabelle nach Zeilen}, captionpos=b]
 @Override
@@ -409,8 +409,8 @@ Zu beachten ist, dass in DOORS jede Zeile in einer Tabelle als eine Anforderung 
 
 Diese Attribute repräsentieren die Varianten und einen Standardwert und den Name des jeweiligen Parameters. In der Schleife werden alle Zeilen im Modul iteriert und geladen. Wenn die Zeile (\texttt{baseReq}) vollständig geladen wurde, wird diese in der globalen Liste \texttt{paramReqList} als ein \texttt{Requirement} Objekt gespeichert. Die Methode \texttt{fillParamTagList} erzeugt die \textit{ParameterTags} und wird in Kapitel \ref{sub:ParameterManager} erläutert.\\
 
-%Wenn eine Zeile nicht vollständig geladen werden konnte, kümmert sich das \textit{RequirementLoadListener} um das vollständige laden der Zeilen kümmert.
-Das \textit{RequirementLoadListener} wird in dieser Klasse instanziiert und von der \textit{DoorsConnetor} Klasse gesetzt. Weiter dazu im nächsten Kapitel.
+%Wenn eine Zeile nicht vollständig geladen werden konnte, kümmert sich der \textit{RequirementLoadListener} um das vollständige laden der Zeilen kümmert.
+Der \textit{RequirementLoadListener} wird in dieser Klasse instanziiert und von der \textit{DoorsConnetor} Klasse gesetzt. Weiter dazu im nächsten Kapitel.
 
 
 \subsubsection{RequirementLoadListener}\label{sub.RequirementLoadListener}

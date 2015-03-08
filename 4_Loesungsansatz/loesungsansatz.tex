@@ -23,7 +23,7 @@ Da Parameterwerte und Varianten schon verlinkt sind, müssen die Anforderungen, 
 Um die Parameter erfolgreich in TESTONA zu speichern, müssen diese aus DOORS importiert werden und aus den Anforderungen gelesen werden. Durch eine gezielte Anfrage an DOORS, über eine Java API, kann die Parametertabelle in TESTONA geladen werden. Die darin bestimmten Beziehungen (Parameterwert zu Variante) müssen fest in die TESTONA Datei gespeichert werden, damit diese auch ohne eine DOORS Verbindung zur Verfügung steht. Als erstes werden die Parameterwerte in \textit{Tag} Objekten gespeichert und nach Programmende in die TESTONA Datei im XML"=Format gespeichert. Dank des \textit{Tags} kann beim Programmstart wieder der Parameterwert gelesen werden und, während das Programm ausgeführt wird, können Änderungen vorgenommen werden.\\
 
 
-Einer der Besonderheiten von TESTONA ist, dass Anforderungen und Baumelemente per Drag\&Drop verknüpft werden können. Mit dieser Funktion muss der Tester die Anforderung mit einem dazu gehörigen Baumelement verknüpfen (auslösendes Ereignis der Parameterspeicherung). Damit das Programm die Aktion des Benutzers mitbekommt, wird an dieser Stelle ein \textit{Listener} implementiert. Der \textit{Listener} bekommt verschiedene Nachrichten von Ereignissen, die gefiltert werden müssen. Wenn die Nachricht empfangen wird, dass eine Anforderung an ein Baumelement verknüpft wurde, muss eine zu programmierende Methode den Anforderungstext von diesem Baumelement lesen und nach Parametern suchen. Als erstes wird davon ausgegangen, dass ein Baumelement nur eine Anforderung beinhalten kann und eine Anforderung nur ein Parameter beinhaltet. Wird in der gelesenen Anforderung ein Parameter gefunden, so müssen die möglichen Werte dieses Parameters aus der DOORS Parametertabelle gelesen und gespeichert werden. An dieser Stelle beginnt die Parameterspeicherung.\\
+Einer der Besonderheiten von TESTONA ist, dass Anforderungen und Baumelemente per Drag\&Drop verknüpft werden können. Mit dieser Funktion muss der Tester die Anforderung mit einem dazu gehörigen Baumelement verknüpfen (auslösendes Ereignis der Parameterspeicherung). Damit das Programm die Aktion des Benutzers mitbekommt, wird an dieser Stelle einen \textit{Listener} implementiert. Der \textit{Listener} bekommt verschiedene Nachrichten von Ereignissen, die gefiltert werden müssen. Wenn die Nachricht empfangen wird, dass eine Anforderung an ein Baumelement verknüpft wurde, muss eine zu programmierende Methode den Anforderungstext von diesem Baumelement lesen und nach Parametern suchen. Als erstes wird davon ausgegangen, dass ein Baumelement nur eine Anforderung beinhalten kann und eine Anforderung nur ein Parameter beinhaltet. Wird in der gelesenen Anforderung ein Parameter gefunden, so müssen die möglichen Werte dieses Parameters aus der DOORS Parametertabelle gelesen und gespeichert werden. An dieser Stelle beginnt die Parameterspeicherung.\\
 
 
 Für die Parameterspeicherung ergeben sich zwei Lösungswege. Die erste Lösung lautet, die Parametertabelle beim Import der Anforderung gleich in TESTONA zu speichern. Diese Lösung hat den Vorteil, dass später eine Verbindung zu DOORS nicht mehr notwendig ist. Somit muss während der Parametersuche auf eine Verbindung mit DOORS nicht geprüft werden, bzw. die Verbindung muss nicht wieder aufgebaut werden. Das heißt, der Benutzer muss sich nur einmal mit DOORS verbinden und kann in der Zukunft problemlos die Anforderungen an einem Baumelement verlinken und gleichzeitig werden die Parameter gelesen und gespeichert. Der Nachteil dieser Vorgehensweise ist, dass möglicherweise unnötige Daten in TESTONA gespeichert werden.\\
@@ -71,13 +71,16 @@ Somit kann jetzt in TESTONA ein Parameterwert mit einer Variante und einem Baume
 
 Wichtig ist auch, dass ein Baumelement verschiedene Parameter repräsentieren kann. Wenn ein Baumelement mehr als eine Anforderung mit verschiedenen Parametern beinhaltet, wird die aktive Variante entscheiden, welches Parameter ausgewertet  und angezeigt wird. Dabei muss beachtet werden, dass vorhandene Parameterwerte und Anforderungen (innerhalb eines Baumelementes) nicht gelöscht oder überschrieben werden.\\
 
-\begin{figure}[h!]
+\begin{figure}[!htb]
   \begin{center}
     \includegraphics[scale=0.7]{4_1_UML_TreeItem_ParameterTags.jpg}
   		  \caption{Darstellung eines Baumelementes mit zwei verschiedenen Parametern und vier Varianten}
      \label{ttn.treeitem_vars}
   \end{center}
 \end{figure}
+
+\newpage
+\hspace{2cm}
 
 %#######################################################################################
 %#######################################################################################
@@ -115,7 +118,7 @@ Wenn die Beziehungen zwischen Varianten, Parametern und Anforderungen erfolgreic
   \end{center}
 \end{figure}
 
-Dafür muss ein \textit{Listener} beim Ändern der Variantenansicht eine Methode aufrufen. Diese aktualisiert die Werte und die Neubezeichnung der Baumelemente. Die Werte werden dynamisch aus den Inhalten der Baumelemente gelesen, da die Werte als Tag in jedem Baumelement  gespeichert sind (siehe Abbildungen \ref{ttn.objectGraph} und \ref{ttn.treeitem_vars}).
+Dafür muss einen \textit{Listener} beim Ändern der Variantenansicht eine Methode aufrufen. Diese aktualisiert die Werte und die Neubezeichnung der Baumelemente. Die Werte werden dynamisch aus den Inhalten der Baumelemente gelesen, da die Werte als Tag in jedem Baumelement  gespeichert sind (siehe Abbildungen \ref{ttn.objectGraph} und \ref{ttn.treeitem_vars}).
 
 %#######################################################################################
 %#######################################################################################

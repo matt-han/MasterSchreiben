@@ -13,25 +13,27 @@ Einer der besonderen Eigenschaften von TESTONA ist die Kopplung mit Anforderungs
 
 Der derzeitige Varianten-Management-Ansatz in TESTONA ist nicht in der Lage, für die Testfallgenerierung zwischen verschiedenen Varianten zu unterscheiden. Zwar werden durch die Perspektive „Variant Management“ verschiedene Varianten unterschieden, aber die Testfälle müssen manuell mit den jeweiligen Varianten verknüpft werden. Im Falle einer automatischen Testfallgenerierung werden auch ungültige Baumelemente betrachtet (siehe Abbild \ref{ttn.gruen} und \ref{ttn.rot}). Um dies zu vermeiden muss, der Testingenieur einzelne Generierungsregeln anlegen. Dieser Vorgang soll automatisiert und von TESTONA übernommen werden. Dabei gibt es verschiedene Betrachtungsweisen und mehrere Lösungswege. Die erworbenen Kenntnisse des Testingenieurs über die Benutzung des Variantenmanagements sind entscheidend für die Lösung. Bei der Lösung ist zu beachten, dass eine komplette Testfallabdeckung garantiert werden muss.\\
 
+\hspace{3cm}
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[scale=0.3]{gruenePolygone_DE.png}
+    \includegraphics[scale=0.35]{gruenePolygone_DE.png}
   		  \caption{Richtige Auswahl der Klassen und Klassifikationen für die Testfallgenerierung}
      \label{ttn.gruen}
   \end{center}
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[!htb]
   \begin{center}
-    \includegraphics[scale=0.3]{roterKreis_DE.png}
+    \includegraphics[scale=0.35]{roterKreis_DE.png}
   		  \caption{Ungültige Auswahl der Klassen (Grün und Blau) und Klassifikationen (Regularität und Ecken) für die Testfallgenerierung}
      \label{ttn.rot}
   \end{center}
 \end{figure}
 
-
+\newpage
+\hspace{2cm}
 %#######################################################################################
 %#######################################################################################
 \newpage
@@ -43,7 +45,7 @@ Die Erweiterung des schon vorhandenen Variantenmanagements in TESTONA wird dazu 
 Im englischen Sprechraum werden die Begriffe \glqq feature modelling\grqq~ und \glqq domain engineering\grqq~ benutzt. Unter \glqq domain engineering\grqq~ ist die Wiederverwendung von Wissensgebieten für die Produktion einer neuen Software zu verstehen \cite{DomainEng}. Obwohl beide Begriffe sich auf die Softwareentwicklung spezialisieren, werden die Prinzipien allgemein in der Produktion verschiedener Produkte verwendet. Betrachtet man TESTONA, so sind die Editionen Light, Express, Professional und Enterprise Varianten.\\
 
 
-Es existiert bereits Software, die das Variantenmanagement unterstützt. Aber es gibt keine Software, die eine Schnittstelle zu einer Datenbank zur Verfügung stellt. Weiterhin wird der Import von Varianten aus der Datenbank nicht begünstigt.\\
+Es existiert bereits Software, die das Variantenmanagement unterstützt. Eine davon ist \textit{pure::variants}.\footnote{http://www.pure"=systems.com, 15/11/2014} Dieses Programm ist in der Lage sich mit DOORS zu verbinden und unterstützt Variantenmanagement. Es unterstützt auch Parameterersetzung in den jeweiligen Varianten anhand so genanntes \glqq Parametrized Text\grqq. Hier werden Parameterwerte in das \textit{pure::variants} Programm eingetragen, die danach in die DOORS Anforderungen ersetzt werden. Das Programm dient als reines Variantenmanagementsystem für die Anforderungen und bietet nicht die Möglichkeit Testfälle zu erzeugen. \\
 
 
 Die Firma \glqq Razorcat Development GmbH\grqq~ bietet auch einen Klassifikationsbaumeditor der TESTONA sehr ähnlich ist. Nach meiner Kenntnis hat diese Software keine Schnittstelle zu einer Datenbank und implementiert kein Variantenmanagement.\footnote{http://www.razorcat.eu/cte.html, 15/11/2014}

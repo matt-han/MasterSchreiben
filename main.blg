@@ -1,3 +1,48 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: bhtThesis.bib
+Warning--empty journal in CombinatorialSoftTesting
+You've used 18 entries,
+            2118 wiz_defined-function locations,
+            592 strings with 6442 characters,
+and the built_in function-call counts, 3945 in all, are:
+= -- 372
+> -- 172
+< -- 0
++ -- 74
+- -- 54
+* -- 223
+:= -- 683
+add.period$ -- 47
+call.type$ -- 18
+change.case$ -- 75
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 178
+empty$ -- 337
+format.name$ -- 54
+if$ -- 822
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 17
+newline$ -- 86
+num.names$ -- 22
+pop$ -- 100
+preamble$ -- 1
+purify$ -- 70
+quote$ -- 0
+skip$ -- 110
+stack$ -- 0
+substring$ -- 99
+swap$ -- 17
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 60
+warning$ -- 1
+while$ -- 22
+width$ -- 20
+write$ -- 174
+(There was 1 warning)
