@@ -1,7 +1,7 @@
 \begin{thebibliography}{10}
 
 \bibitem{TestAbdeckung}
-Gürkan Aydin and Hartmut Pohl.
+Gürkan Aydin and Hartmut Pohl.
 \newblock Code coverage - tools.
 \newblock {\em Hakin9}, 2012.
 
@@ -21,16 +21,16 @@ Eclipse Foundation, http://help.eclipse.org.
 Eclipse Foundation, http://eclipse.org/swt.
 \newblock {\em Eclipse SWT}, Oktober 2014.
 
+\bibitem{SoftwareTestEmbSys}
+Stephan Grünfelder.
+\newblock {\em Software"=Test für Embedded Systems}.
+\newblock dpunkt.verlag, 2013.
+
 \bibitem{ClassificationTrees}
 M.~Grochtmann and K.~Grimm.
 \newblock {\em Classification Trees For Partition testing, Software testing,
   Verification \& Reliability, Volume 3, Number 2}.
 \newblock Wiley, 1993.
-
-\bibitem{SoftwareTestEmbSys}
-Stephan Grünfelder.
-\newblock {\em Software"=Test für Embedded Systems}.
-\newblock dpunkt.verlag, 2013.
 
 \bibitem{Doors}
 IBM, http://www"=03.ibm.com/software/products/de/ratidoor.
@@ -51,6 +51,11 @@ T.~J. Ostrand and M.~J. Balcer.
 \newblock The category"=partition method for specifying and generating
   functional tests.
 \newblock {\em Communications of the ACM}, 1988.
+
+\bibitem{TestenInfoSys}
+Lionel Pilorget.
+\newblock {\em Testen von Informationssystemen}.
+\newblock Vieweg+Teubner Verlag, 2012.
 
 \bibitem{TestCaseDesign}
 Quality Week, http://www.systematic"=testing.com/documents/qualityweek1995\_1
